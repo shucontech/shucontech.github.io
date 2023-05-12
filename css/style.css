@@ -1210,7 +1210,7 @@ support for no js
 .pt-110-cont{ padding-top:110px;}
 .pt-100-cont{ padding-top:100px;}
 .pt-80-b-50-cont { padding-top:80px; padding-bottom:50px;}
-.pt-100-b-80-cont { padding-top:100px; padding-bottom:80px;}
+.pt-100-b-80-cont { padding-top:0px; padding-bottom:80px;}
 .pt-110-b-80-cont { padding-top:110px; padding-bottom:80px;}
 .pt-110-b-30-cont{ padding-top:110px; padding-bottom:30px;}
 .pt-110-b-40-cont{ padding-top:110px; padding-bottom:40px;}
@@ -2157,7 +2157,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 .work-proc-1-bg {
   will-change: background-position;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   background: #2c2c2c url(../images/work-proc-bg.jpg) fixed;
   color:#f1f1f1;
 }
@@ -2420,6 +2420,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 =====================================================*/
 .blog2-post-title-cont, .blog2-post-prev-text {
   margin-bottom:20px;
+  font-size:18px;
 }
 .blog2-post-title-cont .post-prev-title {
   padding:15px 0 15px 20px;
@@ -2446,7 +2447,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   margin:0;
 }
 .blog2-post-prev-text {
-
+  padding-top: 15px;
 }
 @media (max-width: 768px) {
   .blog2-month {
@@ -3070,7 +3071,7 @@ select.input-border {
 /* #FOOTER 1 NEW
 =====================================================*/
 .footer-copy {
-  margin-top:5px;
+  margin-top:45px;
 }
 .footer-copy a{
   font-size:11px;

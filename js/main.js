@@ -920,6 +920,9 @@ function register($form) {
 	}
   });
 }
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
 //END NEWSLETTER	-------------------------------------------------------------------			
 
 //WOW ANIMATE PLUGIN-------------------------------------------------------------------
