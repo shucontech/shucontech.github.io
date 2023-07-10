@@ -8248,7 +8248,11 @@ h2.portfolio-timeline-title {
 .owl-carousel{
 	display: none;
 	position: relative;
-	width: 100%;
+	width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom:10px;
+  text-align: center;
 	-ms-touch-action: pan-y;
 }
 .owl-carousel .owl-wrapper{
