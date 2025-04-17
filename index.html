@@ -302,7 +302,68 @@
 						
             </div>
 					</div>
-
+        <!--Steps-->
+      <div id="working-section" class="page-section grey-light-bg">
+        <div class="container fes1-cont">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fes1-main-title-cont wow fadeInDown">
+                    <div class="title-fs-60">
+                      WORK WITH US<br>
+                      <span class="bold">It's Really Simple, Really Fast</span>
+                    </div>
+                    <div class="line-3-100"></div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="row working-step-section">
+                <!-- Step 1 -->
+                <div class="col-md-3 col-sm-6">
+                  <div id="step1-box" class="fes1-box wow fadeIn step-box">
+                    <div class="step-content">
+                      <div class="step-number">1</div>
+                      <h3>Tell Us What You Need</h3>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Step 2 -->
+                <div class="col-md-3 col-sm-6">
+                  <div id="step2-box" class="fes1-box wow fadeIn step-box" data-wow-delay="200ms">
+                    <div class="step-content">
+                      <div class="step-number">2</div>
+                      <h3>Get a Developer Matched in 7 Days</h3>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Step 3 -->
+                <div class="col-md-3 col-sm-6">
+                  <div id="step3-box" class="fes1-box wow fadeIn step-box" data-wow-delay="400ms">
+                    <div class="step-content">
+                      <div class="step-number">3</div>
+                      <h3>Meet & Get Started With Your Developer</h3>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Step 4 -->
+                <div class="col-md-3 col-sm-6">
+                  <div id="step4-box" class="fes1-box wow fadeIn step-box" data-wow-delay="600ms">
+                    <div class="step-content">
+                      <div class="step-number">4</div>
+                      <h3>Ongoing Quality Guarantee</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 				<!-- FEATURES 4 our services -->
 				<div id="services-link" class="page-section fes4-cont services-section work-proc-1-bg">
 					<div class="container">
@@ -393,8 +454,28 @@
             </div>
 					</div>
 				</div>
+        <!--PRICING-->
+        <div>
 
-				<!-- DIVIDER -->
+        </div>
+        <div class="accordion-container">
+          <h2>Frequently Asked Questions</h2>
+          <button class="accordion">Example</button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam voluptatum est soluta beatae ex recusandae corrupti, delectus dignissimos placeat! Totam maiores delectus animi cumque itaque voluptatibus officia dolorem quae?
+            </p>  
+          </div>
+          <button class="accordion">How can I download your app?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates adipisci deserunt asperiores delectus repellat magni!</p>
+          </div>
+          <button class="accordion">How can I buy your ebook?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates adipisci deserunt asperiores delectus repellat magni!</p>
+          </div>
+        </div>
+<!-- DIVIDER -->
 				<hr class="mt-0 mb-0">	
         
         <!-- CLIENTS 1 & TESTIMONIALS 1 -->
@@ -741,6 +822,21 @@
 
                 RsParticlesAddOn(revapi8);
 			});	/*ready*/
+      /*FAQ*/
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+              } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+              }
+          });
+      }
 		</script>
 
 <!-- JS end -->	
