@@ -1,19 +1,13 @@
-/* ShuconMedAI Custom Styles */
-
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Global Styles */
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Hero Section */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -320,7 +314,6 @@ html {
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
-/* Modules Section */
 .modules-section {
   padding: 80px 0;
   background-color: #f9fafb;
@@ -405,7 +398,6 @@ html {
   line-height: 1.7;
 }
 
-/* Pricing Section */
 .pricing-section {
   padding: 80px 0;
   background-color: #f9fafb;
@@ -538,7 +530,6 @@ html {
   background-color: #1f2937;
 }
 
-/* Contact Section */
 .contact-section {
   padding: 80px 0;
   background-color: white;
@@ -691,7 +682,6 @@ textarea.form-control {
   transform: translateY(-1px);
 }
 
-/* Footer */
 .footer-section {
   background-color: #111827;
   color: white;
@@ -771,7 +761,6 @@ textarea.form-control {
   color: #9ca3af;
 }
 
-/* Responsive Styles */
 @media (max-width: 991px) {
   .hero-title {
     font-size: 3.5rem;
@@ -897,7 +886,6 @@ textarea.form-control {
   }
 }
 
-/* Animation Classes */
 .fadeIn {
   animation: fadeIn 0.6s ease-out;
 }
