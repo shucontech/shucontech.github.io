@@ -49,6 +49,9 @@
     <!--  CSS THEME -->		
 		<link rel="stylesheet" href="css/style.css" >
 	
+    <!-- PRODUCTS CUSTOM STYLES -->
+		<link rel="stylesheet" href="css/products.css" >
+	
     <!-- ANIMATE -->	
 		<link rel='stylesheet' href="css/animate.min.css">
 		
@@ -115,6 +118,11 @@
                       <!-- MENU ITEM -->
                       <li class="">
                         <a href="#services-link"><div class="main-menu-title">SERVICES</div></a>
+                      </li>
+
+                      <!-- MENU ITEM -->
+                      <li class="">
+                        <a href="#products-link"><div class="main-menu-title">PRODUCTS</div></a>
                       </li>
                       
                       <!-- MEGA MENU ITEM -->
@@ -395,6 +403,45 @@
 				</div>
 
 				<!-- DIVIDER -->
+				<hr class="mt-0 mb-0">
+
+				<!-- OUR PRODUCTS -->
+				<div id="products-link" class="page-section p-110-cont">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="fes1-main-title-cont wow fadeInDown">
+									<div class="title-fs-60">
+										OUR<br>
+										<span class="bold">PRODUCTS</span>
+									</div>
+									<div class="line-3-100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-50">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="product-card-compact wow fadeInUp" data-wow-delay="200ms">
+									<div class="product-compact-content">
+										<div class="product-compact-logo">
+											<img src="images/logo-bg.png" alt="ShuconMedAI Logo">
+										</div>
+										<div class="product-compact-info">
+											<h3>Shucon Med AI</h3>
+											<p class="product-compact-description">Transforming healthcare management with intelligent, real time, and user-friendly technology solutions. Trusted by 30k+ patients nationwide.</p>
+											<a href="shuconmedai.html" class="product-compact-btn">
+												Check It Out
+												<span class="icon icon-arrows-right"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- DIVIDER -->
 				<hr class="mt-0 mb-0">	
         
         <!-- CLIENTS 1 & TESTIMONIALS 1 -->
@@ -576,6 +623,51 @@
     
     <!-- MAIN SCRIPT -->
 		<script src="js/main.js"></script>
+		
+		<!-- SMOOTH SCROLL FOR NAVIGATION -->
+		<script>
+		$(document).ready(function() {
+			// Smooth scroll for all navigation links
+			$('.navbar-nav a[href^="#"]').on('click', function(event) {
+				var href = $(this).attr('href');
+				
+				// Close mobile menu if open
+				$('.navbar-collapse').collapse('hide');
+				
+				// Handle home link (scroll to top)
+				if (href === '#' || href === '#top' || href === '') {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: 0
+					}, 900, 'swing');
+					return;
+				}
+				
+				// Handle section links
+				var target = $(href);
+				if (target.length) {
+					event.preventDefault();
+					
+					// Calculate offset for fixed header
+					var headerHeight = $('.header').outerHeight() || 80;
+					var scrollToPosition = target.offset().top - headerHeight;
+					
+					// Smooth scroll animation
+					$('html, body').stop().animate({
+						scrollTop: scrollToPosition
+					}, 900, 'swing');
+				}
+			});
+			
+			// Add smooth scroll for footer back to top button
+			$('#back-top a').on('click', function(event) {
+				event.preventDefault();
+				$('html, body').stop().animate({
+					scrollTop: 0
+				}, 900, 'swing');
+			});
+		});
+		</script>
 		
 		<!-- REVOSLIDER SCRIPTS  -->
     <script src="revo-slider-5/js/jquery.themepunch.tools.min.js" >
