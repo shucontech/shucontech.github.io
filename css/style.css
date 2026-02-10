@@ -997,9 +997,16 @@ support for no js
   animation: scroll-down-anim ease-in-out 1s infinite; 
 }
 .scroll-down {
-  color: #4b4e53;
-	font-size: 32px;
+  color: #fff;
+  font-size: 32px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: scroll-down-anim 2s infinite ease-in-out;
 }
+
 
 @-webkit-keyframes scroll-down-anim {
     0%{ -webkit-transform: translateY(-8px); transform: translateY(-8px); }
@@ -3238,14 +3245,123 @@ select.input-border {
 #main-menu .navbar .nav > li > a .main-menu-title{
 	line-height:20px;
 }
+/* MODIFIED HEADER 1 for Glassmorphism */
+.header-1 {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
 #main-menu .navbar .nav > li > a {
 	padding:38px 3px 5px 3px;
 	margin: 0 12px 17px 12px;
 	border-bottom: 2px solid rgba(45,78,83,0);
-	color:#4b4e53;
-  letter-spacing:2px;
+	color:#ffffff; /* Enhanced readability against dark bg */
+    font-weight: 600; /* Increased font weight */
+  letter-spacing:1px;
   background-color: transparent;
+  transition: color 0.3s, border-bottom 0.3s;
 }
+
+#main-menu .navbar .nav > li > a:hover,
+#main-menu .navbar .nav > li.active > a {
+    color: #4facfe; /* Brand blue hover state */
+    border-bottom: 2px solid #4facfe;
+}
+
+/* MODERN HERO SECTION */
+#hero-modern {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e2024 0%, #232526 100%); /* Clean dark gradient */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+#hero-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/revo-slider/index-portfolio2.jpg') center/cover no-repeat;
+    opacity: 0.2; /* Subtle texture from original image */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #ffffff; /* WCAG AAA Contrast against dark background */
+    text-shadow: 0 0 30px rgba(79, 172, 254, 0.4); /* Thematic glow using brand blue */
+}
+
+.hero-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #00f260 0%, #0575e6 100%);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 242, 96, 0.4);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 242, 96, 0.6);
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .affix.header-1 #main-menu .navbar .nav > li > a {
 	margin-bottom: 13px;
 	padding: 20px 3px 5px 3px;
