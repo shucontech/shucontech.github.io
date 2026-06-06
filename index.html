@@ -36,7 +36,11 @@
 		<meta property="og:title" content="Shucon Tech | Custom Software, Web, Mobile & AI Development Company">
 		<meta property="og:description" content="Enterprise-grade web, mobile, AI, and cloud software crafted for ambitious teams scaling at venture speed.">
 		<meta property="og:image" content="https://shucontech.in/images/LogoMockup.jpg">
-		<meta property="og:image:alt" content="Shucon Tech logo">
+		<meta property="og:image:secure_url" content="https://shucontech.in/images/LogoMockup.jpg">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="Shucon Tech – custom software, web, mobile and AI development">
 		<meta property="og:locale" content="en_US">
 
 		<!-- Twitter -->
@@ -45,6 +49,7 @@
 		<meta name="twitter:title" content="Shucon Tech | Custom Software, Web, Mobile & AI Development Company">
 		<meta name="twitter:description" content="Enterprise-grade web, mobile, AI, and cloud software crafted for ambitious teams scaling at venture speed.">
 		<meta name="twitter:image" content="https://shucontech.in/images/LogoMockup.jpg">
+		<meta name="twitter:image:alt" content="Shucon Tech – custom software, web, mobile and AI development">
 
 		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon.svg">
 		<link rel="icon" type="image/png" sizes="16x16" href="/images/logo-bg.png?v=2">
@@ -97,7 +102,69 @@
 			"@context": "https://schema.org",
 			"@type": "WebSite",
 			"name": "Shucon Tech",
-			"url": "https://shucontech.in/"
+			"url": "https://shucontech.in/",
+			"inLanguage": "en",
+			"publisher": { "@type": "Organization", "name": "Shucon Tech" },
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://shucontech.in/?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+		}
+		</script>
+
+		<!-- JSON-LD: BreadcrumbList -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shucontech.in/" }
+			]
+		}
+		</script>
+
+		<!-- JSON-LD: ItemList of Products -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ItemList",
+			"name": "Shucon Tech Products",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"item": {
+						"@type": "SoftwareApplication",
+						"name": "ShuconMedAI",
+						"url": "https://shucontech.in/shuconmedai.html",
+						"applicationCategory": "HealthApplication",
+						"description": "AI-powered Hospital Management System (HMS) for OPD, IPD, billing, pharmacy, lab, radiology, inventory and revenue leakage detection."
+					}
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"item": {
+						"@type": "Service",
+						"name": "Medical Tourism India",
+						"url": "https://shucontech.in/medical-tourism.html",
+						"serviceType": "Medical tourism coordination",
+						"description": "Connecting international patients to India's best multi-specialty hospitals with end-to-end care coordination and second opinion video OPD."
+					}
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"item": {
+						"@type": "SoftwareApplication",
+						"name": "Toxicology Data System",
+						"url": "https://tox.shucontech.in/",
+						"applicationCategory": "HealthApplication",
+						"description": "Specialized platform for real-time poisoning case tracking, clinical vitals monitoring and integrated medical imaging for toxicology centers."
+					}
+				}
+			]
 		}
 		</script>
 
@@ -118,7 +185,11 @@
 				"postalCode": "248003",
 				"addressCountry": "IN"
 			},
-			"areaServed": "Worldwide"
+			"areaServed": "Worldwide",
+			"sameAs": [
+				"https://www.linkedin.com/company/shucon-tech",
+				"https://shucontech.github.io/"
+			]
 		}
 		</script>
 	
@@ -138,7 +209,7 @@
 	
 		<link rel='stylesheet' href="css/animate.min.css">
 
-		<link rel="stylesheet" href="css/startup-luxe.css?v=10">
+		<link rel="stylesheet" href="css/startup-luxe.css?v=12">
 	
 	</head>
 	<body class="luxury-startup">
@@ -164,7 +235,7 @@
 								<div class="logo-container-2">
 									<div class="logo-2">
 										<a href="index.html" class="clearfix">
-											<img src="images/logo.png" class="logo-img logo-color-change" alt="Shucon Tech logo">
+											<img src="images/logo.png" class="logo-img logo-color-change" alt="Shucon Tech – Custom Software, Web, Mobile & AI Development Company" width="160" height="40" decoding="async">
 										</a>
 									</div>
 								</div>
@@ -446,12 +517,12 @@
 						</div>
 
 						<div class="row display-flex-row">
-							<div class="col-md-6 col-sm-6">
+							<div class="col-md-4 col-sm-6">
 								<div class="product-card-compact wow fadeInUp" data-wow-delay="200ms">
 									<div class="product-compact-content">
 										<div class="product-logo-wrapper">
 											<div class="product-compact-logo">
-												<img src="images/logo-bg.png" alt="ShuconMedAI Logo">
+												<img src="images/logo-bg.png" alt="Shucon Med AI – AI-powered Hospital Management System logo" loading="lazy" decoding="async" width="84" height="84">
 											</div>
 										</div>
 										<div class="product-compact-info">
@@ -469,12 +540,35 @@
 								</div>
 							</div>
 
-							<div class="col-md-6 col-sm-6">
+							<div class="col-md-4 col-sm-6">
+								<div class="product-card-compact wow fadeInUp" data-wow-delay="300ms">
+									<div class="product-compact-content">
+										<div class="product-logo-wrapper">
+											<div class="product-compact-logo">
+												<img src="images/logo-bg.png" alt="Medical Tourism India – Shucon Tech" loading="lazy" decoding="async" width="84" height="84">
+											</div>
+										</div>
+										<div class="product-compact-info">
+											<div class="product-chip">Global Patient Care</div>
+											<h3>Medical Tourism India</h3>
+											<p class="product-compact-description">Connecting international patients
+												to India's best multi-specialty hospitals with end-to-end care
+												coordination and second opinion video OPD.</p>
+											<a href="medical-tourism.html" class="product-compact-btn">
+												Check It Out
+												<span class="icon icon-arrows-right"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4 col-sm-6">
 								<div class="product-card-compact wow fadeInUp" data-wow-delay="400ms">
 									<div class="product-compact-content">
 										<div class="product-logo-wrapper">
 											<div class="product-compact-logo">
-												<img src="images/logo-bg.png" alt="ShuconMedAI Logo">
+												<img src="images/logo-bg.png" alt="Toxicology Data System – Shucon Tech" loading="lazy" decoding="async" width="84" height="84">
 											</div>
 										</div>
 										<div class="product-compact-info">
@@ -516,19 +610,19 @@
                 <div class="row client-row border-bot">
 
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/1.png">
+                      <img alt="Client logo 1" loading="lazy" decoding="async" src="images/clients/1.png">
                     </div>
                   
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/2.png">
+                      <img alt="Client logo 2" loading="lazy" decoding="async" src="images/clients/2.png">
                     </div>
                   
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/3.png">
+                      <img alt="Client logo 3" loading="lazy" decoding="async" src="images/clients/3.png">
                     </div>
                   
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/4.png">
+                      <img alt="Client logo 4" loading="lazy" decoding="async" src="images/clients/4.png">
                     </div>
 
                 </div>
@@ -536,19 +630,19 @@
                 <div class="row client-row">
 
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/5.png">
+                      <img alt="Client logo 5" loading="lazy" decoding="async" src="images/clients/5.png">
                     </div>
                   
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/6.png">
+                      <img alt="Client logo 6" loading="lazy" decoding="async" src="images/clients/6.png">
                     </div>
                   
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/7.png">
+                      <img alt="Client logo 7" loading="lazy" decoding="async" src="images/clients/7.png">
                     </div>
                   
                     <div class="col-xs-6 col-sm-3 text-center">
-                      <img alt="client" src="images/clients/8.png">
+                      <img alt="Client logo 8" loading="lazy" decoding="async" src="images/clients/8.png">
                     </div>
 
                 </div>

@@ -287,6 +287,30 @@ body.luxury-startup #wrap > .grey-bg {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .services-luxe-section .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .services-luxe-section .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .services-luxe-section .row > [class*="col-"] > .fes4-box {
+    height: 100%;
+  }
+  .services-luxe-section .luxe-service-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+  .services-luxe-section .luxe-service-card > div:last-child {
+    flex: 1 1 auto;
+  }
+}
+
 .luxe-title-wrap {
   margin-bottom: 34px;
 }
@@ -484,7 +508,9 @@ body.luxury-startup #wrap > .grey-bg {
 .products-luxe-section .product-compact-info h3 {
   font-family: "Playfair Display", Georgia, serif;
   color: #121a2f;
-  font-size: 32px;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 0;
 }
 
 .products-luxe-section .product-compact-description {
@@ -797,7 +823,7 @@ body.luxury-startup #wrap > .grey-bg {
   }
 
   .products-luxe-section .product-compact-info h3 {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .calendly-float-btn {

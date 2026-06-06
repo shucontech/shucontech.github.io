@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Block backup / demo / staging artifacts (keep CSS & JS crawlable for rendering)
+Disallow: /*.bak$
+Disallow: /rs-plugin/
+Disallow: /revo-slider-5/
+Disallow: /revo-slider-demo/
+
 Sitemap: https://shucontech.in/sitemap.xml
