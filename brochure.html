@@ -66,6 +66,44 @@
   }
 
   /* ====== Common ====== */
+  /* Photo frames: real <img> tags so they print without 'Background graphics' enabled */
+  .cover-photo, .about-photo, .map-photo, .ai-photo-side,
+  .growth-photo, .partner-photo, .leadership-photo,
+  .roadmap-photo, .contact-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--slate-100);
+  }
+  .cover-photo > .photo, .about-photo > .photo, .map-photo > .photo,
+  .ai-photo-side > .photo, .growth-photo > .photo, .partner-photo > .photo,
+  .leadership-photo > .photo, .roadmap-photo > .photo, .contact-hero > .photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    display: block;
+  }
+  .photo-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .cover-photo > .topbar {
+    position: relative;
+    z-index: 2;
+  }
+  .map-photo > .map-overlay,
+  .contact-hero > .topbar {
+    z-index: 2;
+  }
+  .contact-hero > div:not(.photo):not(.photo-overlay):not(.topbar) {
+    position: relative;
+    z-index: 2;
+  }
+
   .pad {
     padding: 22mm 22mm;
     height: 100%;
@@ -172,10 +210,6 @@
     height: 100%;
   }
   .cover-photo {
-    position: relative;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.45) 0%, rgba(15,23,42,0.65) 100%), url('images/brochure/cover.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     padding: 18mm 22mm;
   }
@@ -290,9 +324,6 @@
   .about-photo {
     height: 100%;
     min-height: 70mm;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.05) 0%, rgba(15,23,42,0.18) 100%), url('images/brochure/about.jpg');
-    background-size: cover;
-    background-position: center;
     border-radius: 2px;
   }
   .pillars {
@@ -352,11 +383,7 @@
     line-height: 1.4;
   }
   .map-photo {
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.15)), url('images/brochure/tourism.jpg');
-    background-size: cover;
-    background-position: center;
     border-radius: 2px;
-    position: relative;
   }
   .map-overlay {
     position: absolute;
@@ -447,9 +474,6 @@
   .ai-photo-side {
     height: 100%;
     min-height: 130mm;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.2)), url('images/brochure/ai.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
   /* ====== PAGE 5 — Growth Engine (funnel) ====== */
@@ -498,9 +522,6 @@
   .growth-photo {
     height: 100%;
     min-height: 175mm;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.25)), url('images/brochure/growth.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
   /* ====== PAGE 6 — Partnership ====== */
@@ -570,9 +591,6 @@
   .partner-photo {
     height: 60mm;
     margin-top: 8mm;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.0), rgba(15,23,42,0.22)), url('images/brochure/partnership.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
   /* ====== PAGE 7 — Leadership ====== */
@@ -584,9 +602,6 @@
     align-items: stretch;
   }
   .leadership-photo {
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.1), rgba(15,23,42,0.35)), url('images/brochure/leadership.jpg');
-    background-size: cover;
-    background-position: center;
     min-height: 175mm;
   }
   .leadership-copy { padding-top: 4px; }
@@ -736,9 +751,6 @@
   .roadmap-photo {
     margin-top: 8mm;
     height: 60mm;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.08), rgba(15,23,42,0.32)), url('images/brochure/roadmap.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
   /* ====== PAGE 10 — Contact ====== */
@@ -748,10 +760,6 @@
     grid-template-rows: 1fr auto;
   }
   .contact-hero {
-    position: relative;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.45) 0%, rgba(15,23,42,0.85) 100%), url('images/brochure/contact.jpg');
-    background-size: cover;
-    background-position: center;
     color: #fff;
     padding: 28mm 22mm 22mm;
     display: flex;
@@ -995,6 +1003,8 @@
 <section class="page">
   <div class="cover">
     <div class="cover-photo">
+      <img class="photo" src="images/brochure/cover.jpg" alt="">
+      <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.45) 0%, rgba(15,23,42,0.65) 100%);"></div>
       <div class="topbar">
         <div class="brand-mark light"><img src="images/brochure/logo-shuconmedai.png" alt="Shucon MedAI"></div>
         <div class="brand-tech light"><span>An initiative by</span><img src="images/brochure/logo-shucontech.png" alt="Shucon Tech"></div>
@@ -1090,7 +1100,10 @@
           </div>
         </div>
       </div>
-      <div class="about-photo"></div>
+      <div class="about-photo">
+        <img class="photo" src="images/brochure/about.jpg" alt="">
+        <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.05) 0%, rgba(15,23,42,0.18) 100%);"></div>
+      </div>
     </div>
 
     <div class="page-footer">
@@ -1139,6 +1152,8 @@
         </div>
       </div>
       <div class="map-photo">
+        <img class="photo" src="images/brochure/tourism.jpg" alt="">
+        <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.15));"></div>
         <div class="map-overlay">
           <div>
             <div class="label">Priority Market</div>
@@ -1221,7 +1236,10 @@
           </div>
         </div>
       </div>
-      <div class="ai-photo-side"></div>
+      <div class="ai-photo-side">
+        <img class="photo" src="images/brochure/ai.jpg" alt="">
+        <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.2));"></div>
+      </div>
     </div>
 
     <div class="page-footer">
@@ -1268,7 +1286,10 @@
         </div>
         <p style="margin-top: 16px; max-width:90mm;">A funnel engineered for international healthcare: targeted reach, qualified intent, frictionless conversion and accountable hand-off to your clinical teams.</p>
       </div>
-      <div class="growth-photo"></div>
+      <div class="growth-photo">
+        <img class="photo" src="images/brochure/growth.jpg" alt="">
+        <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.25));"></div>
+      </div>
     </div>
 
     <div class="page-footer">
@@ -1318,7 +1339,10 @@
       </div>
     </div>
 
-    <div class="partner-photo"></div>
+    <div class="partner-photo">
+      <img class="photo" src="images/brochure/partnership.jpg" alt="">
+      <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.0), rgba(15,23,42,0.22));"></div>
+    </div>
 
     <div class="page-footer">
       <div class="meta">Shucon MedAI · Hospital Partnership Brochure</div>
@@ -1342,7 +1366,10 @@
     </div>
 
     <div class="leadership-grid" style="margin-top: 4mm;">
-      <div class="leadership-photo"></div>
+      <div class="leadership-photo">
+        <img class="photo" src="images/brochure/leadership.jpg" alt="">
+        <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.1), rgba(15,23,42,0.35));"></div>
+      </div>
       <div class="leadership-copy">
         <p style="font-size:10pt; color:var(--slate-700); line-height:1.55; margin:0;">The founding team brings experience delivering technology solutions for global enterprises including <strong style="color:var(--navy);">Google</strong> and <strong style="color:var(--navy);">Microsoft</strong>.</p>
         <p style="margin-top:8px; font-size:9.5pt; line-height:1.55;">Our mission is to create the infrastructure layer connecting hospitals, patients and intelligent healthcare systems worldwide — a platform built for clinical reliability and enterprise scale.</p>
@@ -1487,7 +1514,10 @@
       </div>
     </div>
 
-    <div class="roadmap-photo"></div>
+    <div class="roadmap-photo">
+      <img class="photo" src="images/brochure/roadmap.jpg" alt="">
+      <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.08), rgba(15,23,42,0.32));"></div>
+    </div>
 
     <div class="page-footer">
       <div class="meta">Shucon MedAI · Hospital Partnership Brochure</div>
@@ -1500,6 +1530,8 @@
 <section class="page">
   <div class="contact-page">
     <div class="contact-hero">
+      <img class="photo" src="images/brochure/contact.jpg" alt="">
+      <div class="photo-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.45) 0%, rgba(15,23,42,0.85) 100%);"></div>
       <div class="topbar">
         <div class="brand-mark light"><img src="images/brochure/logo-shuconmedai.png" alt="Shucon MedAI"></div>
         <div class="brand-tech light"><span>An initiative by</span><img src="images/brochure/logo-shucontech.png" alt="Shucon Tech"></div>

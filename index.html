@@ -58,10 +58,13 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="images/logo-bg.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="images/logo-bg.png">
 
+		<link rel="preload" as="image" href="images/logo.png">
+
 		<!-- Performance: preconnect to third-party origins -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="preconnect" href="https://assets.calendly.com">
+		<link rel="dns-prefetch" href="https://assets.calendly.com">
 		<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
 		<!-- JSON-LD: Organization -->
@@ -192,9 +195,6 @@
 			]
 		}
 		</script>
-	
-		<link href="revo-slider-5/css/settings.css" rel="stylesheet" type="text/css">
-	
 	
 	
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -718,9 +718,7 @@
                     
           </div>
         </footer>
-					<!-- Calendly widget script for popup CTA -->
-					<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-					<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+					<!-- Calendly widget is loaded on-demand when user clicks the CTA -->
 					<a href="#" class="calendly-float-btn js-calendly-popup" aria-label="Book consultation">
 						Book consultation
 					</a>
@@ -774,6 +772,41 @@
 		$(document).ready(function() {
 			$('#year').text(new Date().getFullYear());
 
+			var calendlyAssetPromise;
+			function loadCalendlyAssets() {
+				if (calendlyAssetPromise) {
+					return calendlyAssetPromise;
+				}
+
+				calendlyAssetPromise = $.Deferred();
+
+				if (!document.querySelector('link[data-calendly-widget="true"]')) {
+					var cssLink = document.createElement('link');
+					cssLink.rel = 'stylesheet';
+					cssLink.href = 'https://assets.calendly.com/assets/external/widget.css';
+					cssLink.setAttribute('data-calendly-widget', 'true');
+					document.head.appendChild(cssLink);
+				}
+
+				if (typeof Calendly !== 'undefined' && typeof Calendly.initPopupWidget === 'function') {
+					calendlyAssetPromise.resolve();
+					return calendlyAssetPromise;
+				}
+
+				var widgetScript = document.createElement('script');
+				widgetScript.src = 'https://assets.calendly.com/assets/external/widget.js';
+				widgetScript.async = true;
+				widgetScript.onload = function() {
+					calendlyAssetPromise.resolve();
+				};
+				widgetScript.onerror = function() {
+					calendlyAssetPromise.reject();
+				};
+				document.body.appendChild(widgetScript);
+
+				return calendlyAssetPromise;
+			}
+
 			// Smooth scroll for all navigation links
 			$('.navbar-nav a[href^="#"]').on('click', function(event) {
 				var href = $(this).attr('href');
@@ -806,211 +839,21 @@
 				}
 			});
 			
-			// Add smooth scroll for footer back to top button
-			$('#back-top a').on('click', function(event) {
-				event.preventDefault();
-				$('html, body').stop().animate({
-					scrollTop: 0
-				}, 900, 'swing');
-			});
-
-			$('.smooth-scroll[href^="#"]').on('click', function(event) {
-				var targetSelector = $(this).attr('href');
-				if (!targetSelector || targetSelector === '#') {
-					return;
-				}
-
-				var target = $(targetSelector);
-				if (target.length) {
-					event.preventDefault();
-					var headerHeight = $('.header').outerHeight() || 80;
-					$('html, body').stop().animate({
-						scrollTop: target.offset().top - headerHeight
-					}, 900, 'swing');
-				}
-			});
-
 			$(document).on('click', '.js-calendly-popup', function(event) {
 				event.preventDefault();
 				event.stopImmediatePropagation();
-				if (typeof Calendly !== 'undefined' && typeof Calendly.initPopupWidget === 'function') {
-					Calendly.initPopupWidget({ url: 'https://calendly.com/shucontech-consultation' });
-				} else {
-					window.open('https://calendly.com/shucontech-consultation', '_blank');
-				}
+				loadCalendlyAssets()
+					.done(function() {
+						Calendly.initPopupWidget({ url: 'https://calendly.com/shucontech-consultation' });
+					})
+					.fail(function() {
+						window.open('https://calendly.com/shucontech-consultation', '_blank');
+					});
 				return false;
 			});
 		});
 		</script>
 		
-		<!-- REVOSLIDER SCRIPTS  -->
-    <script src="revo-slider-5/js/jquery.themepunch.tools.min.js" >
-    </script>
-    <script src="revo-slider-5/js/jquery.themepunch.revolution.min.js" >
-    </script>
-    
-    <!-- PARTICLES ADD-ON FILES -->
-		<script src="revo-slider-5/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3"></script>
-    
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-      (Load Extensions only on Local File Systems ! 
-      The following part can be removed on Server for On Demand Loading) -->
-    <script src="revo-slider-5/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="revo-slider-5/js/extensions/revolution.extension.video.min.js"></script>
-      
-    <!-- SLIDER REVOLUTION INITIALIZATION  -->
-		<script>
-		
-			var tpj=jQuery;
-			var revapi8;
-			tpj(document).ready(function() {
-				if(tpj("#rev_slider_280_1").revolution == undefined){
-					revslider_showDoubleJqueryError("#rev_slider_280_1");
-				}else{
-					revapi8 = tpj("#rev_slider_280_1").show().revolution({
-						sliderType:"hero",
-						jsFileLocation:"revo-slider-5/js/",
-						sliderLayout:"fullscreen",
-						dottedOverlay:"none",
-						delay:9000,
-						particles: {
-							startSlide: "first",
-							endSlide: "last",
-							zIndex: "1",
-							particles: {
-								number: {
-									value: 90
-								},
-								color: {
-									value: "#dadada"
-								},
-								shape: {
-									type: "circle",
-									stroke: {
-										width: 0,
-										color: "#dadada",
-										opacity: 1
-									},
-									image: {
-										src: ""
-									}
-								},
-								opacity: {
-									value: .1, 
-									random: false, 
-									min: 0.25, 
-									anim: {
-										enable: false, 
-										speed: 1,
-										opacity_min: 0,
-										sync: false
-										}
-									},
-								size: {
-									value: 5, 
-									random: true, 
-									min: 1, 
-									anim: {
-										enable: false,
-										speed: 40,
-										size_min: 0.1,
-										sync: false
-									}
-								},
-								line_linked: {
-									enable: true,
-									distance: 150,
-									color: "#dadada",
-									opacity: 0.5,
-									width: 1
-								},
-								move: {
-									enable: true,
-									speed: 1,
-									direction: "none",
-									random: true,
-									min_speed: 3,
-									straight: false,
-									out_mode: "out"
-								}
-							},
-							interactivity: {
-								events: {
-									onhover: {
-										enable: true,
-										mode: "repulse"
-									},
-									onclick: {
-										enable: false,
-										mode: "bubble"
-									}
-								},
-								modes: {
-									grab: {
-										distance: 400,
-										line_linked: {
-											opacity: 0.5
-										}
-									}, 
-									bubble: {
-										distance: 400,
-										size: 40,
-										opacity: 1
-									}, 
-									repulse: {
-										distance: 75
-									}
-								}
-							}
-						},
-						navigation: {
-						},
-						responsiveLevels:[1240,1024,778,480],
-						visibilityLevels:[1240,1024,778,480],
-						gridwidth:[1240,1024,778,480],
-						gridheight:[868,768,960,720],
-						lazyType:"none",
-          parallax: {
-            type: "off",
-            origo: "slidercenter",
-            speed: 1000,
-            levels: [0],
-            type: "scroll",
-            disable_onmobile: "on"
-          },
-						shadow:0,
-						spinner:"spinner0",
-						autoHeight:"off",
-						fullScreenAutoWidth:"off",
-						fullScreenAlignForce:"off",
-						fullScreenOffsetContainer: "",
-						fullScreenOffset: "",
-						disableProgressBar:"on",
-						hideThumbsOnMobile:"off",
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						debugMode:false,
-						fallbacks: {
-							simplifyAll:"off",
-							disableFocusListener:false,
-						}
-					});
-				}
-
-				if (typeof RsParticlesAddOn === 'function' && revapi8) {
-					RsParticlesAddOn(revapi8);
-				}
-			});	/*ready*/
-		</script>
-
 <!-- JS end -->	
 	
 	</body>
