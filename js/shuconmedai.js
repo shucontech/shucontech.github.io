@@ -60,33 +60,42 @@
 
       const submitBtn = form.querySelector('.submit-btn');
       const alertContainer = document.getElementById('form-alert');
-
-      const formData = {
-        fullName: form.querySelector('[name="fullName"]').value,
-        phone: form.querySelector('[name="phone"]').value,
-        email: form.querySelector('[name="email"]').value,
-        hospitalName: form.querySelector('[name="hospitalName"]').value,
-        message: form.querySelector('[name="message"]').value
-      };
-
-      if (!formData.fullName || !formData.email || !formData.hospitalName || !formData.message) {
-        showAlert('Please fill in all required fields (marked with *)', 'error');
-        return;
+      
+      const formData = new FormData(form);
+      
+      if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
       }
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
-
+      
       try {
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        showAlert('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
-
-        form.reset();
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+              'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+           showAlert('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
+           form.reset();
+        } else {
+           const data = await response.json();
+           if (Object.hasOwn(data, 'errors')) {
+               const errorMessages = data.errors.map(error => error.message).join(", ");
+               throw new Error(errorMessages);
+           } else {
+               throw new Error('Oops! There was a problem submitting your form');
+           }
+        }
 
       } catch (error) {
         console.error('Contact form error:', error);
-        showAlert('There was an error sending your message. Please try again or contact us directly at shucontech@gmail.com', 'error');
+        showAlert(error.message || 'There was an error sending your message. Please try again or contact us directly at shucontech@gmail.com', 'error');
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Message';
