@@ -11,7 +11,14 @@
   transition: all 0.3s ease;
   overflow: hidden;
   margin-bottom: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+/* Equal-height row for product cards */
+.display-flex-row { display: flex; flex-wrap: wrap; }
+.display-flex-row > [class*="col-"] { display: flex; flex-direction: column; }
 
 .product-card-compact:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -21,9 +28,12 @@
 /* Product Content Layout */
 .product-compact-content {
   display: flex;
-  align-items: center;
-  padding: 30px;
-  gap: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 32px 28px;
+  gap: 18px;
+  height: 100%;
 }
 
 /* Logo Section */
@@ -32,7 +42,7 @@
 }
 
 .product-compact-logo img {
-  width: 100px;
+  width: 84px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -45,21 +55,26 @@
 /* Info Section */
 .product-compact-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .product-compact-info h3 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 700;
   color: #333;
   margin-bottom: 10px;
   margin-top: 0;
+  line-height: 1.25;
 }
 
 .product-compact-description {
   color: #666;
   font-size: 0.95em;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  flex: 1;
 }
 
 /* Compact Button */
@@ -97,24 +112,24 @@
 /* Responsive Styles */
 @media (max-width: 767px) {
   .product-compact-content {
-    flex-direction: column;
     text-align: center;
+    align-items: center;
     padding: 25px 20px;
-    gap: 20px;
+    gap: 16px;
   }
-  
+
   .product-compact-logo img {
-    width: 80px;
+    width: 72px;
   }
-  
+
   .product-compact-info h3 {
-    font-size: 1.3em;
+    font-size: 1.25em;
   }
-  
+
   .product-compact-description {
     font-size: 0.9em;
   }
-  
+
   .product-compact-btn {
     font-size: 0.85em;
     padding: 7px 18px;
@@ -125,13 +140,9 @@
   .product-compact-content {
     padding: 20px 15px;
   }
-  
+
   .product-compact-logo img {
-    width: 70px;
-  }
-  
-  .product-compact-info h3 {
-    font-size: 1.2em;
+    width: 64px;
   }
 }
 

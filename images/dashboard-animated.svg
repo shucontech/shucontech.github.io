@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" preserveAspectRatio="xMidYMid slice" role="img" aria-label="ShuconMedAI Hospital Management Dashboard">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fafbfd"/>
+      <stop offset="100%" stop-color="#eef2f9"/>
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e63d8"/>
+      <stop offset="100%" stop-color="#14a37f"/>
+    </linearGradient>
+    <linearGradient id="fillBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e63d8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#1e63d8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fillTeal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14a37f" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#14a37f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fillGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5a623" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="leakRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e25c5c"/>
+      <stop offset="100%" stop-color="#c23737"/>
+    </linearGradient>
+    <linearGradient id="leakAmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f1a30" flood-opacity="0.06"/>
+    </filter>
+    <style>
+      .card { fill: #ffffff; }
+      .card-stroke { stroke: #e6ebf3; stroke-width: 1; fill: none; }
+      .grid { stroke: #eef1f7; stroke-width: 1; }
+      .axis-label { fill: #95a0bb; font: 500 9px "Plus Jakarta Sans", -apple-system, sans-serif; }
+      .title { fill: #0f1a30; font: 600 14px "Plus Jakarta Sans", -apple-system, sans-serif; }
+      .legend { fill: #5a6680; font: 500 10px "Plus Jakarta Sans", -apple-system, sans-serif; }
+      .nav-text { fill: #5a6680; font: 500 10px "Plus Jakarta Sans", -apple-system, sans-serif; }
+      .nav-text-active { fill: #d97706; font: 600 10px "Plus Jakarta Sans", -apple-system, sans-serif; }
+      .nav-section { fill: #95a0bb; font: 600 8px "Plus Jakarta Sans", -apple-system, sans-serif; letter-spacing: 0.5px; text-transform: uppercase; }
+      .leak-cat { fill: #5a6680; font: 500 9px "Plus Jakarta Sans", -apple-system, sans-serif; }
+      .leak-val { fill: #0f1a30; font: 700 9px "Plus Jakarta Sans", -apple-system, sans-serif; }
+
+      .line {
+        fill: none;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 1400;
+        stroke-dashoffset: 1400;
+        animation: drawLine 5s cubic-bezier(0.65, 0, 0.35, 1) forwards infinite;
+      }
+      .line-1 { stroke: #1e63d8; animation-delay: 0s; }
+      .line-2 { stroke: #14a37f; animation-delay: 0.3s; }
+      .line-3 { stroke: #f5a623; animation-delay: 0.6s; }
+
+      .area { opacity: 0; animation: fadeArea 5s ease-out forwards infinite; }
+      .area-1 { animation-delay: 1.0s; }
+      .area-2 { animation-delay: 1.3s; }
+      .area-3 { animation-delay: 1.6s; }
+
+      @keyframes drawLine {
+        0%   { stroke-dashoffset: 1400; }
+        45%  { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes fadeArea {
+        0%, 20% { opacity: 0; }
+        60%     { opacity: 1; }
+        100%    { opacity: 1; }
+      }
+
+      .leak-bar { transform-origin: left center; animation: barGrow 5s cubic-bezier(0.65,0,0.35,1) forwards infinite; }
+      .leak-1 { animation-delay: 0.10s; }
+      .leak-2 { animation-delay: 0.25s; }
+      .leak-3 { animation-delay: 0.40s; }
+      .leak-4 { animation-delay: 0.55s; }
+      .leak-5 { animation-delay: 0.70s; }
+      @keyframes barGrow {
+        0%   { transform: scaleX(0); }
+        45%  { transform: scaleX(1); }
+        100% { transform: scaleX(1); }
+      }
+
+      .pulse-dot { animation: pulse 1.6s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50%      { opacity: 0.5; transform: scale(1.4); }
+      }
+
+      .nav-item { opacity: 0; animation: navIn 5s ease-out forwards infinite; }
+      .nav-1  { animation-delay: 0.02s; }
+      .nav-2  { animation-delay: 0.04s; }
+      .nav-3  { animation-delay: 0.06s; }
+      .nav-4  { animation-delay: 0.08s; }
+      .nav-5  { animation-delay: 0.10s; }
+      .nav-6  { animation-delay: 0.12s; }
+      .nav-7  { animation-delay: 0.14s; }
+      .nav-8  { animation-delay: 0.16s; }
+      .nav-9  { animation-delay: 0.18s; }
+      .nav-10 { animation-delay: 0.20s; }
+      .nav-11 { animation-delay: 0.22s; }
+      .nav-12 { animation-delay: 0.24s; }
+      .nav-13 { animation-delay: 0.26s; }
+      .nav-14 { animation-delay: 0.28s; }
+      .nav-15 { animation-delay: 0.30s; }
+      .nav-16 { animation-delay: 0.32s; }
+      .nav-17 { animation-delay: 0.34s; }
+      .nav-18 { animation-delay: 0.36s; }
+      .nav-19 { animation-delay: 0.38s; }
+      @keyframes navIn {
+        0%   { opacity: 0; transform: translateX(-6px); }
+        20%  { opacity: 1; transform: translateX(0); }
+        100% { opacity: 1; transform: translateX(0); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="580" fill="url(#bgGrad)"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="180" height="580" fill="#ffffff"/>
+  <line x1="180" y1="0" x2="180" y2="580" stroke="#e6ebf3" stroke-width="1"/>
+
+  <!-- Sidebar logo -->
+  <g transform="translate(16, 14)">
+    <rect width="26" height="26" rx="6" fill="url(#brandGrad)"/>
+    <text x="34" y="12" fill="#0f1a30" font-weight="700" font-size="11" font-family="Plus Jakarta Sans, sans-serif">ShuconMedAI</text>
+    <text x="34" y="23" fill="#95a0bb" font-size="8" font-family="Plus Jakarta Sans, sans-serif">HMS Console</text>
+  </g>
+
+  <!-- Sidebar nav items -->
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="14" y="58" class="nav-section">Billing</text>
+    <g class="nav-item nav-1"><circle cx="20" cy="74" r="3" fill="#1e63d8"/><text x="32" y="77" class="nav-text">Pharmacy Invoice</text></g>
+    <g class="nav-item nav-2"><circle cx="20" cy="90" r="3" fill="#1e63d8"/><text x="32" y="93" class="nav-text">OPD Billing</text></g>
+    <g class="nav-item nav-3"><circle cx="20" cy="106" r="3" fill="#1e63d8"/><text x="32" y="109" class="nav-text">IPD Billing</text></g>
+
+    <text x="14" y="128" class="nav-section">Procedures</text>
+    <g class="nav-item nav-4"><circle cx="20" cy="144" r="3" fill="#14a37f"/><text x="32" y="147" class="nav-text">Procedure Pricing</text></g>
+    <g class="nav-item nav-5"><circle cx="20" cy="160" r="3" fill="#14a37f"/><text x="32" y="163" class="nav-text">Pathology Mgmt</text></g>
+    <g class="nav-item nav-6"><circle cx="20" cy="176" r="3" fill="#14a37f"/><text x="32" y="179" class="nav-text">Lab Reports</text></g>
+
+    <text x="14" y="198" class="nav-section">Radiology</text>
+    <g class="nav-item nav-7"><circle cx="20" cy="214" r="3" fill="#f5a623"/><text x="32" y="217" class="nav-text">Radiology Mgmt</text></g>
+    <g class="nav-item nav-8"><circle cx="20" cy="230" r="3" fill="#f5a623"/><text x="32" y="233" class="nav-text">Radiology Templates</text></g>
+
+    <text x="14" y="252" class="nav-section">Doctor</text>
+    <g class="nav-item nav-9"><circle cx="20" cy="268" r="3" fill="#7c3aed"/><text x="32" y="271" class="nav-text">Prescription Templates</text></g>
+    <g class="nav-item nav-10"><circle cx="20" cy="284" r="3" fill="#7c3aed"/><text x="32" y="287" class="nav-text">Consultations</text></g>
+
+    <text x="14" y="306" class="nav-section">IPD Management</text>
+    <g class="nav-item nav-11"><circle cx="20" cy="322" r="3" fill="#1e63d8"/><text x="32" y="325" class="nav-text">IPD Dashboard</text></g>
+    <g class="nav-item nav-12"><circle cx="20" cy="338" r="3" fill="#1e63d8"/><text x="32" y="341" class="nav-text">Patient Admission</text></g>
+    <g class="nav-item nav-13"><circle cx="20" cy="354" r="3" fill="#1e63d8"/><text x="32" y="357" class="nav-text">Patient Management</text></g>
+    <g class="nav-item nav-14"><circle cx="20" cy="370" r="3" fill="#1e63d8"/><text x="32" y="373" class="nav-text">Bed Management</text></g>
+
+    <text x="14" y="392" class="nav-section">Inventory</text>
+    <g class="nav-item nav-15"><circle cx="20" cy="408" r="3" fill="#14a37f"/><text x="32" y="411" class="nav-text">Stock &amp; Purchase</text></g>
+    <g class="nav-item nav-16"><circle cx="20" cy="424" r="3" fill="#14a37f"/><text x="32" y="427" class="nav-text">Suppliers</text></g>
+
+    <text x="14" y="446" class="nav-section">Admin</text>
+    <g class="nav-item nav-17">
+      <rect x="6" y="456" width="168" height="22" rx="6" fill="#fff5e6"/>
+      <rect x="6" y="456" width="3" height="22" rx="2" fill="#f5a623"/>
+      <circle cx="22" cy="467" r="3" fill="#f5a623"/>
+      <text x="34" y="470" class="nav-text-active">Dashboard</text>
+    </g>
+    <g class="nav-item nav-17"><circle cx="20" cy="494" r="3" fill="#5a6680"/><text x="32" y="497" class="nav-text">Superuser Prefs</text></g>
+    <g class="nav-item nav-18"><circle cx="20" cy="510" r="3" fill="#5a6680"/><text x="32" y="513" class="nav-text">Export Data</text></g>
+    <g class="nav-item nav-19"><circle cx="20" cy="526" r="3" fill="#5a6680"/><text x="32" y="529" class="nav-text">My Account</text></g>
+  </g>
+
+  <!-- Top bar -->
+  <rect x="180" y="0" width="820" height="44" fill="#ffffff"/>
+  <line x1="180" y1="44" x2="1000" y2="44" stroke="#e6ebf3" stroke-width="1"/>
+
+  <!-- Hamburger -->
+  <g transform="translate(196, 18)">
+    <rect width="14" height="2" rx="1" fill="#5a6680"/>
+    <rect y="5" width="14" height="2" rx="1" fill="#5a6680"/>
+    <rect y="10" width="14" height="2" rx="1" fill="#5a6680"/>
+  </g>
+
+  <!-- Search pill -->
+  <g transform="translate(220, 12)">
+    <rect width="380" height="20" rx="10" fill="#f6f8fc" stroke="#e6ebf3"/>
+    <circle cx="14" cy="10" r="4" fill="none" stroke="#95a0bb" stroke-width="1.4"/>
+    <line x1="17" y1="13" x2="20" y2="16" stroke="#95a0bb" stroke-width="1.4" stroke-linecap="round"/>
+    <text x="28" y="14" fill="#95a0bb" font-size="9" font-family="Plus Jakarta Sans, sans-serif">Search patients, invoices, procedures…</text>
+  </g>
+
+  <!-- Live indicator pulse -->
+  <g transform="translate(880, 22)">
+    <circle class="pulse-dot" cx="0" cy="0" r="3" fill="#14a37f"/>
+    <text x="8" y="3" fill="#14a37f" font-size="9" font-weight="600" font-family="Plus Jakarta Sans, sans-serif">LIVE</text>
+  </g>
+
+  <!-- Bell -->
+  <g transform="translate(918, 14)">
+    <path d="M8 0 a6 6 0 0 1 6 6 v5 l2 2 H 0 l2 -2 v-5 a6 6 0 0 1 6 -6 z" fill="none" stroke="#5a6680" stroke-width="1.4" stroke-linejoin="round"/>
+    <circle cx="14" cy="2" r="3" fill="#e25c5c"/>
+  </g>
+
+  <!-- Avatar -->
+  <g transform="translate(950, 8)">
+    <circle cx="14" cy="14" r="13" fill="url(#brandGrad)"/>
+    <text x="14" y="18" text-anchor="middle" fill="#ffffff" font-weight="700" font-size="10" font-family="Plus Jakarta Sans, sans-serif">PJ</text>
+  </g>
+
+  <!-- ============== OPD Visits card ============== -->
+  <g filter="url(#cardShadow)">
+    <rect x="200" y="60" width="780" height="220" rx="10" class="card"/>
+    <rect x="200" y="60" width="780" height="220" rx="10" class="card-stroke"/>
+  </g>
+  <text x="220" y="86" class="title">OPD Visits (New vs Returning)</text>
+
+  <g class="axis-label" text-anchor="end">
+    <text x="248" y="113">700</text>
+    <text x="248" y="138">600</text>
+    <text x="248" y="163">500</text>
+    <text x="248" y="188">400</text>
+    <text x="248" y="213">300</text>
+    <text x="248" y="238">200</text>
+  </g>
+  <g class="grid">
+    <line x1="252" y1="110" x2="960" y2="110"/>
+    <line x1="252" y1="135" x2="960" y2="135"/>
+    <line x1="252" y1="160" x2="960" y2="160"/>
+    <line x1="252" y1="185" x2="960" y2="185"/>
+    <line x1="252" y1="210" x2="960" y2="210"/>
+    <line x1="252" y1="235" x2="960" y2="235"/>
+  </g>
+  <g class="axis-label" text-anchor="middle">
+    <text x="270" y="252">May 05</text>
+    <text x="370" y="252">May 10</text>
+    <text x="470" y="252">May 15</text>
+    <text x="570" y="252">May 20</text>
+    <text x="670" y="252">May 25</text>
+    <text x="770" y="252">May 30</text>
+    <text x="870" y="252">Jun 04</text>
+  </g>
+
+  <path class="area area-3" fill="url(#fillGold)"
+        d="M 260,140 C 290,135 305,150 325,138 C 360,120 380,135 410,128 C 445,118 465,140 495,135 C 525,128 555,150 585,142 C 615,134 645,124 675,118 C 710,128 735,148 765,138 C 800,128 825,144 855,136 C 890,128 920,138 955,128 L 955,235 L 260,235 Z"/>
+  <path class="area area-2" fill="url(#fillTeal)"
+        d="M 260,180 C 290,168 310,178 335,170 C 365,160 390,180 415,172 C 445,160 470,184 500,178 C 530,170 555,184 585,176 C 615,168 645,180 675,170 C 705,160 735,178 765,168 C 795,158 825,178 855,168 C 890,158 920,178 955,170 L 955,235 L 260,235 Z"/>
+  <path class="area area-1" fill="url(#fillBlue)"
+        d="M 260,220 C 290,216 310,222 335,218 C 365,212 390,224 415,218 C 445,210 470,224 500,218 C 530,212 555,224 585,218 C 615,210 645,224 675,218 C 705,212 735,222 765,218 C 795,212 825,224 855,218 C 890,212 920,224 955,220 L 955,235 L 260,235 Z"/>
+
+  <path class="line line-3"
+        d="M 260,140 C 290,135 305,150 325,138 C 360,120 380,135 410,128 C 445,118 465,140 495,135 C 525,128 555,150 585,142 C 615,134 645,124 675,118 C 710,128 735,148 765,138 C 800,128 825,144 855,136 C 890,128 920,138 955,128"/>
+  <path class="line line-2"
+        d="M 260,180 C 290,168 310,178 335,170 C 365,160 390,180 415,172 C 445,160 470,184 500,178 C 530,170 555,184 585,176 C 615,168 645,180 675,170 C 705,160 735,178 765,168 C 795,158 825,178 855,168 C 890,158 920,178 955,170"/>
+  <path class="line line-1"
+        d="M 260,220 C 290,216 310,222 335,218 C 365,212 390,224 415,218 C 445,210 470,224 500,218 C 530,212 555,224 585,218 C 615,210 645,224 675,218 C 705,212 735,222 765,218 C 795,212 825,224 855,218 C 890,212 920,224 955,220"/>
+
+  <g transform="translate(380, 270)">
+    <circle cx="0" cy="0" r="4" fill="#1e63d8"/>
+    <text x="10" y="3" class="legend">New Patients</text>
+    <circle cx="120" cy="0" r="4" fill="#14a37f"/>
+    <text x="130" y="3" class="legend">Returning Patients</text>
+    <circle cx="270" cy="0" r="4" fill="#f5a623"/>
+    <text x="280" y="3" class="legend">Total Visits</text>
+  </g>
+
+  <!-- ============== Daily Revenue card ============== -->
+  <g filter="url(#cardShadow)">
+    <rect x="200" y="300" width="500" height="260" rx="10" class="card"/>
+    <rect x="200" y="300" width="500" height="260" rx="10" class="card-stroke"/>
+  </g>
+  <text x="220" y="326" class="title">Daily Revenue</text>
+
+  <g class="axis-label" text-anchor="end">
+    <text x="258" y="356">800,000</text>
+    <text x="258" y="396">600,000</text>
+    <text x="258" y="436">400,000</text>
+    <text x="258" y="476">200,000</text>
+    <text x="258" y="516">0</text>
+  </g>
+  <g class="grid">
+    <line x1="262" y1="352" x2="680" y2="352"/>
+    <line x1="262" y1="392" x2="680" y2="392"/>
+    <line x1="262" y1="432" x2="680" y2="432"/>
+    <line x1="262" y1="472" x2="680" y2="472"/>
+    <line x1="262" y1="512" x2="680" y2="512"/>
+  </g>
+
+  <path class="area area-2" fill="url(#fillTeal)"
+        d="M 270,400 C 295,385 315,415 340,395 C 370,370 395,420 425,400 C 460,375 485,415 515,395 C 545,375 575,405 605,385 C 635,370 665,400 680,390 L 680,512 L 270,512 Z"/>
+  <path class="area area-3" fill="url(#fillGold)"
+        d="M 270,490 C 300,485 320,495 345,485 C 375,475 400,495 425,488 C 455,478 480,495 510,488 C 540,478 570,492 600,485 C 630,478 660,495 680,488 L 680,512 L 270,512 Z"/>
+  <path class="area area-1" fill="url(#fillBlue)"
+        d="M 270,508 C 300,506 320,510 345,506 C 375,502 400,510 425,506 C 455,502 480,510 510,506 C 540,502 570,510 600,506 C 630,502 660,510 680,506 L 680,512 L 270,512 Z"/>
+
+  <path class="line line-2"
+        d="M 270,400 C 295,385 315,415 340,395 C 370,370 395,420 425,400 C 460,375 485,415 515,395 C 545,375 575,405 605,385 C 635,370 665,400 680,390"/>
+  <path class="line line-3"
+        d="M 270,490 C 300,485 320,495 345,485 C 375,475 400,495 425,488 C 455,478 480,495 510,488 C 540,478 570,492 600,485 C 630,478 660,495 680,488"/>
+  <path class="line line-1"
+        d="M 270,508 C 300,506 320,510 345,506 C 375,502 400,510 425,506 C 455,502 480,510 510,506 C 540,502 570,510 600,506 C 630,502 660,510 680,506"/>
+
+  <g class="axis-label" text-anchor="middle">
+    <text x="280" y="530">May 05</text>
+    <text x="370" y="530">May 12</text>
+    <text x="460" y="530">May 19</text>
+    <text x="550" y="530">May 26</text>
+    <text x="640" y="530">Jun 04</text>
+  </g>
+  <g transform="translate(310, 548)">
+    <circle cx="0" cy="0" r="3.5" fill="#1e63d8"/>
+    <text x="8" y="3" class="legend">OPD Revenue</text>
+    <circle cx="100" cy="0" r="3.5" fill="#14a37f"/>
+    <text x="108" y="3" class="legend">Lab Revenue</text>
+    <circle cx="190" cy="0" r="3.5" fill="#f5a623"/>
+    <text x="198" y="3" class="legend">Pharmacy Revenue</text>
+  </g>
+
+  <!-- ============== Revenue Leakage card ============== -->
+  <g filter="url(#cardShadow)">
+    <rect x="720" y="300" width="260" height="260" rx="10" class="card"/>
+    <rect x="720" y="300" width="260" height="260" rx="10" class="card-stroke"/>
+  </g>
+  <text x="740" y="326" class="title">Revenue Leakage</text>
+  <text x="740" y="342" fill="#95a0bb" font-size="9" font-family="Plus Jakarta Sans, sans-serif">Flagged this period</text>
+
+  <!-- Total leak summary -->
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="740" y="362" fill="#95a0bb" font-size="8" letter-spacing="0.5" font-weight="600">TOTAL LEAKAGE</text>
+    <text x="740" y="382" fill="#c23737" font-size="18" font-weight="700">₹ 4.82 L</text>
+    <text x="855" y="362" fill="#95a0bb" font-size="8" letter-spacing="0.5" font-weight="600">RECOVERED</text>
+    <text x="855" y="382" fill="#14a37f" font-size="14" font-weight="700">₹ 1.96 L</text>
+  </g>
+
+  <!-- Horizontal bars -->
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="740" y="412" class="leak-cat">Lab Cancellations</text>
+    <rect x="850" y="404" width="110" height="8" rx="4" fill="#f4eef0"/>
+    <rect class="leak-bar leak-1" x="850" y="404" width="101" height="8" rx="4" fill="url(#leakRed)"/>
+    <text x="740" y="426" class="leak-val">₹ 1,84,200</text>
+
+    <text x="740" y="446" class="leak-cat">Pharmacy Refunds</text>
+    <rect x="850" y="438" width="110" height="8" rx="4" fill="#f4eef0"/>
+    <rect class="leak-bar leak-2" x="850" y="438" width="86" height="8" rx="4" fill="url(#leakRed)"/>
+    <text x="740" y="460" class="leak-val">₹ 1,12,400</text>
+
+    <text x="740" y="480" class="leak-cat">Unbilled Procedures</text>
+    <rect x="850" y="472" width="110" height="8" rx="4" fill="#f4eef0"/>
+    <rect class="leak-bar leak-3" x="850" y="472" width="64" height="8" rx="4" fill="url(#leakAmber)"/>
+    <text x="740" y="494" class="leak-val">₹ 86,300</text>
+
+    <text x="740" y="514" class="leak-cat">Discount Misuse</text>
+    <rect x="850" y="506" width="110" height="8" rx="4" fill="#f4eef0"/>
+    <rect class="leak-bar leak-4" x="850" y="506" width="45" height="8" rx="4" fill="url(#leakAmber)"/>
+    <text x="740" y="528" class="leak-val">₹ 58,700</text>
+
+    <text x="740" y="548" class="leak-cat">IPD No-shows</text>
+    <rect x="850" y="540" width="110" height="8" rx="4" fill="#f4eef0"/>
+    <rect class="leak-bar leak-5" x="850" y="540" width="31" height="8" rx="4" fill="#14a37f"/>
+  </g>
+
+</svg>
