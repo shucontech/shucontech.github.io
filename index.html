@@ -314,6 +314,157 @@
         </div>
     </section>
 
+    <!-- LEAKAGE ESTIMATOR -->
+    <section class="section calc" id="calculator">
+        <style>
+            .calc { background: var(--paper); }
+            .calc-card {
+                margin-top: 40px; background: var(--surface); border: 1px solid var(--line);
+                border-radius: var(--radius); box-shadow: var(--shadow-md);
+                display: grid; grid-template-columns: 1.1fr 0.9fr; overflow: hidden;
+            }
+            .calc-inputs { padding: 34px 38px; }
+            .calc-field { margin-bottom: 26px; }
+            .calc-field:last-child { margin-bottom: 0; }
+            .calc-field .cf-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+            .calc-field label { font-size: 14px; font-weight: 700; color: var(--ink-2); }
+            .calc-field .cf-val { font-size: 16px; font-weight: 800; color: var(--accent-2); font-variant-numeric: tabular-nums; }
+            .calc-field input[type=range] {
+                width: 100%; -webkit-appearance: none; appearance: none; height: 6px;
+                border-radius: 999px; background: var(--paper-2); outline: none; cursor: pointer;
+            }
+            .calc-field input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%;
+                background: var(--accent); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(37,99,235,0.4);
+            }
+            .calc-field input[type=range]::-moz-range-thumb {
+                width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
+                border: 3px solid #fff; box-shadow: 0 2px 8px rgba(37,99,235,0.4);
+            }
+            .calc-out {
+                background: linear-gradient(120deg, #0f1a30, #16264a); color: #eaf0fb;
+                padding: 38px; display: flex; flex-direction: column; justify-content: center;
+            }
+            .calc-out .co-label { font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.12em; color: #9fb0d0; margin: 0 0 8px; }
+            .calc-out .co-big { font-family: var(--serif); font-size: clamp(38px, 5.5vw, 56px); line-height: 1; font-weight: 700; color: var(--mint); }
+            .calc-out .co-sub { font-size: 14px; color: #c6d2ea; margin: 10px 0 22px; }
+            .calc-out .co-split { display: flex; gap: 26px; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; }
+            .calc-out .co-item b { display: block; font-size: 20px; font-weight: 800; color: #fff; font-variant-numeric: tabular-nums; }
+            .calc-out .co-item span { font-size: 12.5px; color: #9fb0d0; }
+            .calc-out .co-cta { margin-top: 26px; }
+            .calc-disclaimer { margin-top: 16px; font-size: 12.5px; color: var(--muted-2); text-align: center; }
+            @media (max-width: 820px) {
+                .calc-card { grid-template-columns: 1fr; }
+                .calc-inputs { padding: 28px 24px; }
+                .calc-out { padding: 30px 24px; }
+            }
+        </style>
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Estimate your exposure</span>
+                <h2 class="section-title">How much might your hospital be losing?</h2>
+                <p class="section-sub">
+                    Move the sliders to match your hospital. This is an illustrative estimate of the revenue
+                    at risk in the gaps between departments — the leakage Shucon is built to surface.
+                </p>
+            </div>
+
+            <div class="calc-card">
+                <div class="calc-inputs">
+                    <div class="calc-field">
+                        <div class="cf-top">
+                            <label for="cBeds">IPD beds</label>
+                            <span class="cf-val" id="cBedsVal">100</span>
+                        </div>
+                        <input type="range" id="cBeds" min="10" max="5000" step="5" value="100">
+                    </div>
+                    <div class="calc-field">
+                        <div class="cf-top">
+                            <label for="cOpd">OPD patients / day</label>
+                            <span class="cf-val" id="cOpdVal">300</span>
+                        </div>
+                        <input type="range" id="cOpd" min="50" max="10000" step="10" value="300">
+                    </div>
+                    <div class="calc-field">
+                        <div class="cf-top">
+                            <label for="cBedRev">Avg revenue per IPD bed-day</label>
+                            <span class="cf-val" id="cBedRevVal">₹15,000</span>
+                        </div>
+                        <input type="range" id="cBedRev" min="3000" max="100000" step="500" value="15000">
+                    </div>
+                    <div class="calc-field">
+                        <div class="cf-top">
+                            <label for="cLeak">Estimated leakage rate</label>
+                            <span class="cf-val" id="cLeakVal">5.0%</span>
+                        </div>
+                        <input type="range" id="cLeak" min="0.5" max="10" step="0.1" value="5">
+                    </div>
+                </div>
+                <div class="calc-out">
+                    <p class="co-label">Estimated revenue at risk / year</p>
+                    <div class="co-big" id="cAnnual">₹1.7 Cr</div>
+                    <p class="co-sub" id="cContext">≈ 2.0% of ~₹7.0 Cr in annual revenue</p>
+                    <div class="co-split">
+                        <div class="co-item"><b id="cMonthly">₹14.0 L</b><span>per month at risk</span></div>
+                        <div class="co-item"><b id="cRevenue">₹58.5 L</b><span>monthly revenue base</span></div>
+                    </div>
+                    <div class="co-cta">
+                        <a class="btn btn-primary" href="#contact">See where it's leaking</a>
+                    </div>
+                </div>
+            </div>
+            <p class="calc-disclaimer">
+                Illustrative estimate only, based on typical Indian hospital operating assumptions
+                (≈₹700 average OPD revenue per visit, 65% IPD occupancy). Actual leakage varies by hospital.
+            </p>
+        </div>
+
+        <script>
+            (function () {
+                var OPD_REV = 700;      // avg revenue per OPD visit (₹)
+                var OCCUPANCY = 0.65;   // IPD bed occupancy
+                var DAYS = 30;          // days per month
+
+                var beds = document.getElementById('cBeds');
+                var opd = document.getElementById('cOpd');
+                var bedRev = document.getElementById('cBedRev');
+                var leak = document.getElementById('cLeak');
+
+                function inr(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+                function inrCompact(n) {
+                    if (n >= 1e7) return '₹' + (n / 1e7).toFixed(n >= 1e8 ? 0 : 1) + ' Cr';
+                    if (n >= 1e5) return '₹' + (n / 1e5).toFixed(n >= 1e6 ? 0 : 1) + ' L';
+                    return inr(n);
+                }
+
+                function update() {
+                    var nBeds = +beds.value, nOpd = +opd.value, nBedRev = +bedRev.value, nLeak = +leak.value;
+
+                    document.getElementById('cBedsVal').textContent = nBeds;
+                    document.getElementById('cOpdVal').textContent = nOpd;
+                    document.getElementById('cBedRevVal').textContent = inr(nBedRev);
+                    document.getElementById('cLeakVal').textContent = nLeak.toFixed(1) + '%';
+
+                    var monthlyOpd = nOpd * DAYS * OPD_REV;
+                    var monthlyIpd = nBeds * OCCUPANCY * DAYS * nBedRev;
+                    var monthlyRevenue = monthlyOpd + monthlyIpd;
+                    var monthlyLeak = monthlyRevenue * (nLeak / 100);
+                    var annualLeak = monthlyLeak * 12;
+                    var annualRevenue = monthlyRevenue * 12;
+
+                    document.getElementById('cAnnual').textContent = inrCompact(annualLeak);
+                    document.getElementById('cMonthly').textContent = inrCompact(monthlyLeak);
+                    document.getElementById('cRevenue').textContent = inrCompact(monthlyRevenue);
+                    document.getElementById('cContext').textContent =
+                        '≈ ' + nLeak.toFixed(1) + '% of ~' + inrCompact(annualRevenue) + ' in annual revenue';
+                }
+
+                [beds, opd, bedRev, leak].forEach(function (el) { el.addEventListener('input', update); });
+                update();
+            })();
+        </script>
+    </section>
+
     <!-- HOW IT WORKS -->
     <section class="section how" id="how">
         <div class="wrap">
