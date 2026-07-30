@@ -1,0 +1,112 @@
+/* ============================================================
+   Shucon MedAI — Blog styles
+   Depends on css/shucon-vc.css (design tokens + nav/footer/btn)
+   ============================================================ */
+
+/* ---------- Blog hero ---------- */
+.blog-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #12264c 100%);
+  color: #eaf0fb;
+  padding: 118px 0 56px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.blog-hero .eyebrow { color: #8fb4ff; }
+.blog-hero .eyebrow::before { background: #8fb4ff; }
+.blog-hero h1 {
+  font-family: var(--serif); font-weight: 700; letter-spacing: -0.02em;
+  font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; margin: 10px 0 12px; color: #fff;
+}
+.blog-hero p { font-size: 18px; color: #c6d2ea; max-width: 720px; margin: 0; }
+
+/* ---------- Blog listing grid ---------- */
+.blog-list { padding: 70px 0 90px; background: var(--paper); }
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.post-card {
+  display: flex; flex-direction: column; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-sm); overflow: hidden; transition: transform .2s ease, box-shadow .2s ease;
+}
+.post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.post-card .pc-body { padding: 26px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+.post-tag {
+  align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent-deep); background: var(--accent-soft);
+  padding: 5px 10px; border-radius: 999px; margin-bottom: 14px;
+}
+.post-card h2 { font-size: 20px; line-height: 1.25; font-weight: 700; margin: 0 0 10px; color: var(--ink-2); }
+.post-card h2 a { color: inherit; }
+.post-card h2 a:hover { color: var(--accent-2); }
+.post-card p { font-size: 14.5px; color: var(--muted); margin: 0 0 18px; flex: 1; }
+.post-meta { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--muted-2); font-weight: 600; }
+.post-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--muted-2); }
+
+/* Featured card spans full width */
+.post-card.feat { grid-column: 1 / -1; flex-direction: row; }
+.post-card.feat .pc-side {
+  flex: 0 0 42%; background: linear-gradient(135deg, var(--navy), #12264c); color: #fff;
+  padding: 40px; display: flex; flex-direction: column; justify-content: center;
+}
+.post-card.feat .pc-side .big { font-family: var(--serif); font-size: clamp(34px, 4vw, 52px); color: var(--mint); font-weight: 700; line-height: 1; }
+.post-card.feat .pc-side .cap { font-size: 13px; color: #9fb0d0; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 8px; }
+.post-card.feat .pc-body { padding: 40px; }
+.post-card.feat h2 { font-size: 26px; }
+
+/* ---------- Article ---------- */
+.article { background: var(--surface); }
+.article-head { padding: 116px 0 30px; background: var(--paper); border-bottom: 1px solid var(--line); }
+.breadcrumbs { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.breadcrumbs a { color: var(--muted); }
+.breadcrumbs a:hover { color: var(--accent-2); }
+.article-head .post-tag { margin-bottom: 16px; }
+.article-head h1 {
+  font-family: var(--serif); font-weight: 700; letter-spacing: -0.02em;
+  font-size: clamp(28px, 4vw, 44px); line-height: 1.14; margin: 0 0 16px; color: var(--ink-2);
+  max-width: 900px;
+}
+.article-head .lede { font-size: 19px; color: var(--muted); max-width: 780px; margin: 0 0 18px; line-height: 1.5; }
+.article-meta { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--muted-2); font-weight: 600; }
+.article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--muted-2); }
+
+.prose { width: min(760px, calc(100% - 44px)); margin: 0 auto; padding: 52px 0 24px; }
+.prose h2 { font-family: var(--serif); font-size: 28px; font-weight: 700; color: var(--ink-2); margin: 44px 0 14px; letter-spacing: -0.01em; }
+.prose h3 { font-size: 20px; font-weight: 700; color: var(--ink-2); margin: 30px 0 10px; }
+.prose p { font-size: 17px; line-height: 1.72; color: #2b364b; margin: 0 0 18px; }
+.prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+.prose li { font-size: 17px; line-height: 1.65; color: #2b364b; margin-bottom: 10px; }
+.prose a { color: var(--accent-2); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.prose a.btn { text-decoration: none; font-weight: 700; }
+.prose a.btn.btn-primary { color: #fff; }
+.prose strong { color: var(--ink-2); }
+.prose blockquote {
+  margin: 26px 0; padding: 18px 24px; border-left: 4px solid var(--accent);
+  background: var(--paper-2); border-radius: 0 12px 12px 0; color: var(--ink-2); font-size: 17px;
+}
+.prose table { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; }
+.prose th, .prose td { border: 1px solid var(--line); padding: 11px 14px; text-align: left; }
+.prose th { background: var(--paper-2); font-weight: 700; color: var(--ink-2); }
+
+/* Key-takeaway / callout box */
+.callout {
+  margin: 30px 0; background: var(--paper); border: 1px solid var(--line);
+  border-radius: var(--radius-sm); padding: 22px 24px;
+}
+.callout h4 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-deep); }
+.callout p { margin: 0; font-size: 15.5px; color: var(--muted); }
+
+/* In-article Shucon CTA band */
+.cta-band {
+  margin: 46px 0 10px; background: linear-gradient(120deg, var(--navy), #16264a);
+  color: #eaf0fb; border-radius: var(--radius); padding: 34px 38px;
+}
+.cta-band h3 { font-family: var(--serif); font-size: 26px; color: #fff; margin: 0 0 8px; font-weight: 700; }
+.cta-band p { color: #c6d2ea; font-size: 16px; margin: 0 0 20px; }
+
+/* Related posts */
+.related { background: var(--paper); border-top: 1px solid var(--line); padding: 60px 0 80px; }
+.related h2 { font-family: var(--serif); font-size: 26px; font-weight: 700; margin: 0 0 26px; color: var(--ink-2); }
+
+@media (max-width: 900px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .post-card.feat { flex-direction: column; }
+  .post-card.feat .pc-side { flex-basis: auto; }
+}

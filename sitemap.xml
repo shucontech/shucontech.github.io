@@ -3,13 +3,43 @@
 		xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://shucontech.in/</loc>
-		<lastmod>2026-07-23</lastmod>
+		<lastmod>2026-07-30</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 		<image:image>
 			<image:loc>https://shucontech.in/images/logo-bg.png</image:loc>
 			<image:title>Shucon MedAI – AI Hospital Operating System &amp; Revenue Leakage Detection</image:title>
 		</image:image>
+	</url>
+	<url>
+		<loc>https://shucontech.in/blog/</loc>
+		<lastmod>2026-07-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://shucontech.in/blog/hospital-revenue-leakage-guide.html</loc>
+		<lastmod>2026-07-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://shucontech.in/blog/pharmacy-inventory-reconciliation.html</loc>
+		<lastmod>2026-07-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://shucontech.in/blog/fragmented-hospital-software.html</loc>
+		<lastmod>2026-07-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://shucontech.in/blog/arpob-hospital-guide.html</loc>
+		<lastmod>2026-07-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
 	</url>
 </urlset>
 
