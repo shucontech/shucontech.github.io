@@ -3,13 +3,61 @@
 		xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://shuconmedai.com/</loc>
-		<lastmod>2026-07-30</lastmod>
+		<lastmod>2026-09-16</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 		<image:image>
 			<image:loc>https://shuconmedai.com/images/logo-bg.png</image:loc>
 			<image:title>Shucon MedAI – AI Hospital Operating System &amp; Revenue Leakage Detection</image:title>
 		</image:image>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/hospital-revenue-leakage/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/hospital-ai/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/hospital-operations-ai/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/hospital-billing-leakage/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/hospital-pharmacy-inventory/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/case-study/hospital-pharmacy-revenue-leakage/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/uae-hospital-ai/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/hospital-revenue-leakage-checklist/</loc>
+		<lastmod>2026-09-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://shuconmedai.com/blog/</loc>

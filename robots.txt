@@ -6,5 +6,7 @@ Disallow: /*.bak$
 Disallow: /rs-plugin/
 Disallow: /revo-slider-5/
 Disallow: /revo-slider-demo/
+Disallow: /index-prev-hms.html
+Disallow: /visiting-card-saksham.html
 
 Sitemap: https://shuconmedai.com/sitemap.xml

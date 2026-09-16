@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -122,12 +123,11 @@
                 <img src="../images/logo-bg.png" alt="Shucon MedAI hospital operating system logo" width="180" height="40" decoding="async">
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html#problem">The problem</a></li>
+                <li><a href="../hospital-revenue-leakage/">Revenue leakage</a></li>
+                <li><a href="../hospital-ai/">Hospital AI</a></li>
                 <li><a href="../index.html#calculator">Leakage calculator</a></li>
-                <li><a href="../index.html#how">How it works</a></li>
-                <li><a href="../index.html#modules">Platform</a></li>
                 <li><a href="index.html">Blog</a></li>
-                <li><a class="nav-cta" href="../index.html#contact">Book a demo</a></li>
+                <li><a class="nav-cta" onclick="gtag('event','revenue_review_clicked',{page_path:'/blog/hospital-revenue-leakage-guide.html'});" href="../index.html#contact">Revenue review</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -243,7 +243,8 @@
                     records and a recommended action. It runs over your existing systems first, so you can prove the
                     recovery before migrating anything.
                 </p>
-                <a class="btn btn-primary" href="../index.html#contact">Book a demo</a>
+                <a class="btn btn-primary" onclick="gtag('event','revenue_review_clicked',{content_group:'revenue_leakage'});" href="../index.html#contact">Book a Hospital Revenue Review</a>
+                <a class="text-link" href="../hospital-revenue-leakage/">Explore hospital revenue leakage detection</a>
             </div>
 
             <h2>How to actually stop revenue leakage</h2>
@@ -337,6 +338,8 @@
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <a href="index.html">Blog</a>
+                    <a href="../hospital-revenue-leakage-checklist/">25-point leakage checklist</a>
+                    <a href="../case-study/hospital-pharmacy-revenue-leakage/">Pharmacy leakage case study</a>
                     <a href="mailto:saksham@shucontech.in">saksham@shucontech.in</a>
                     <p>Dehradun, India 248003</p>
                 </div>
