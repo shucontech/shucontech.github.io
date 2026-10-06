@@ -14,14 +14,17 @@
 
   var logoLink = document.querySelector('.nav-logo');
   var root = logoLink ? (logoLink.getAttribute('href') || '').replace(/index\.html$/, '') : '';
+  if (root === './') root = '';
 
-  // Links point at index.html so local file:// previews work; on the live site use the canonical folder URLs.
-  if (/^https?:$/.test(window.location.protocol)) {
-    document.querySelectorAll('a[href*="index.html"]').forEach(function (a) {
-      var href = a.getAttribute('href');
-      if (/^(https?:|mailto:|tel:|\/\/)/.test(href) && href.indexOf(window.location.host) === -1) return;
-      var clean = href.replace(/(^|\/)index\.html(?=$|[#?])/, '$1');
-      a.setAttribute('href', clean === '' ? './' : clean);
+  // Links use canonical folder URLs; local file:// previews need explicit index.html.
+  var isFile = window.location.protocol === 'file:';
+  function link(href) {
+    if (!isFile || /^(https?:|mailto:|tel:|\/\/|#)/.test(href)) return href;
+    return href.replace(/^([^#?]*\/)(?=$|[#?])/, '$1index.html');
+  }
+  if (isFile) {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      a.setAttribute('href', link(a.getAttribute('href')));
     });
   }
 
@@ -73,7 +76,7 @@
   var heroEl = document.querySelector('.agent-hero, .landing-hero, .commercial-hero, .blog-hero, .article-head, header');
   sticky = document.createElement('div');
   sticky.className = 'sticky-cta';
-  sticky.innerHTML = '<span>See an agent run on your workflow</span><a href="' + root + 'index.html#contact" data-event="demo_clicked">Book a demo</a>';
+  sticky.innerHTML = '<span>See an agent run on your workflow</span><a href="' + link((root || './') + '#contact') + '" data-event="demo_clicked">Book a demo</a>';
   document.body.appendChild(sticky);
 
   /* WhatsApp: floating button + one-time CEO modal after 15s */
@@ -211,9 +214,9 @@
       '<h3>Request received</h3>' +
       '<p>We will reply within one business day with times for a 30-minute discovery call. While you wait:</p>' +
       '<div class="next-links">' +
-      '<a href="' + root + 'hospital-revenue-leakage-checklist/index.html">Run the 25-point revenue leakage audit</a>' +
-      '<a href="' + root + 'ai-agents/index.html">Compare all agent suites</a>' +
-      '<a href="' + root + 'leadership/saksham-gupta/index.html">Meet the founder</a>' +
+      '<a href="' + link(root + 'hospital-revenue-leakage-checklist/') + '">Run the 25-point revenue leakage audit</a>' +
+      '<a href="' + link(root + 'ai-agents/') + '">Compare all agent suites</a>' +
+      '<a href="' + link(root + 'leadership/saksham-gupta/') + '">Meet the founder</a>' +
       '</div></div>';
   }
 

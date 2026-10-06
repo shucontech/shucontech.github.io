@@ -1,0 +1,157 @@
+go_live,slug,working_title,primary_keyword,category,product,status
+2026-10-07,alos-average-length-of-stay,What is ALOS in a Hospital? Average Length of Stay Formula,alos in hospital,Hospital finance,stakeholder-action,written
+2026-10-09,tpa-claim-rejection-reasons,TPA Claim Rejection Reasons and How Hospitals Can Prevent Them,tpa claim rejection reasons,Insurance & claims,insurance-claims,written
+2026-10-12,bed-occupancy-rate-formula,Bed Occupancy Rate Formula: How to Calculate Hospital Occupancy,bed occupancy rate formula,Hospital finance,stakeholder-action,written
+2026-10-14,hospital-management-system-modules,Hospital Management System Modules: The Complete List,hospital management system modules,Hospital software,hms,written
+2026-10-16,opd-to-ipd-conversion-ratio,"OPD to IPD Conversion Ratio: Formula, Benchmarks and How to Improve It",opd to ipd conversion ratio,Hospital finance,patient-engagement,written
+2026-10-19,ai-agents-in-healthcare,AI Agents in Healthcare: What They Are and How Hospitals Use Them,ai agents in healthcare,Healthcare AI,ai-agents,written
+2026-10-21,hospital-kpis-list,Hospital KPIs: 25 Metrics Every Hospital Administrator Should Track,hospital kpis,Hospital finance,stakeholder-action,written
+2026-10-23,cashless-claim-process-hospital,Cashless Claim Process in Hospitals: Step-by-Step Guide,cashless claim process hospital,Insurance & claims,insurance-claims,written
+2026-10-26,charge-capture-in-hospitals,Charge Capture in Hospitals: Why Services Go Unbilled and How to Fix It,charge capture hospital,Revenue leakage,revenue-leakage,written
+2026-10-28,how-to-choose-hospital-management-software,How to Choose Hospital Management Software: A Buyer's Checklist,how to choose hospital management software,Hospital software,hms,written
+2026-10-30,bed-turnover-rate,"Bed Turnover Rate: Formula, Interval and What It Tells You",bed turnover rate formula,Hospital finance,stakeholder-action,written
+2026-11-02,ai-voice-agents-for-hospitals,"AI Voice Agents for Hospitals: Use Cases, Benefits and Risks",ai voice agent for hospitals,Healthcare AI,patient-engagement,written
+2026-11-04,hospital-billing-process,Hospital Billing Process: Step-by-Step From Admission to Discharge,hospital billing process,Revenue leakage,revenue-leakage,written
+2026-11-06,pre-authorization-cashless-hospitalisation,Pre-Authorization for Cashless Hospitalisation: Process and Checklist,pre authorization process in hospital,Insurance & claims,insurance-claims,written
+2026-11-09,hospital-revenue-cycle-management-india,Hospital Revenue Cycle Management in India: A Practical Guide,hospital revenue cycle management india,Revenue leakage,revenue-leakage,written
+2026-11-11,hospital-software-cost-india,Hospital Software Cost in India: What Drives HMS Pricing,hospital software cost india,Hospital software,hms,written
+2026-11-13,claim-deductions-hospital-bills,Insurance Claim Deductions in Hospital Bills: Common Causes and Fixes,claim deductions in hospital bill,Insurance & claims,insurance-claims,written
+2026-11-16,ar-days-hospital,AR Days in Hospitals: How to Calculate and Reduce Receivable Days,ar days hospital,Hospital finance,insurance-claims,written
+2026-11-18,ot-billing-leakage,OT Billing Leakage: How Hospitals Lose Revenue in the Operation Theatre,ot billing,Revenue leakage,revenue-leakage,written
+2026-11-20,cloud-vs-on-premise-hospital-software,Cloud vs On-Premise Hospital Software: Which Should You Choose?,cloud vs on premise hospital software,Hospital software,hms,written
+2026-11-23,expiry-management-hospital-pharmacy,Expiry Management in Hospital Pharmacy: Reduce Write-Offs,pharmacy expiry management,Pharmacy & inventory,pharmacy,written
+2026-11-25,ai-in-hospital-operations-use-cases,AI in Hospital Operations: 12 Practical Use Cases,ai in hospital operations,Healthcare AI,ai-agents,written
+2026-11-27,discharge-process-tat,Hospital Discharge Process: How to Reduce Discharge TAT,discharge tat in hospital,Hospital operations,stakeholder-action,written
+2026-11-30,abc-ved-analysis-hospital-inventory,ABC VED Analysis in Hospital Inventory: Method and Example,abc ved analysis,Pharmacy & inventory,pharmacy,written
+2026-12-02,how-to-increase-hospital-revenue,How to Increase Hospital Revenue: 15 Proven Strategies,how to increase hospital revenue,Growth & strategy,revenue-leakage,written
+2026-12-04,patient-follow-up-calls-after-discharge,"Patient Follow-Up Calls After Discharge: Script, Timing and Automation",patient follow up after discharge,Patient experience,patient-engagement,written
+2026-12-07,hospital-mis-report,"Hospital MIS Report: Format, Metrics and Daily Dashboard",hospital mis report format,Hospital operations,stakeholder-action,written
+2026-12-09,unbilled-services-audit,Unbilled Services Audit: How to Find Missed Hospital Charges,unbilled services hospital,Revenue leakage,revenue-leakage,written
+2026-12-11,hms-implementation-plan,"HMS Implementation Plan: Timeline, Steps and Common Mistakes",hms implementation,Hospital software,hms,written
+2026-12-14,clean-claim-rate-denial-rate,Clean Claim Rate and Denial Rate: Formulas for Hospitals,clean claim rate formula,Insurance & claims,insurance-claims,written
+2026-12-16,reduce-appointment-no-shows,How to Reduce Appointment No-Shows in Hospitals and Clinics,reduce patient no shows,Patient experience,patient-engagement,written
+2026-12-18,hospital-discount-refund-controls,Hospital Discount and Refund Controls: Stop Revenue Leakage,hospital discount policy,Revenue leakage,revenue-leakage,written
+2026-12-21,human-in-the-loop-ai-healthcare,Human-in-the-Loop AI in Healthcare: Safe Automation Explained,human in the loop ai healthcare,Healthcare AI,custom-ai,written
+2026-12-23,pharmacy-pilferage-prevention,Pharmacy Pilferage in Hospitals: Detection and Prevention,pharmacy pilferage,Pharmacy & inventory,pharmacy,written
+2026-12-25,emr-vs-ehr-vs-hms,EMR vs EHR vs HMS: Differences Explained for Hospitals,emr vs ehr,Hospital software,hms,written
+2026-12-28,payer-mix-hospital,Payer Mix in Hospitals: What It Is and How It Affects Revenue,payer mix hospital,Hospital finance,insurance-claims,written
+2026-12-30,hospital-kpi-dashboard,Building a Hospital KPI Dashboard Leadership Actually Uses,hospital dashboard,Hospital operations,stakeholder-action,brief
+2027-01-01,what-is-hospital-management-system,What is a Hospital Management System (HMS)?,what is hospital management system,Hospital software,hms,brief
+2027-01-04,reimbursement-vs-cashless-claims,Reimbursement vs Cashless Claims: A Hospital Perspective,reimbursement vs cashless,Insurance & claims,insurance-claims,brief
+2027-01-06,consumables-billing-leakage,Consumables Billing Leakage in Hospitals,consumables billing hospital,Revenue leakage,revenue-leakage,brief
+2027-01-08,ai-for-insurance-claims,AI for Hospital Insurance Claims,ai insurance claims hospital,Healthcare AI,ai-agents,brief
+2027-01-11,fefo-vs-fifo-pharmacy,FEFO vs FIFO in Hospital Pharmacy,fefo vs fifo,Pharmacy & inventory,pharmacy,brief
+2027-01-13,case-mix-index,Case Mix Index Explained for Indian Hospitals,case mix index,Hospital finance,stakeholder-action,brief
+2027-01-15,opd-queue-management,OPD Queue Management: Reduce Waiting Time,opd queue management,Patient experience,patient-engagement,brief
+2027-01-18,lis-laboratory-information-system,What is a Laboratory Information System (LIS)?,laboratory information system,Diagnostics,diagnostics,brief
+2027-01-20,hospital-ebitda-margin,Hospital EBITDA Margin: Benchmarks and Levers,hospital ebitda margin,Hospital finance,stakeholder-action,brief
+2027-01-22,insurance-desk-sop,Hospital Insurance Desk SOP,insurance desk sop,Insurance & claims,insurance-claims,brief
+2027-01-25,icu-billing-errors,ICU Billing Errors and How to Prevent Them,icu billing,Revenue leakage,revenue-leakage,brief
+2027-01-27,stock-audit-procedure-hospital,Stock Audit Procedure for Hospital Stores and Pharmacy,stock audit procedure,Pharmacy & inventory,pharmacy,brief
+2027-01-29,ai-revenue-cycle-management,AI in Revenue Cycle Management,ai revenue cycle management,Healthcare AI,ai-agents,brief
+2027-02-01,his-vs-hms-vs-erp,HIS vs HMS vs Hospital ERP,hospital erp,Hospital software,hms,brief
+2027-02-03,patient-leakage-referral-leakage,Patient Leakage: Why Patients Don't Return and How to Fix It,patient leakage,Patient experience,patient-engagement,brief
+2027-02-05,revenue-per-opd-patient,Average Revenue Per OPD Patient,revenue per opd patient,Hospital finance,stakeholder-action,brief
+2027-02-08,discharge-summary-insurance-checklist,Discharge Summary Documentation for Insurance Claims,discharge summary insurance,Insurance & claims,insurance-claims,brief
+2027-02-10,package-billing-overruns,Package Billing Overruns: Controlling Costs in Fixed Packages,package billing hospital,Revenue leakage,revenue-leakage,brief
+2027-02-12,ris-pacs-explained,RIS and PACS Explained for Diagnostic Centres,ris pacs,Diagnostics,diagnostics,brief
+2027-02-15,generative-ai-hospital-governance,Generative AI in Hospitals: Risks and Governance,generative ai hospital,Healthcare AI,ai-agents,brief
+2027-02-17,indent-management-hospital,Ward Indent Management in Hospitals,indent management hospital,Pharmacy & inventory,pharmacy,brief
+2027-02-19,bed-census-midnight-census,Midnight Census and Bed Census Explained,midnight census hospital,Hospital finance,stakeholder-action,brief
+2027-02-22,tpa-query-management,Managing TPA Queries Faster,tpa query,Insurance & claims,insurance-claims,brief
+2027-02-24,data-migration-old-hms,Migrating Data From an Old HMS,hms data migration,Hospital software,hms,brief
+2027-02-26,interim-billing-ipd,Interim Billing for IPD Patients,interim bill hospital,Revenue leakage,revenue-leakage,brief
+2027-03-01,ipd-admission-process,IPD Admission Process Checklist,ipd admission process,Hospital operations,stakeholder-action,brief
+2027-03-03,how-to-start-ai-in-hospital,How to Start With AI in a Hospital: A 90-Day Plan,ai in hospital,Healthcare AI,ai-agents,brief
+2027-03-05,reorder-level-formula,Reorder Level Formula for Hospital Inventory,reorder level formula,Pharmacy & inventory,pharmacy,brief
+2027-03-08,gross-vs-net-collection-rate,Gross vs Net Collection Rate,net collection rate,Hospital finance,stakeholder-action,brief
+2027-03-10,claim-settlement-tat,Insurance Claim Settlement TAT for Hospitals,claim settlement time,Insurance & claims,insurance-claims,brief
+2027-03-12,doctor-fee-payout-calculation,Doctor Professional Fee Payout Calculation,doctor payout hospital,Revenue leakage,revenue-leakage,brief
+2027-03-15,sample-tracking-barcode-lab,Sample Tracking and Barcoding in Labs,sample tracking lab,Diagnostics,diagnostics,brief
+2027-03-17,hms-for-small-hospitals,HMS for Small Hospitals and Nursing Homes,hms for small hospital,Hospital software,hms,brief
+2027-03-19,patient-feedback-nps-hospital,Patient Feedback and NPS in Hospitals,patient satisfaction survey hospital,Patient experience,patient-engagement,brief
+2027-03-22,ai-for-patient-follow-up,AI for Patient Follow-Up and Readmission Reduction,ai patient follow up,Healthcare AI,ai-agents,brief
+2027-03-24,hospital-break-even-analysis,Hospital Break-Even Analysis,hospital break even,Hospital finance,stakeholder-action,brief
+2027-03-26,package-rates-vs-itemised-billing,Package Rates vs Itemised Billing,package vs itemised billing,Insurance & claims,insurance-claims,brief
+2027-03-29,day-end-cash-reconciliation,Day-End Cash Reconciliation in Hospitals,cash reconciliation hospital,Revenue leakage,revenue-leakage,brief
+2027-03-31,ot-scheduling-utilisation,OT Scheduling and Utilisation,ot utilisation,Hospital operations,stakeholder-action,brief
+2027-04-02,inventory-turnover-ratio-hospital,Inventory Turnover Ratio for Hospitals,inventory turnover ratio,Pharmacy & inventory,pharmacy,brief
+2027-04-05,lab-report-tat,Lab Report TAT: Measure and Reduce Turnaround Time,lab tat,Diagnostics,diagnostics,brief
+2027-04-07,questions-to-ask-hms-vendor,Questions to Ask an HMS Vendor (RFP Template),hms rfp,Hospital software,hms,brief
+2027-04-09,ai-vs-rpa-healthcare,AI Agents vs RPA in Healthcare,ai vs rpa,Healthcare AI,ai-agents,brief
+2027-04-12,cost-per-patient-day,Cost Per Patient Day,cost per patient day,Hospital finance,stakeholder-action,brief
+2027-04-14,insurance-receivables-reconciliation,Insurance Receivables Reconciliation,tpa reconciliation,Insurance & claims,insurance-claims,brief
+2027-04-16,implant-billing-tracking,Implant Billing and Tracking,implant billing,Revenue leakage,revenue-leakage,brief
+2027-04-19,hospital-call-centre,Running a Hospital Call Centre,hospital call centre,Patient experience,patient-engagement,brief
+2027-04-21,home-sample-collection-management,Home Sample Collection Management,home sample collection,Diagnostics,diagnostics,brief
+2027-04-23,consignment-stock-hospital,Consignment Stock in Hospitals,consignment stock,Pharmacy & inventory,pharmacy,brief
+2027-04-26,hospital-sop-list,Hospital SOP List,hospital sop,Hospital operations,stakeholder-action,brief
+2027-04-28,custom-healthcare-ai-agents,Building Custom Healthcare AI Agents,custom ai agents healthcare,Healthcare AI,ai-agents,brief
+2027-04-30,hms-training-adoption,HMS Training and Staff Adoption,hms training,Hospital software,hms,brief
+2027-05-03,icu-occupancy-revenue,ICU Occupancy and ICU Revenue,icu occupancy,Hospital finance,stakeholder-action,brief
+2027-05-05,corporate-tie-up-billing,Corporate Tie-Up Billing for Hospitals,corporate billing hospital,Insurance & claims,insurance-claims,brief
+2027-05-07,lab-revenue-leakage,Lab Revenue Leakage,lab revenue leakage,Revenue leakage,revenue-leakage,brief
+2027-05-10,surgery-counselling-conversion,Surgery Counselling and Conversion,surgery conversion,Patient experience,patient-engagement,brief
+2027-05-12,diagnostic-centre-kpis,Diagnostic Centre KPIs,diagnostic centre kpi,Diagnostics,diagnostics,brief
+2027-05-14,whatsapp-automation-hospitals,WhatsApp Automation for Hospitals,whatsapp for hospitals,Healthcare AI,ai-agents,brief
+2027-05-17,pharmacy-returns-from-wards,Pharmacy Returns From Wards,pharmacy returns,Pharmacy & inventory,pharmacy,brief
+2027-05-19,hospital-budgeting-process,Hospital Budgeting Process,hospital budget,Hospital finance,stakeholder-action,brief
+2027-05-21,hospital-operations-management,Hospital Operations Management Guide,hospital operations management,Hospital operations,stakeholder-action,brief
+2027-05-24,hospital-software-total-cost-of-ownership,Total Cost of Ownership for Hospital Software,hospital software tco,Hospital software,hms,brief
+2027-05-26,radiology-revenue-leakage,Radiology Revenue Leakage,radiology revenue leakage,Revenue leakage,revenue-leakage,brief
+2027-05-28,hospital-front-desk-sop,Hospital Front Desk SOP,hospital front desk,Patient experience,patient-engagement,brief
+2027-05-31,ai-for-hospital-pharmacy,AI for Hospital Pharmacy,ai pharmacy hospital,Healthcare AI,ai-agents,brief
+2027-06-02,pharmacy-revenue-share,Pharmacy Revenue Share in Hospitals,pharmacy revenue hospital,Hospital finance,stakeholder-action,brief
+2027-06-04,pmjay-empanelment-process,PM-JAY Empanelment Process for Hospitals [fact-check],pmjay empanelment,Compliance,insurance-claims,brief - needs fact-check
+2027-06-07,credit-bills-management,Credit Bills Management in Hospitals,credit bills hospital,Revenue leakage,revenue-leakage,brief
+2027-06-09,drug-formulary-management,Drug Formulary Management,hospital formulary,Pharmacy & inventory,pharmacy,brief
+2027-06-11,b2b-lab-billing-collection-centres,B2B Lab Billing and Collection Centres,b2b lab billing,Diagnostics,diagnostics,brief
+2027-06-14,hl7-fhir-basics,HL7 and FHIR Basics for Hospitals,hl7 fhir,Hospital software,hms,brief
+2027-06-16,roi-of-ai-in-hospitals,ROI of AI in Hospitals,roi ai hospital,Healthcare AI,ai-agents,brief
+2027-06-18,hospital-mis-daily-huddle,Daily Huddles and Operational Reviews in Hospitals,hospital daily huddle,Hospital operations,stakeholder-action,brief
+2027-06-21,cghs-empanelment-guide,CGHS Empanelment Guide [fact-check],cghs empanelment,Compliance,insurance-claims,brief - needs fact-check
+2027-06-23,tariff-price-list-management,Hospital Tariff and Price List Management,hospital tariff,Revenue leakage,revenue-leakage,brief
+2027-06-25,health-check-packages,Designing Health Check Packages,health check package,Patient experience,patient-engagement,brief
+2027-06-28,ai-for-diagnostic-centres,AI for Diagnostic Centres,ai diagnostic centre,Healthcare AI,ai-agents,brief
+2027-06-30,narcotic-drug-register-hospital,Narcotic Drug Register in Hospitals [fact-check],ndps register,Compliance,insurance-claims,brief - needs fact-check
+2027-07-02,hospital-cost-reduction,Hospital Cost Reduction Strategies,hospital cost reduction,Hospital finance,stakeholder-action,brief
+2027-07-05,room-rent-capping-proportionate-deduction,Room Rent Capping and Proportionate Deduction [fact-check],proportionate deduction,Insurance & claims,insurance-claims,brief - needs fact-check
+2027-07-07,bed-transfer-billing-errors,Bed Transfer Billing Errors,bed charges billing,Revenue leakage,revenue-leakage,brief
+2027-07-09,multi-specialty-hospital-software,Software Requirements for Multi-Specialty Hospitals,multispecialty hospital software,Hospital software,hms,brief
+2027-07-12,ai-clinical-documentation,AI for Clinical Documentation,ai clinical documentation,Healthcare AI,ai-agents,brief
+2027-07-14,cssd-tracking,CSSD Instrument Tracking,cssd,Pharmacy & inventory,pharmacy,brief
+2027-07-16,nabh-accreditation-overview,NABH Accreditation Overview [fact-check],nabh accreditation,Compliance,insurance-claims,brief - needs fact-check
+2027-07-19,radiology-workflow,Radiology Workflow Optimisation,radiology workflow,Diagnostics,diagnostics,brief
+2027-07-21,hospital-procurement-process,Hospital Procurement Process,hospital procurement,Hospital operations,stakeholder-action,brief
+2027-07-23,hospital-profitability-tier-2-cities,Hospital Profitability in Tier-2 and Tier-3 Cities,hospital tier 2,Growth & strategy,revenue-leakage,brief
+2027-07-26,nhcx-health-claims-exchange,National Health Claims Exchange (NHCX) Explained [fact-check],nhcx,Insurance & claims,insurance-claims,brief - needs fact-check
+2027-07-28,internal-revenue-audit-checklist,Internal Revenue Audit Checklist for Hospitals,hospital revenue audit,Revenue leakage,revenue-leakage,brief
+2027-07-30,hospital-erp-multi-location,Software for Multi-Location Hospital Groups,hospital chain software,Hospital software,hms,brief
+2027-08-02,ai-healthcare-data-privacy,AI and Patient Data Privacy in Hospitals,healthcare ai privacy,Healthcare AI,ai-agents,brief
+2027-08-04,nabh-quality-indicators,NABH Quality Indicators [fact-check],nabh quality indicators,Compliance,insurance-claims,brief - needs fact-check
+2027-08-06,purchase-order-process-hospital,Purchase Order Process in Hospitals,purchase order hospital,Pharmacy & inventory,pharmacy,brief
+2027-08-09,operating-margin-by-department,Department-Wise Profitability in Hospitals,department profitability hospital,Hospital finance,stakeholder-action,brief
+2027-08-11,how-to-start-diagnostic-centre,How to Start a Diagnostic Centre in India,start diagnostic centre,Diagnostics,diagnostics,brief
+2027-08-13,ecghs-echs-empanelment,ECHS Empanelment Guide [fact-check],echs empanelment,Compliance,insurance-claims,brief - needs fact-check
+2027-08-16,hospital-referral-programme,Doctor Referral Programmes for Hospitals,doctor referral hospital,Growth & strategy,revenue-leakage,brief
+2027-08-18,gst-on-hospital-services,GST on Hospital Services [fact-check],gst on hospital services,Compliance,insurance-claims,brief - needs fact-check
+2027-08-20,hospital-housekeeping-bed-turnaround,Housekeeping and Bed Turnaround Time,bed turnaround time,Hospital operations,stakeholder-action,brief
+2027-08-23,hospital-digital-transformation,Hospital Digital Transformation Roadmap,hospital digital transformation,Hospital software,hms,brief
+2027-08-25,ai-stakeholder-action-queues,From Dashboards to Action Queues,hospital action queue,Healthcare AI,ai-agents,brief
+2027-08-27,abdm-integration-hospitals,ABDM Integration for Hospitals [fact-check],abdm integration,Compliance,insurance-claims,brief - needs fact-check
+2027-08-30,medical-records-department,Medical Records Department (MRD) Management,mrd hospital,Hospital operations,stakeholder-action,brief
+2027-09-01,hospital-uae-revenue-leakage,Revenue Leakage in UAE Hospitals,revenue leakage uae,UAE,ai-agents,brief
+2027-09-03,starting-nursing-home-india,Starting a Nursing Home in India,start nursing home,Growth & strategy,revenue-leakage,brief
+2027-09-06,dpdp-act-hospitals,DPDP Act 2023 and Hospitals [fact-check],dpdp act healthcare,Compliance,insurance-claims,brief - needs fact-check
+2027-09-08,nursing-staffing-ratio,Nursing Staffing and Workload Planning,nurse patient ratio,Hospital operations,stakeholder-action,brief
+2027-09-10,hospital-insurance-uae-claims,Insurance Claims in UAE Hospitals [fact-check],uae medical claims,UAE,ai-agents,brief - needs fact-check
+2027-09-13,biomedical-waste-management,Biomedical Waste Management Rules [fact-check],biomedical waste management,Compliance,insurance-claims,brief - needs fact-check
+2027-09-15,hospital-second-branch-expansion,Expanding to a Second Hospital Branch,hospital expansion,Growth & strategy,revenue-leakage,brief
+2027-09-17,nabl-accreditation-basics,NABL Accreditation Basics [fact-check],nabl accreditation,Compliance,insurance-claims,brief - needs fact-check
+2027-09-20,emergency-department-operations,Emergency Department Operations,emergency department kpi,Hospital operations,stakeholder-action,brief
+2027-09-22,ai-uae-hospitals,AI Adoption in UAE Hospitals,ai hospitals uae,UAE,ai-agents,brief
+2027-09-24,infection-control-kpis,Infection Control KPIs,infection control indicators,Hospital operations,stakeholder-action,brief
+2027-09-27,hospital-audit-types,Types of Hospital Audits,hospital audit,Compliance,insurance-claims,brief
+2027-09-29,state-health-schemes-hospitals,State Government Health Schemes for Hospitals [fact-check],state health scheme hospital,Compliance,insurance-claims,brief - needs fact-check
+2027-10-01,hospital-marketing-digital,Digital Marketing for Hospitals,hospital marketing,Growth & strategy,revenue-leakage,brief
+2027-10-04,hospital-operations-2027-outlook,Hospital Operations Outlook 2027,hospital trends 2027,Growth & strategy,revenue-leakage,brief

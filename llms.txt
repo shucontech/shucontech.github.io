@@ -23,6 +23,11 @@
 - [Hospital pharmacy reconciliation guide](https://shuconmedai.com/blog/pharmacy-inventory-reconciliation.html)
 - [How fragmented hospital software causes revenue loss](https://shuconmedai.com/blog/fragmented-hospital-software.html)
 
+## Guides
+<!-- AUTO:LLMS:START -->
+
+<!-- AUTO:LLMS:END -->
+
 ## Company
 - [Saksham Gupta, Founder and CEO](https://shuconmedai.com/leadership/saksham-gupta/)
 - Contact: saksham@shucontech.in

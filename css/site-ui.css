@@ -377,3 +377,25 @@
   .js-reveal [data-reveal] { opacity: 1; transform: none; transition: none; }
   .sticky-cta, .demo-modal[open] { transition: none; animation: none; }
 }
+
+/* Scheduled-content blocks: breadcrumbs, author box, auto-maintained guide lists */
+.article-head .crumbs { font-size: 13px; margin-bottom: 14px; color: #8f9bb8; }
+.article-head .crumbs a { color: inherit; text-decoration: none; }
+.article-head .crumbs a:hover { color: #fff; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 22px 0; }
+.table-scroll table { margin: 0; min-width: 520px; }
+.author-box { display: flex; gap: 16px; align-items: flex-start; margin-top: 40px; padding: 20px; border: 1px solid #e3e7f0; border-radius: 14px; background: #f8f9fc; }
+.author-box img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex: none; }
+.author-box b { display: block; font-size: 16px; color: var(--ink-2, #1a2236); }
+.author-box span { display: block; font-size: 14px; color: var(--muted, #5b6680); margin: 4px 0 6px; line-height: 1.5; }
+.author-box a { font-size: 14px; font-weight: 700; color: #6047ce; }
+.auto-guides { padding: 64px 0; background: #f8f9fc; border-top: 1px solid #eceff5; }
+.auto-guides .section-title { margin: 8px 0 22px; }
+.auto-guides ul { list-style: none; margin: 0 0 18px; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 28px; }
+.auto-guides li a { display: block; padding: 14px 18px; border: 1px solid #e3e7f0; border-radius: 12px; background: #fff; color: var(--ink-2, #1a2236); font-weight: 600; font-size: 15px; line-height: 1.4; text-decoration: none; transition: border-color .2s, transform .2s; }
+.auto-guides li a:hover { border-color: #c9c1ff; transform: translateY(-2px); }
+.auto-guides-all { font-weight: 700; color: #6047ce; }
+.more-guides { margin-top: 36px; padding: 22px 24px; border-left: 3px solid #7c5cff; background: #f8f9fc; border-radius: 0 12px 12px 0; }
+.more-guides h2 { font-size: 20px !important; margin: 0 0 10px !important; }
+.more-guides ul { margin: 0; }
+@media (max-width: 720px) { .auto-guides ul { grid-template-columns: 1fr; } }

@@ -1,0 +1,97 @@
+<!--
+{
+  "slug": "hospital-mis-report",
+  "date": "2026-12-07",
+  "title": "Hospital MIS Report Format, Metrics & Dashboard",
+  "og_title": "Hospital MIS Report: Format, Metrics and Daily Dashboard",
+  "h1": "Hospital MIS Report: Format, Metrics and Daily Dashboard",
+  "breadcrumb": "Hospital MIS report",
+  "description": "Hospital MIS report format with daily metrics for occupancy, revenue, billing, claims, pharmacy, discharge and leadership actions.",
+  "lede": "A hospital MIS report should convert daily transactions into decisions. The format matters less than whether each number has an owner and action.",
+  "category": "Hospital operations",
+  "product": "stakeholder-action",
+  "keywords": ["hospital mis report format", "hospital MIS report", "hospital daily dashboard", "hospital operations dashboard", "hospital KPI report", "hospital management report", "hospital finance MIS", "hospital dashboard metrics"],
+  "related": ["how-to-increase-hospital-revenue", "clean-claim-rate-denial-rate", "unbilled-services-audit"],
+  "faqs": [
+    {"q": "What is a hospital MIS report?", "a": "A hospital MIS report is a structured management report that summarises operational, financial and clinical-administrative metrics for decision-making."},
+    {"q": "What should be included in a hospital MIS report format?", "a": "It should include occupancy, OPD and IPD volumes, revenue, collections, discharge TAT, claims, pharmacy, diagnostics, complaints and owner-wise action items."},
+    {"q": "How often should hospital MIS be prepared?", "a": "Many hospitals prepare a daily operations dashboard and a deeper weekly or monthly MIS. Daily reports should focus on exceptions and actions."},
+    {"q": "Who should own the hospital MIS report?", "a": "The administrator or operations head usually owns the MIS, with finance, billing, TPA, pharmacy, nursing and department heads owning their sections."},
+    {"q": "Can hospital MIS be automated?", "a": "Yes, if source systems are reliable and definitions are agreed. Automation should still allow human review for unusual numbers and action ownership."}
+  ]
+}
+-->
+<p><strong>A hospital MIS report format is a daily or periodic management dashboard covering patient volumes, occupancy, revenue, billing, claims, pharmacy, discharge TAT, complaints and action owners.</strong> The best format shows what changed, why it changed and who must act today.</p>
+<p>MIS stands for management information system, but in many hospitals it becomes a spreadsheet sent too late to influence decisions. A useful MIS is not a data dump. It is an operating rhythm for the owner, CEO, CFO, administrator and department heads.</p>
+<p>This guide gives a practical hospital MIS report structure for Indian and UAE hospitals, with metrics, formulas, examples and mistakes to avoid.</p>
+<h2>Hospital MIS report format: daily sections</h2>
+<p>The daily MIS should fit into a short leadership review. It should answer five questions: Are beds being used well? Is revenue complete? Are claims moving? Are discharges stuck? Which department needs intervention today?</p>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Daily metric</th><th>Typical owner</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Patient volume</td><td>OPD visits, admissions, discharges</td><td>Operations head</td></tr>
+    <tr><td>Bed utilisation</td><td>Occupancy, ICU occupancy, planned discharges</td><td>Administrator</td></tr>
+    <tr><td>Revenue</td><td>Gross billing, net billing, unbilled services</td><td>Finance or billing</td></tr>
+    <tr><td>Claims</td><td>Pre-auth pending, files submitted, denials</td><td>TPA desk</td></tr>
+    <tr><td>Pharmacy</td><td>Issues, returns, stock exceptions</td><td>Pharmacy head</td></tr>
+    <tr><td>Patient experience</td><td>Complaints, follow-up calls, escalations</td><td>Patient experience team</td></tr>
+  </tbody>
+</table>
+<p>Keep the format stable for at least a quarter. If definitions change every week, trends become meaningless. When a new metric is introduced, define numerator, denominator, source system, timing and owner.</p>
+<h2>Daily hospital dashboard metrics and formulas</h2>
+<p>Use a small set of metrics that leadership can act on. Too many numbers dilute attention. A daily dashboard should include both leading indicators, such as pending discharges, and lagging indicators, such as yesterday's net billing.</p>
+<blockquote>Bed occupancy rate = occupied bed days ÷ available bed days × 100</blockquote>
+<blockquote>Net revenue = gross billing - discounts - refunds - deductions - write-offs</blockquote>
+<blockquote>Discharge billing TAT = final bill ready time - discharge order time</blockquote>
+<p>For revenue leaders, connect MIS to <a href="post:how-to-increase-hospital-revenue">hospital revenue strategy</a>. For claims teams, include clean claim rate, denial rate and query ageing from the <a href="post:clean-claim-rate-denial-rate">clean claim rate formula</a> guide. For patient experience, include discharge follow-up completion and unresolved concerns from <a href="post:patient-follow-up-calls-after-discharge">patient follow-up calls after discharge</a>.</p>
+<div class="callout"><h4>One metric, one owner</h4><p>If a number has no owner, it is only information. Every exception in the MIS should map to a person, not a department name.</p></div>
+<h2>Worked example: daily MIS for a 150-bed hospital</h2>
+<p>Assume a 150-bed multi-specialty hospital reviews yesterday's numbers at 10:30 am. Occupancy was 72%, with 108 beds occupied. There were 38 admissions, 34 discharges and 16 planned discharges for today. Gross billing was ₹22 lakh and net billing after discounts was ₹19.4 lakh.</p>
+<p>The MIS shows ₹2.1 lakh of unbilled services pending from nursing procedures, oxygen and OT consumables. It also shows 11 insurance files pending document completion and 7 final bills delayed beyond the hospital's internal discharge TAT target. The leadership discussion should not stop at the numbers. It should assign action: billing to close unbilled items by 1 pm, nursing to confirm procedure documentation, TPA desk to clear 11 files and administrator to unblock discharge delays.</p>
+<table>
+  <thead>
+    <tr><th>Metric</th><th>Yesterday</th><th>Action trigger</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Occupancy</td><td>72%</td><td>Review ward-level variation</td></tr>
+    <tr><td>Net billing</td><td>₹19.4 lakh</td><td>Compare with same weekday trend</td></tr>
+    <tr><td>Unbilled services</td><td>₹2.1 lakh</td><td>Close before next discharge batch</td></tr>
+    <tr><td>TPA document pending</td><td>11 files</td><td>Assign file owners</td></tr>
+    <tr><td>Delayed final bills</td><td>7</td><td>Remove bottleneck by noon</td></tr>
+  </tbody>
+</table>
+<h2>Hospital finance MIS: revenue and leakage</h2>
+<p>The finance section should not only show billing and collection. It should reveal leakage. Include unbilled services, cancelled bills, discounts by approver, refunds, pharmacy mismatch, claim deductions and ageing of receivables. A separate audit process for <a href="post:unbilled-services-audit">unbilled services in hospitals</a> can feed the MIS daily.</p>
+<p>Finance MIS should separate cash, credit, TPA, corporate and scheme patients where applicable. Regulations and payer requirements can change, so scheme-specific or insurer-specific interpretations should be checked against current official guidance and contract terms. Do not let the MIS become a legal claims document; it is a management tool.</p>
+<h2>Operations MIS: beds, discharge and patient flow</h2>
+<p>Operations teams need visibility into bed availability, planned admissions, planned discharges, emergency load and bottlenecks. Occupancy at hospital level can hide ward-level problems. ICU may be full while general ward is underused. A maternity ward may have predictable peaks while surgical beds depend on OT scheduling.</p>
+<p>Include planned discharge count early in the day. If discharge summaries, pharmacy returns, insurance approvals or final bills delay bed release, the MIS should show it. A hospital can improve revenue without adding beds simply by reducing avoidable discharge delays and admitting waiting patients faster.</p>
+<h2>Claims MIS for TPA and cashless patients</h2>
+<p>The TPA section should track pre-authorisation requests, approvals pending, query files, submitted files, deductions, denials and receivable ageing. Files should be aged by blocker, not only by date. A 12-day-old file pending doctor signature needs a different intervention from a 12-day-old file awaiting payer response.</p>
+<p>Many hospitals target a higher clean claim rate and lower denial rate, but the right range depends on payer mix, documentation quality and specialty profile. Avoid fixed benchmarks unless you have your own historical baseline. The MIS should help teams reduce rework and improve cash flow.</p>
+<h2>Weekly and monthly MIS review format</h2>
+<p>The daily MIS is for action. The weekly and monthly MIS should show trend, root cause and accountability. Weekly reviews can compare weekday patterns, department-level revenue, payer-wise ageing, discharge delays and stock exceptions, including <a href="post:abc-ved-analysis-hospital-inventory">ABC VED analysis</a>. Monthly reviews should include service-line contribution, doctor-wise activity where appropriate, discount patterns, claim deductions and capital utilisation.</p>
+<p>Do not use the monthly review to reopen every daily issue. Instead, ask which problems repeated despite daily escalation. If unbilled services appear every week in OT, the answer may be charge mapping or OT closure workflow. If discharge billing TAT worsens on weekends, the answer may be staffing or approval availability.</p>
+<ul>
+  <li><strong>Daily MIS:</strong> Exceptions, pending actions and immediate blockers.</li>
+  <li><strong>Weekly MIS:</strong> Department trends, repeated causes and owner performance.</li>
+  <li><strong>Monthly MIS:</strong> Strategy, payer mix, service-line profitability and investment decisions.</li>
+</ul>
+<h2>Data quality checks before trusting the dashboard</h2>
+<p>A dashboard can be beautifully designed and still wrong. Before leadership relies on it, reconcile key numbers with source records. Admissions should match registration and ward census. Pharmacy sales should match billing and stock movement. Claim ageing should match submitted files. Discounts should match approval logs.</p>
+<p>When hospitals change software, data definitions must be part of the rollout. The <a href="post:hms-implementation-plan">HMS implementation plan</a> should specify how each MIS metric is captured, who validates it and what happens when the dashboard and department register disagree.</p>
+<p>Also decide the reporting cut-off time. If finance reports revenue till midnight but pharmacy exports stock at 8 pm, the numbers will not reconcile. A simple data dictionary should capture source system, cut-off, formula, exclusions and escalation owner for every metric used in leadership review.</p>
+<h2>Automating the hospital MIS report</h2>
+<p>Automation works only when source data is reliable. If pharmacy issues are not patient-tagged, billing corrections are not coded and discharge times are not captured, dashboards will look polished but mislead leadership. Start by standardising definitions and workflow capture.</p>
+<p>Shucon MedAI's <a href="../agents/stakeholder-action/">stakeholder action agents</a> can convert hospital metrics into owner-wise action lists for finance, billing, pharmacy, claims and operations. For hospitals that need a connected transaction layer, the <a href="../platform/hospital-management-system/">hospital management system</a> helps keep OPD, IPD, billing, pharmacy, lab and insurance data on one operating model.</p>
+<h2>Common mistakes in hospital MIS reporting</h2>
+<ul>
+  <li><strong>Too many metrics:</strong> Leadership stops reading when the report becomes a data dump.</li>
+  <li><strong>No definitions:</strong> Different departments calculate the same metric differently.</li>
+  <li><strong>Late circulation:</strong> A daily report sent in the evening cannot unblock morning operations.</li>
+  <li><strong>No action log:</strong> Repeated issues appear every day without owner accountability.</li>
+  <li><strong>Only financial view:</strong> Revenue numbers make sense only with patient flow, claims and operational context.</li>
+</ul>
+<p>A good hospital MIS report is a decision system. It should make yesterday's problems visible early enough for today's team to fix them.</p>

@@ -1,0 +1,53 @@
+name: Publish scheduled posts
+
+on:
+  schedule:
+    - cron: '35 0 * * *'   # 06:05 IST daily
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Publish as of this date (YYYY-MM-DD). Leave empty for today (IST).'
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish-scheduled
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Publish due posts
+        run: python3 _scheduled/publish.py ${{ inputs.date && format('--date {0}', inputs.date) || '' }}
+
+      - name: Commit and push
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to publish today."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "shucon-publisher[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A blog sitemap.xml llms.txt index.html agents platform solutions custom-healthcare-ai ai-agents hospital-pharmacy-inventory hospital-revenue-leakage hospital-billing-leakage hospital-operations-ai hospital-ai
+          git commit -m "Publish scheduled posts ($(TZ=Asia/Kolkata date +%F))"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Request GitHub Pages build
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
