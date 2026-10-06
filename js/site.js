@@ -15,6 +15,16 @@
   var logoLink = document.querySelector('.nav-logo');
   var root = logoLink ? (logoLink.getAttribute('href') || '').replace(/index\.html$/, '') : '';
 
+  // Links point at index.html so local file:// previews work; on the live site use the canonical folder URLs.
+  if (/^https?:$/.test(window.location.protocol)) {
+    document.querySelectorAll('a[href*="index.html"]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (/^(https?:|mailto:|tel:|\/\/)/.test(href) && href.indexOf(window.location.host) === -1) return;
+      var clean = href.replace(/(^|\/)index\.html(?=$|[#?])/, '$1');
+      a.setAttribute('href', clean === '' ? './' : clean);
+    });
+  }
+
   var year = document.getElementById('year2');
   if (year) year.textContent = new Date().getFullYear();
 

@@ -1,0 +1,28 @@
+# Shucon MedAI
+
+> Shucon MedAI builds healthcare AI agents and a connected hospital operations platform for hospitals, nursing homes, hospital groups and diagnostic centres in India and the UAE. Agents detect revenue leakage, move insurance claims forward, handle patient calls, and tell every stakeholder what needs to happen next. They run over existing hospital software or natively on the Shucon hospital management system. Founded by Saksham Gupta, a former Microsoft engineer on the core Microsoft AI Copilot team.
+
+## AI agents
+- [Healthcare AI agents overview](https://shuconmedai.com/ai-agents/): All Shucon MedAI agent suites and how they work together.
+- [Revenue leakage detection agents](https://shuconmedai.com/agents/revenue-leakage/): Reconcile billing, pharmacy, inventory, cancellations and claims to find and recover lost hospital revenue.
+- [Insurance claim and TPA agents](https://shuconmedai.com/agents/insurance-claims/): Pre-authorization, documentation readiness, payer query follow-up and denial prevention.
+- [Patient engagement voice agents](https://shuconmedai.com/agents/patient-engagement/): AI voice agents for incoming and outgoing patient calls, appointments, follow-ups and OPD-to-IPD conversion.
+- [Stakeholder action agents](https://shuconmedai.com/agents/stakeholder-action/): Prioritised next actions for leadership, finance, operations, nursing and pharmacy.
+- [Custom healthcare AI agents](https://shuconmedai.com/custom-healthcare-ai/): Agents built around an organization's own SOPs, systems and approvals.
+
+## Platform
+- [Hospital management system (HMS)](https://shuconmedai.com/platform/hospital-management-system/): OPD, IPD, EMR, billing, pharmacy, inventory, lab, radiology, OT, insurance and analytics.
+- [Diagnostic centre, lab and radiology software](https://shuconmedai.com/solutions/diagnostics-centres/): Bookings, samples, LIS/RIS workflows, reporting, billing and referrals.
+- [AI for hospitals in the UAE](https://shuconmedai.com/uae-hospital-ai/)
+
+## Resources
+- [Hospital revenue leakage: causes and fixes](https://shuconmedai.com/blog/hospital-revenue-leakage-guide.html)
+- [25-point hospital revenue leakage checklist](https://shuconmedai.com/hospital-revenue-leakage-checklist/)
+- [Pharmacy revenue leakage case study](https://shuconmedai.com/case-study/hospital-pharmacy-revenue-leakage/)
+- [ARPOB formula and benchmarks](https://shuconmedai.com/blog/arpob-hospital-guide.html)
+- [Hospital pharmacy reconciliation guide](https://shuconmedai.com/blog/pharmacy-inventory-reconciliation.html)
+- [How fragmented hospital software causes revenue loss](https://shuconmedai.com/blog/fragmented-hospital-software.html)
+
+## Company
+- [Saksham Gupta, Founder and CEO](https://shuconmedai.com/leadership/saksham-gupta/)
+- Contact: saksham@shucontech.in
