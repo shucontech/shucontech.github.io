@@ -18,6 +18,8 @@
 ## Resources
 - [Hospital revenue leakage: causes and fixes](https://shuconmedai.com/blog/hospital-revenue-leakage-guide.html)
 - [25-point hospital revenue leakage checklist](https://shuconmedai.com/hospital-revenue-leakage-checklist/)
+- [Free hospital management tools](https://shuconmedai.com/tools/): calculators for hospital leaders
+- [ARPOB calculator](https://shuconmedai.com/tools/arpob-calculator/): calculate Average Revenue Per Occupied Bed and the value of raising it
 - [Pharmacy revenue leakage case study](https://shuconmedai.com/case-study/hospital-pharmacy-revenue-leakage/)
 - [ARPOB formula and benchmarks](https://shuconmedai.com/blog/arpob-hospital-guide.html)
 - [Hospital pharmacy reconciliation guide](https://shuconmedai.com/blog/pharmacy-inventory-reconciliation.html)

@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en-IN"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5D6VNZNNKQ');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARPOB Calculator for Hospitals (Free) | Shucon MedAI</title>
+<meta name="description" content="Free ARPOB calculator for hospitals. Enter beds, occupancy and IPD revenue to get Average Revenue Per Occupied Bed and what a ₹1,000 rise is worth a year.">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0b1a3a">
+<link rel="canonical" href="https://shuconmedai.com/tools/arpob-calculator/">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="Shucon MedAI"><meta property="og:url" content="https://shuconmedai.com/tools/arpob-calculator/">
+<meta property="og:title" content="ARPOB Calculator: What Is Each Occupied Bed Really Earning?"><meta property="og:description" content="Free ARPOB calculator for hospitals. Enter beds, occupancy and IPD revenue to get Average Revenue Per Occupied Bed and what a ₹1,000 rise is worth a year.">
+<meta property="og:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ARPOB Calculator for Hospitals"><meta name="twitter:description" content="Free ARPOB calculator for hospitals. Enter beds, occupancy and IPD revenue to get Average Revenue Per Occupied Bed and what a ₹1,000 rise is worth a year."><meta name="twitter:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="icon" href="../../images/favicon/favicon.svg"><link rel="apple-touch-icon" href="../../images/favicon/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/shucon-vc.css?v=2"><link rel="stylesheet" href="../../css/blog.css?v=2"><link rel="stylesheet" href="../../css/commercial.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "ARPOB Calculator", "url": "https://shuconmedai.com/tools/arpob-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}, "description": "Free ARPOB calculator for hospitals: calculate Average Revenue Per Occupied Bed, occupied bed days and the annual revenue impact of raising ARPOB.", "isPartOf": {"@type": "CollectionPage", "@id": "https://shuconmedai.com/tools/"}, "publisher": {"@type": "Organization", "@id": "https://shuconmedai.com/#organization", "name": "Shucon MedAI"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shuconmedai.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://shuconmedai.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Hospital management calculators", "item": "https://shuconmedai.com/tools/#management-calculators"}, {"@type": "ListItem", "position": 4, "name": "ARPOB Calculator", "item": "https://shuconmedai.com/tools/arpob-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is ARPOB in a hospital?", "acceptedAnswer": {"@type": "Answer", "text": "ARPOB stands for Average Revenue Per Occupied Bed. It is the average net inpatient (IPD) revenue a hospital earns for each occupied bed per day."}}, {"@type": "Question", "name": "How do you calculate ARPOB?", "acceptedAnswer": {"@type": "Answer", "text": "Divide net IPD revenue for a period by the occupied bed days in the same period. For example, ₹2.9 crore of net IPD revenue over 1,950 occupied bed days gives an ARPOB of about ₹14,900."}}, {"@type": "Question", "name": "How do I calculate occupied bed days?", "acceptedAnswer": {"@type": "Answer", "text": "Add up the number of occupied beds at each daily (usually midnight) census across the period. If you only know occupancy, estimate it as total beds × occupancy rate × number of days."}}, {"@type": "Question", "name": "Should ARPOB use gross or net revenue?", "acceptedAnswer": {"@type": "Answer", "text": "Use net revenue, after discounts, refunds, cancellations and insurer deductions. Gross revenue flatters ARPOB and hides the revenue leakage you are trying to find."}}, {"@type": "Question", "name": "What is a good ARPOB for an Indian hospital?", "acceptedAnswer": {"@type": "Answer", "text": "It varies by specialty mix, city and payer mix. As indicative ranges, small nursing homes often see ₹8,000–₹15,000, mid-size secondary hospitals ₹15,000–₹30,000 and metro tertiary hospitals ₹30,000–₹60,000 or more per occupied bed per day."}}, {"@type": "Question", "name": "How can a hospital increase ARPOB?", "acceptedAnswer": {"@type": "Answer", "text": "Start by capturing revenue already earned: complete charge capture at the point of care, reconcile pharmacy and consumables to billing, control discounts and cancellations, and reduce insurance deductions. Then review case mix and tariffs."}}]}</script>
+<link rel="stylesheet" href="../../css/site-ui.css?v=6">
+<style>
+.calc{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:start}
+.calc-card{background:#fff;border:1px solid #e3e7f0;border-radius:18px;padding:28px;box-shadow:0 18px 50px rgba(16,24,45,.07)}
+.calc-card h2{font-size:20px;margin:0 0 18px}
+.field{margin-bottom:18px}
+.field label{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:14.5px;color:#1a2236;margin-bottom:7px}
+.field label small{font-weight:500;color:#6b7690}
+.field .in{display:flex;align-items:center;border:1.5px solid #d5dbe8;border-radius:12px;background:#fbfcfe;transition:border-color .2s}
+.field .in:focus-within{border-color:#7c5cff;background:#fff}
+.field .in span{padding:0 12px;color:#6b7690;font-weight:600;font-size:15px;white-space:nowrap}
+.field input{flex:1;min-width:0;border:0;background:transparent;padding:13px 14px;font:600 17px/1.2 inherit;color:#0b1a3a;outline:0}
+.field .hint{font-size:12.5px;color:#7b86a0;margin-top:6px}
+.result{background:radial-gradient(520px 300px at 90% 0%,rgba(124,92,255,.28),transparent 70%),#0b1122;color:#fff;border:0}
+.result .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a99bff;font-weight:700}
+.result .big{font:800 clamp(44px,6vw,64px)/1 var(--serif,inherit);letter-spacing:-.03em;margin:10px 0 6px}
+.result .sub{color:#aebbd8;font-size:14.5px}
+.result .band{margin:18px 0 22px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.07);font-size:14.5px;color:#dbe3f5}
+.result .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.result .stat{background:rgba(255,255,255,.06);border-radius:12px;padding:14px}
+.result .stat b{display:block;font-size:20px}
+.result .stat small{color:#9fb0d0;font-size:12.5px}
+.uplift{border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+.uplift p{margin:0 0 10px;color:#dbe3f5;font-size:15px}
+.uplift input[type=range]{width:100%;accent-color:#7c5cff}
+.uplift .win{font-size:26px;font-weight:800;color:#5ee0a0;margin:10px 0 2px}
+.uplift .winsub{color:#9fb0d0;font-size:13.5px}
+.result .btn{margin-top:22px;width:100%;justify-content:center}
+.result .alt-link{display:block;text-align:center;margin-top:12px;color:#c6d2ea;font-size:14px}
+.calc-copy{max-width:780px}
+.calc-copy h2{margin-top:36px}
+.calc-copy blockquote{margin:16px 0;padding:16px 20px;border-left:3px solid #7c5cff;background:#f6f4ff;border-radius:0 12px 12px 0;font-weight:700;color:#1a2236}
+.calc-copy table{width:100%;border-collapse:collapse;margin:16px 0}
+.calc-copy th,.calc-copy td{text-align:left;padding:10px 12px;border-bottom:1px solid #e3e7f0;font-size:15px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+</style>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="UbWEq0aYWth4TX9ekG3Cww" async></script>
+</head><body>
+<nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="../../" aria-label="Shucon MedAI home"><img src="../../images/logo-header.png" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="../../ai-agents/">AI agents</a></li><li><a href="../../platform/hospital-management-system/">HMS platform</a></li><li><a href="../../solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="../../hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="../../tools/">Tools</a></li><li><a href="../../blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="../../#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<header class="commercial-hero"><div class="wrap"><div class="breadcrumbs"><a href="../../">Home</a> / <a href="../">Tools</a> / <a href="../#management-calculators">Management calculators</a></div><span class="eyebrow on-dark">Free hospital management calculator</span><h1>ARPOB Calculator</h1><p class="hero-lead">Find your Average Revenue Per Occupied Bed in 30 seconds, and see what raising it by even ₹1,000 a day is worth to your hospital every year.</p><div class="proof-line"><span>No sign-up</span><span>Runs in your browser</span><span>Nothing is stored or sent</span></div></div></header>
+<main>
+<section class="page-section alt"><div class="wrap">
+<div class="calc">
+<form class="calc-card" id="arpobForm" autocomplete="off" onsubmit="return false">
+<h2>Your hospital</h2>
+<div class="field"><label for="beds">Operational IPD beds</label><div class="in"><input id="beds" type="number" inputmode="numeric" min="1" step="1" value="100"><span>beds</span></div></div>
+<div class="field"><label for="occ">Average occupancy</label><div class="in"><input id="occ" type="number" inputmode="decimal" min="1" max="100" step="0.1" value="65"><span>%</span></div></div>
+<div class="field"><label for="days">Days in the period</label><div class="in"><input id="days" type="number" inputmode="numeric" min="1" step="1" value="30"><span>days</span></div><div class="hint">Use 30 for a month, 91 for a quarter, 365 for a year.</div></div>
+<div class="field"><label for="rev">Net IPD revenue for the period <small>after discounts &amp; deductions</small></label><div class="in"><span>₹</span><input id="rev" type="number" inputmode="decimal" min="0" step="0.1" value="290"><span>lakh</span></div><div class="hint">290 lakh = ₹2.9 crore. Use net, not gross, revenue.</div></div>
+<div class="field"><label for="obd">Occupied bed days <small>optional</small></label><div class="in"><input id="obd" type="number" inputmode="numeric" min="0" step="1" placeholder="Auto: beds × occupancy × days"></div><div class="hint">If you have the actual daily-census total, enter it here for a more accurate ARPOB.</div></div>
+</form>
+<div class="calc-card result" aria-live="polite">
+<div class="label">Your ARPOB</div>
+<div class="big" id="outArpob">₹14,872</div>
+<div class="sub">per occupied bed, per day</div>
+<div class="band" id="outBand"></div>
+<div class="grid2">
+<div class="stat"><b id="outObd">1,950</b><small>occupied bed days</small></div>
+<div class="stat"><b id="outRevDay">₹9.67 lakh</b><small>net IPD revenue per day</small></div>
+</div>
+<div class="uplift">
+<p>If ARPOB rises by <b id="outUp">₹1,000</b> per day</p>
+<input id="up" type="range" min="250" max="5000" step="250" value="1000" aria-label="ARPOB increase per day">
+<div class="win" id="outWinYear">₹2.37 crore a year</div>
+<div class="winsub" id="outWinMonth">₹19.5 lakh a month, with the same beds and occupancy</div>
+</div>
+<a class="btn btn-primary" data-event="revenue_review_clicked" href="../../#contact">Find what's holding your ARPOB back</a>
+<a class="alt-link" href="../../hospital-revenue-leakage-checklist/">Or run the free 25-point revenue leakage audit &rarr;</a>
+</div>
+</div>
+</div></section>
+<section class="page-section"><div class="wrap"><div class="prose calc-copy">
+<h2>How this ARPOB calculator works</h2>
+<p><strong>ARPOB (Average Revenue Per Occupied Bed)</strong> is net inpatient revenue divided by occupied bed days. It shows how much each occupied bed earns per day, so you can compare months, wards and branches regardless of size or occupancy swings.</p>
+<blockquote>ARPOB = Net IPD revenue ÷ Occupied bed days</blockquote>
+<blockquote>Occupied bed days ≈ Beds × Occupancy % × Days in period</blockquote>
+<p>For the most accurate result, use the actual total from your daily midnight census for occupied bed days, and net revenue after discounts, refunds, cancellations and insurer deductions. Read the full <a href="../../blog/arpob-hospital-guide.html">ARPOB guide with formula and India benchmarks</a>.</p>
+<h2>Indicative ARPOB ranges in India</h2>
+<table><thead><tr><th>Hospital type</th><th>Typical ARPOB per day</th></tr></thead><tbody>
+<tr><td>Small nursing home / Tier-3 town</td><td>₹8,000 – ₹15,000</td></tr>
+<tr><td>Mid-size secondary care</td><td>₹15,000 – ₹30,000</td></tr>
+<tr><td>Tertiary / multi-specialty (metro)</td><td>₹30,000 – ₹60,000+</td></tr></tbody></table>
+<p>These are broad, indicative ranges. Specialty mix, city, payer mix and package rates move ARPOB significantly, so your own trend over time matters more than any external benchmark.</p>
+<h2>Why ARPOB is often lower than it should be</h2>
+<p>Because ARPOB uses net revenue, every leak reduces it directly while occupied bed days stay the same. The usual culprits are:</p>
+<ul>
+<li>OT and ward consumables used but never charged</li>
+<li>Medicines dispensed but cancelled or returned without the stock trail matching (see <a href="../../blog/pharmacy-inventory-reconciliation.html">pharmacy inventory reconciliation</a>)</li>
+<li>Bedside procedures documented but missing from the final bill</li>
+<li>Discounts and write-offs without an approval trail</li>
+<li>Insurance and TPA deductions accepted without review</li>
+</ul>
+<p>Recovering revenue the hospital has already earned is usually the fastest way to raise ARPOB. Read the guide to <a href="../../blog/hospital-revenue-leakage-guide.html">the seven most common hospital revenue leaks</a>, or see how <a href="../../agents/revenue-leakage/">revenue leakage detection agents</a> reconcile billing, pharmacy, inventory and claims continuously.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is ARPOB in a hospital?</h3><p>ARPOB stands for Average Revenue Per Occupied Bed. It is the average net inpatient (IPD) revenue a hospital earns for each occupied bed per day.</p><h3>How do you calculate ARPOB?</h3><p>Divide net IPD revenue for a period by the occupied bed days in the same period. For example, ₹2.9 crore of net IPD revenue over 1,950 occupied bed days gives an ARPOB of about ₹14,900.</p><h3>How do I calculate occupied bed days?</h3><p>Add up the number of occupied beds at each daily (usually midnight) census across the period. If you only know occupancy, estimate it as total beds × occupancy rate × number of days.</p><h3>Should ARPOB use gross or net revenue?</h3><p>Use net revenue, after discounts, refunds, cancellations and insurer deductions. Gross revenue flatters ARPOB and hides the revenue leakage you are trying to find.</p><h3>What is a good ARPOB for an Indian hospital?</h3><p>It varies by specialty mix, city and payer mix. As indicative ranges, small nursing homes often see ₹8,000–₹15,000, mid-size secondary hospitals ₹15,000–₹30,000 and metro tertiary hospitals ₹30,000–₹60,000 or more per occupied bed per day.</p><h3>How can a hospital increase ARPOB?</h3><p>Start by capturing revenue already earned: complete charge capture at the point of care, reconcile pharmacy and consumables to billing, control discounts and cancellations, and reduce insurance deductions. Then review case mix and tariffs.</p>
+</div></div></section>
+<section class="page-section dark page-cta"><div class="wrap"><div class="section-head"><span class="eyebrow on-dark">From number to action</span><h2 class="section-title">Want to know exactly where your ARPOB is leaking?</h2><p class="section-sub">Review billing, pharmacy, inventory and claims workflows with the Shucon MedAI team in a 30-minute session.</p></div><div class="hero-actions"><a class="btn btn-primary" data-event="revenue_review_clicked" href="../../#contact">Get a 30-Minute Hospital Revenue Review</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-top footer-4"><div class="footer-brand"><p>AI agents and connected software for healthcare operations.</p><a class="footer-mail" href="mailto:saksham@shucontech.in">saksham@shucontech.in</a><br><a class="footer-demo" data-event="demo_clicked" href="../../#contact">Book a demo &rarr;</a></div><div class="footer-col"><h4>AI agents</h4><a href="../../agents/revenue-leakage/">Revenue leakage</a><a href="../../agents/stakeholder-action/">Stakeholder action</a><a href="../../agents/patient-engagement/">Patient engagement</a><a href="../../agents/insurance-claims/">Insurance claims</a><a href="../../ai-agents/">All AI agents</a></div><div class="footer-col"><h4>Platform</h4><a href="../../platform/hospital-management-system/">Hospital management system</a><a href="../../solutions/diagnostics-centres/">Diagnostics centres</a><a href="../../custom-healthcare-ai/">Custom healthcare AI</a><a href="../../hospital-ai/">Hospital AI</a></div><div class="footer-col"><h4>Resources</h4><a href="../../blog/">Insights</a><a href="../../tools/">Free tools &amp; calculators</a><a href="../../hospital-revenue-leakage/">Revenue leakage guide</a><a href="../../hospital-revenue-leakage-checklist/">25-point leakage checklist</a><a href="../../leadership/saksham-gupta/">CEO profile</a></div></div><div class="footer-bottom"><p>&copy; <span id="year2"></span> Shucon MedAI. All rights reserved.</p><a href="https://www.linkedin.com/company/shucontech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var ids=['beds','occ','days','rev','obd','up'];
+  var q=new URLSearchParams(location.search);
+  ids.forEach(function(k){ if(q.has(k)) $(k).value=q.get(k); });
+  function inr(n){ return '₹'+Math.round(n).toLocaleString('en-IN'); }
+  function money(n){
+    if(n>=1e7) return '₹'+(n/1e7).toLocaleString('en-IN',{maximumFractionDigits:2})+' crore';
+    if(n>=1e5) return '₹'+(n/1e5).toLocaleString('en-IN',{maximumFractionDigits:2})+' lakh';
+    return inr(n);
+  }
+  function band(a){
+    if(a<8000) return 'Below the indicative range for most Indian hospitals. Check that revenue is net IPD only and that bed days are correct, then look for unbilled services.';
+    if(a<15000) return 'Within the indicative range for small nursing homes and Tier-3 hospitals (₹8,000–₹15,000).';
+    if(a<30000) return 'Within the indicative range for mid-size secondary care hospitals (₹15,000–₹30,000).';
+    return 'In the indicative range for tertiary and multi-specialty metro hospitals (₹30,000–₹60,000+).';
+  }
+  var tracked=false;
+  function calc(e){
+    var beds=+$('beds').value, occ=+$('occ').value, days=+$('days').value, rev=+$('rev').value*1e5, obdIn=+$('obd').value, up=+$('up').value;
+    var obd=obdIn>0?obdIn:beds*(occ/100)*days;
+    $('outUp').textContent=inr(up);
+    if(!(obd>0) || !(rev>0) || !(days>0)){
+      $('outArpob').textContent='—';$('outBand').textContent='Enter beds, occupancy, days and net IPD revenue to calculate.';
+      $('outObd').textContent='—';$('outRevDay').textContent='—';$('outWinYear').textContent='—';$('outWinMonth').textContent='';return;
+    }
+    var arpob=rev/obd, perDayObd=obd/days;
+    $('outArpob').textContent=inr(arpob);
+    $('outBand').textContent=band(arpob);
+    $('outObd').textContent=Math.round(obd).toLocaleString('en-IN');
+    $('outRevDay').textContent=money(rev/days);
+    $('outWinYear').textContent=money(up*perDayObd*365)+' a year';
+    $('outWinMonth').textContent=money(up*perDayObd*30)+' a month, with the same beds and occupancy';
+    if(e && !tracked && typeof gtag==='function'){ tracked=true; gtag('event','arpob_calculated',{arpob:Math.round(arpob)}); }
+    var p=new URLSearchParams();ids.forEach(function(k){ if($(k).value!=='') p.set(k,$(k).value); });
+    if(e) history.replaceState(null,'','?'+p.toString());
+  }
+  ids.forEach(function(k){ $(k).addEventListener('input',calc); });
+  calc();
+})();
+</script>
+<script src="../../js/site.js?v=8"></script>
+<a href="#" id="back-top" aria-label="Back to top">&#8593;</a>
+</body></html>
