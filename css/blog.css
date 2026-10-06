@@ -1,5 +1,5 @@
 /* ============================================================
-   Shucon MedAI — Blog styles
+   Shucon MedAI, Blog styles
    Depends on css/shucon-vc.css (design tokens + nav/footer/btn)
    ============================================================ */
 
@@ -66,6 +66,8 @@
 .article-head .lede { font-size: 19px; color: var(--muted); max-width: 780px; margin: 0 0 18px; line-height: 1.5; }
 .article-meta { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--muted-2); font-weight: 600; }
 .article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--muted-2); }
+.article-meta a, .post-meta a { color: var(--accent-2); font-weight: 700; }
+.article-meta a:hover, .post-meta a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 .prose { width: min(760px, calc(100% - 44px)); margin: 0 auto; padding: 52px 0 24px; }
 .prose h2 { font-family: var(--serif); font-size: 28px; font-weight: 700; color: var(--ink-2); margin: 44px 0 14px; letter-spacing: -0.01em; }

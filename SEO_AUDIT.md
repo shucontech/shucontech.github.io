@@ -43,7 +43,7 @@ Audit date: 2026-09-16
 
 - Existing blog copy includes broad industry ranges and benchmark statements without citations. These should not be expanded into additional unsupported numerical claims.
 - Existing wording is India-specific in places. New UAE content must describe market intent and compatibility without implying UAE customers or regulatory certifications.
-- The supported `$15,000+` leakage result can be used, but customer identity and operational details must remain anonymous.
+- The supported `₹15 Lakh+` leakage result can be used, but customer identity and operational details must remain anonymous.
 
 ## Implementation plan
 

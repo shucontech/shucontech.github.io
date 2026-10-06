@@ -1,4 +1,4 @@
-/* Commercial SEO pages — extends Shucon MedAI's existing design system. */
+/* Commercial SEO pages, extends Shucon MedAI's existing design system. */
 .commercial-hero {
   position: relative; overflow: hidden; color: #eaf0fb;
   background: radial-gradient(900px 440px at 85% -10%, rgba(37,99,235,.3), transparent 62%), linear-gradient(155deg,#0a1226,#0b1a3a 58%,#0a1428);
@@ -8,7 +8,7 @@
 .commercial-hero .wrap { position:relative; z-index:1; }
 .commercial-hero .breadcrumbs { color:#9fb0d0; margin-bottom:24px; }
 .commercial-hero .breadcrumbs a { color:#c6d2ea; }
-.commercial-hero h1 { max-width:900px; margin:18px 0; color:#fff; font:600 clamp(38px,5.5vw,64px)/1.08 var(--serif); }
+.commercial-hero h1 { max-width:900px; margin:18px 0; color:#fff; font:700 clamp(38px,5.5vw,64px)/1.06 var(--serif); letter-spacing:-0.045em; }
 .commercial-hero .hero-lead { max-width:780px; }
 .commercial-hero .hero-actions { margin-top:30px; }
 .proof-line { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:34px; color:#9fb0d0; font-size:13px; font-weight:600; }
