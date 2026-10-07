@@ -156,6 +156,11 @@
 		<priority>0.7</priority>
 	</url>
 <!-- AUTO:SITEMAP:START -->
-
+	<url>
+		<loc>https://shuconmedai.com/blog/alos-average-length-of-stay.html</loc>
+		<lastmod>2026-10-07</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
 <!-- AUTO:SITEMAP:END -->
 </urlset>

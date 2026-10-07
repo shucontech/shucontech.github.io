@@ -27,7 +27,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
-
+- [What is ALOS in a Hospital? Average Length of Stay Formula, Example and How to Improve It](https://shuconmedai.com/blog/alos-average-length-of-stay.html): ALOS in hospital means average inpatient stay. Learn the formula, example, indicative benchmarks and ways to reduce ALOS safely.
 <!-- AUTO:LLMS:END -->
 
 ## Company
