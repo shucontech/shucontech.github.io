@@ -28,7 +28,7 @@ jobs:
           python-version: '3.12'
 
       - name: Publish due posts
-        run: python3 _scheduled/publish.py ${{ inputs.date && format('--date {0}', inputs.date) || '' }}
+        run: python3 _scheduled/publish.py --urls-out "$RUNNER_TEMP/indexnow-urls.txt" ${{ inputs.date && format('--date {0}', inputs.date) || '' }}
 
       - name: Commit and push
         id: commit
@@ -51,3 +51,26 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
+
+      # IndexNow tells Bing (and the search engines that share its index, incl. Copilot and
+      # ChatGPT search), Yandex, Seznam and Naver about new/changed URLs immediately.
+      # The key file must stay at the site root: /<key>.txt containing the key.
+      - name: Notify search engines (IndexNow)
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: 06a7a11c3d7d9e6c42a9282057936d38
+        run: |
+          [ -s "$RUNNER_TEMP/indexnow-urls.txt" ] || { echo "No URLs to submit."; exit 0; }
+          sleep 90   # give GitHub Pages time to deploy so crawlers fetch the new version
+          python3 - <<'PY'
+          import json, os
+          urls = open(os.environ['RUNNER_TEMP'] + '/indexnow-urls.txt').read().split()
+          key = os.environ['INDEXNOW_KEY']
+          json.dump({"host": "shuconmedai.com", "key": key,
+                     "keyLocation": f"https://shuconmedai.com/{key}.txt", "urlList": urls},
+                    open('/tmp/indexnow.json', 'w'))
+          print('\n'.join(urls))
+          PY
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @/tmp/indexnow.json

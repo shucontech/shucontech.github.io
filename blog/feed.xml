@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Shucon MedAI Insights</title>
+		<link>https://shuconmedai.com/blog/</link>
+		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
+		<language>en-IN</language>
+		<lastBuildDate>Fri, 16 Oct 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>OPD to IPD Conversion Ratio: Formula, Benchmarks and How to Improve It</title>
+			<link>https://shuconmedai.com/blog/opd-to-ipd-conversion-ratio.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/opd-to-ipd-conversion-ratio.html</guid>
+			<pubDate>Fri, 16 Oct 2026 06:00:00 +0530</pubDate>
+			<category>Hospital finance</category>
+			<description>OPD to IPD conversion ratio formula, examples, indicative benchmarks and practical steps to improve admission follow-up in hospitals.</description>
+		</item>
+		<item>
+			<title>Hospital Management System Modules: The Complete List for Hospitals and Nursing Homes</title>
+			<link>https://shuconmedai.com/blog/hospital-management-system-modules.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-management-system-modules.html</guid>
+			<pubDate>Wed, 14 Oct 2026 06:00:00 +0530</pubDate>
+			<category>Hospital software</category>
+			<description>Hospital management system modules explained: OPD, IPD, billing, pharmacy, lab, inventory, TPA, MIS and AI workflows for hospitals.</description>
+		</item>
+		<item>
+			<title>Bed Occupancy Rate Formula: How to Calculate Hospital Occupancy and Use It</title>
+			<link>https://shuconmedai.com/blog/bed-occupancy-rate-formula.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/bed-occupancy-rate-formula.html</guid>
+			<pubDate>Mon, 12 Oct 2026 06:00:00 +0530</pubDate>
+			<category>Hospital finance</category>
+			<description>Bed occupancy rate formula for hospitals, with examples, indicative benchmarks and actions to improve bed utilisation without unsafe crowding.</description>
+		</item>
+		<item>
+			<title>TPA Claim Rejection Reasons and How Hospitals Can Prevent Them</title>
+			<link>https://shuconmedai.com/blog/tpa-claim-rejection-reasons.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/tpa-claim-rejection-reasons.html</guid>
+			<pubDate>Fri, 09 Oct 2026 06:00:00 +0530</pubDate>
+			<category>Insurance &amp; claims</category>
+			<description>TPA claim rejection reasons explained for hospitals, with prevention steps for documentation, billing, coding and cashless approvals.</description>
+		</item>
+		<item>
+			<title>What is ALOS in a Hospital? Average Length of Stay Formula, Example and How to Improve It</title>
+			<link>https://shuconmedai.com/blog/alos-average-length-of-stay.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/alos-average-length-of-stay.html</guid>
+			<pubDate>Wed, 07 Oct 2026 06:00:00 +0530</pubDate>
+			<category>Hospital finance</category>
+			<description>ALOS in hospital means average inpatient stay. Learn the formula, example, indicative benchmarks and ways to reduce ALOS safely.</description>
+		</item>
+		<item>
+			<title>Revenue Leakage in Hospitals: 7 Silent Ways You&#x27;re Losing Money</title>
+			<link>https://shuconmedai.com/blog/hospital-revenue-leakage-guide.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-revenue-leakage-guide.html</guid>
+			<pubDate>Thu, 30 Jul 2026 06:00:00 +0530</pubDate>
+			<category>Hospital finance</category>
+			<description>The seven most common leaks between departments, and how to detect and stop them.</description>
+		</item>
+		<item>
+			<title>Pharmacy Inventory Reconciliation: Definition, Formula and Leakage Fixes</title>
+			<link>https://shuconmedai.com/blog/pharmacy-inventory-reconciliation.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/pharmacy-inventory-reconciliation.html</guid>
+			<pubDate>Thu, 30 Jul 2026 06:00:00 +0530</pubDate>
+			<category>Pharmacy &amp; inventory</category>
+			<description>Match dispensing, stock and billing continuously so medicine never leaves without a bill.</description>
+		</item>
+		<item>
+			<title>Why Fragmented Hospital Software Causes Revenue Leakage</title>
+			<link>https://shuconmedai.com/blog/fragmented-hospital-software.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/fragmented-hospital-software.html</guid>
+			<pubDate>Thu, 30 Jul 2026 06:00:00 +0530</pubDate>
+			<category>Hospital software</category>
+			<description>Why siloed hospital systems leak money, and how one shared transaction model closes the gaps.</description>
+		</item>
+		<item>
+			<title>What is ARPOB in a Hospital? Full Form, Formula and Benchmarks</title>
+			<link>https://shuconmedai.com/blog/arpob-hospital-guide.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/arpob-hospital-guide.html</guid>
+			<pubDate>Thu, 30 Jul 2026 06:00:00 +0530</pubDate>
+			<category>Hospital finance</category>
+			<description>Average Revenue Per Occupied Bed: the formula, India benchmarks and what drags it down.</description>
+		</item>
+	</channel>
+</rss>

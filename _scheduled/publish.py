@@ -6,8 +6,10 @@ Each run (idempotent):
   * resolves <a href="post:slug"> links (linked once the target is live, plain text before)
   * rebuilds auto-managed blocks: blog listing + Blog JSON-LD, sitemap, llms.txt,
     homepage "latest guides", product-page "guides" and legacy-post "more guides"
+  * regenerates the RSS feed (blog/feed.xml)
+  * with --urls-out, lists changed page URLs for IndexNow submission
 
-Usage: python3 _scheduled/publish.py [--date YYYY-MM-DD] [--dry-run] [--check]
+Usage: python3 _scheduled/publish.py [--date YYYY-MM-DD] [--dry-run] [--check] [--urls-out FILE]
 """
 import argparse
 import datetime as dt
@@ -290,11 +292,43 @@ def guides_block(items, heading, prefix):
             f'<ul>{links}</ul><a class="auto-guides-all" href="{prefix}blog/">All insights &rarr;</a></div></section>')
 
 
+def feed_xml(newest):
+    def rfc822(d):
+        return dt.datetime.fromisoformat(d).replace(hour=6, tzinfo=IST).strftime('%a, %d %b %Y %H:%M:%S %z')
+    items = [(p['h1'], p['slug'], p['date'], p['description'], p['category']) for p in newest]
+    items += [(t, slug, d, desc, cat) for slug, (t, cat, _, d, desc) in LEGACY.items()]
+    items.sort(key=lambda i: i[2], reverse=True)
+    body = ''.join(
+        f'\t\t<item>\n\t\t\t<title>{esc(t)}</title>\n\t\t\t<link>{SITE}/blog/{slug}.html</link>\n'
+        f'\t\t\t<guid isPermaLink="true">{SITE}/blog/{slug}.html</guid>\n\t\t\t<pubDate>{rfc822(d)}</pubDate>\n'
+        f'\t\t\t<category>{esc(cat)}</category>\n\t\t\t<description>{esc(desc)}</description>\n\t\t</item>\n'
+        for t, slug, d, desc, cat in items[:30])
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n\t<channel>\n'
+            '\t\t<title>Shucon MedAI Insights</title>\n'
+            f'\t\t<link>{SITE}/blog/</link>\n'
+            f'\t\t<atom:link href="{SITE}/blog/feed.xml" rel="self" type="application/rss+xml"/>\n'
+            '\t\t<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>\n'
+            '\t\t<language>en-IN</language>\n'
+            f'\t\t<lastBuildDate>{rfc822(items[0][2])}</lastBuildDate>\n'
+            f'{body}\t</channel>\n</rss>\n')
+
+
+def page_url(path):
+    """Public URL for a site file, or None for non-page files (sitemap, feed, llms.txt)."""
+    if not path.endswith('.html'):
+        return None
+    if path == 'index.html' or path.endswith('/index.html'):
+        path = path[:-len('index.html')]
+    return f'{SITE}/{path}'
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--date', help='pretend today is YYYY-MM-DD')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--check', action='store_true', help='validate all posts and exit')
+    ap.add_argument('--urls-out', help='write the URLs of changed pages to this file (for IndexNow)')
     a = ap.parse_args()
     today = a.date or dt.datetime.now(IST).date().isoformat()
 
@@ -333,6 +367,8 @@ def main():
     llm = '\n'.join(f'- [{p["h1"]}]({SITE}/blog/{p["slug"]}.html): {p["description"]}' for p in newest)
     edit('llms.txt', lambda t: replace_block(t, 'LLMS', llm, 'llms.txt'))
 
+    writes['blog/feed.xml'] = feed_xml(newest)
+
     edit('index.html', lambda t: replace_block(t, 'HOME-GUIDES', guides_block(newest[:6], 'Latest guides for hospital leaders', ''), 'index.html'))
 
     for page, prods in PRODUCT_PAGES.items():
@@ -358,6 +394,13 @@ def main():
         changed.append('removed ' + path)
         if not a.dry_run:
             os.remove(os.path.join(ROOT, path))
+    if a.urls_out:
+        urls = [page_url(c.replace('removed ', '')) for c in changed]
+        urls = [u for u in urls if u]
+        if urls:
+            urls += [SITE + '/blog/', SITE + '/sitemap.xml']
+        with open(a.urls_out, 'w', encoding='utf-8') as f:
+            f.write(''.join(u + '\n' for u in dict.fromkeys(urls)))
     print(f'today={today} live={len(live)}/{len(posts)} changed={len(changed)}')
     for c in changed:
         print('  ', c)
