@@ -7,7 +7,11 @@ Posts in `posts/` go live automatically on their `date`. The workflow runs
 2. Updates the blog listing and its JSON-LD, `sitemap.xml`, `llms.txt`, the homepage "Latest guides"
    block, the "Related guides" blocks on product pages, and the "More guides" box in the 4 original
    blog posts.
-3. Commits and pushes the changes, which redeploys GitHub Pages.
+3. Regenerates the RSS feed at `blog/feed.xml`.
+4. Commits and pushes the changes, which redeploys GitHub Pages.
+5. Submits the changed URLs to IndexNow (Bing, Copilot/ChatGPT search, Yandex, etc.) so they are
+   crawled within hours instead of days. The key file `06a7a11c3d7d9e6c42a9282057936d38.txt` at the
+   site root must not be deleted. Google does not use IndexNow; it picks changes up from the sitemap.
 
 Folders that start with `_` are not published by GitHub Pages (Jekyll), so drafts are not reachable
 on shuconmedai.com. They **are** visible to anyone who can see the GitHub repo.
