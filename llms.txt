@@ -27,6 +27,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [AI Agents in Healthcare: What They Are and How Hospitals Use Them](https://shuconmedai.com/blog/ai-agents-in-healthcare.html): AI agents in healthcare explained for hospitals: what they do, practical use cases, human oversight, risks and implementation steps.
 - [OPD to IPD Conversion Ratio: Formula, Benchmarks and How to Improve It](https://shuconmedai.com/blog/opd-to-ipd-conversion-ratio.html): OPD to IPD conversion ratio formula, examples, indicative benchmarks and practical steps to improve admission follow-up in hospitals.
 - [Hospital Management System Modules: The Complete List for Hospitals and Nursing Homes](https://shuconmedai.com/blog/hospital-management-system-modules.html): Hospital management system modules explained: OPD, IPD, billing, pharmacy, lab, inventory, TPA, MIS and AI workflows for hospitals.
 - [Bed Occupancy Rate Formula: How to Calculate Hospital Occupancy and Use It](https://shuconmedai.com/blog/bed-occupancy-rate-formula.html): Bed occupancy rate formula for hospitals, with examples, indicative benchmarks and actions to improve bed utilisation without unsafe crowding.
