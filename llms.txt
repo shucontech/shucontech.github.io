@@ -27,6 +27,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [Hospital KPIs: 25 Metrics Every Hospital Administrator Should Track](https://shuconmedai.com/blog/hospital-kpis-list.html): Hospital KPIs explained for Indian hospitals: track finance, occupancy, claims, operations and patient flow with 25 practical metrics.
 - [AI Agents in Healthcare: What They Are and How Hospitals Use Them](https://shuconmedai.com/blog/ai-agents-in-healthcare.html): AI agents in healthcare explained for hospitals: what they do, practical use cases, human oversight, risks and implementation steps.
 - [OPD to IPD Conversion Ratio: Formula, Benchmarks and How to Improve It](https://shuconmedai.com/blog/opd-to-ipd-conversion-ratio.html): OPD to IPD conversion ratio formula, examples, indicative benchmarks and practical steps to improve admission follow-up in hospitals.
 - [Hospital Management System Modules: The Complete List for Hospitals and Nursing Homes](https://shuconmedai.com/blog/hospital-management-system-modules.html): Hospital management system modules explained: OPD, IPD, billing, pharmacy, lab, inventory, TPA, MIS and AI workflows for hospitals.

@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Mon, 19 Oct 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Wed, 21 Oct 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>Hospital KPIs: 25 Metrics Every Hospital Administrator Should Track</title>
+			<link>https://shuconmedai.com/blog/hospital-kpis-list.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-kpis-list.html</guid>
+			<pubDate>Wed, 21 Oct 2026 06:00:00 +0530</pubDate>
+			<category>Hospital finance</category>
+			<description>Hospital KPIs explained for Indian hospitals: track finance, occupancy, claims, operations and patient flow with 25 practical metrics.</description>
+		</item>
 		<item>
 			<title>AI Agents in Healthcare: What They Are and How Hospitals Use Them</title>
 			<link>https://shuconmedai.com/blog/ai-agents-in-healthcare.html</link>
