@@ -322,7 +322,7 @@ h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -0.02em; }
 .contact-info { display: grid; gap: 16px; }
 .cinfo { display: flex; gap: 14px; align-items: flex-start; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: var(--radius-sm); padding: 18px; }
 .cinfo .ci { width: 40px; height: 40px; border-radius: 10px; background: rgba(127,168,255,0.14); color: #9fb9ff; display: grid; place-items: center; flex: none; }
-.cinfo h4 { font-size: 15px; margin: 0 0 4px; color: #fff; }
+.cinfo h3, .cinfo h4 { font-size: 15px; margin: 0 0 4px; color: #fff; }
 .cinfo p, .cinfo a { margin: 0; font-size: 13.5px; color: #b7c4de; }
 .cinfo a:hover { color: #fff; }
 

@@ -26,15 +26,17 @@
     <meta name="twitter:description" content="Deploy connected AI agents across revenue, patient, claims and hospital operations.">
     <meta name="twitter:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/images/favicon/favicon-96x96.png" sizes="96x96" type="image/png">
     <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/shucon-vc.css?v=5">
+    <style>
+      @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(fonts/plus-jakarta-sans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+      @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(fonts/plus-jakarta-sans-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    </style>
+    <link rel="stylesheet" href="css/shucon-vc.css?v=6">
     <link rel="stylesheet" href="css/agents.css?v=14">
 
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Shucon MedAI", "url": "https://shuconmedai.com/", "logo": {"@type": "ImageObject", "url": "https://shuconmedai.com/images/logo-bg.png", "width": 1280, "height": 571}, "description": "Healthcare AI agents and a connected hospital operations platform for providers, diagnostics networks and healthcare organizations.", "founder": {"@type": "Person", "name": "Saksham Gupta", "jobTitle": "Founder and CEO", "url": "https://shuconmedai.com/leadership/saksham-gupta/", "image": "https://shuconmedai.com/images/saksham-gupta-linkedin.jpg", "sameAs": ["https://www.linkedin.com/in/saksham9/"], "description": "Former Microsoft engineer on the core Microsoft AI Copilot team and founder of Shucon MedAI."}, "sameAs": ["https://www.linkedin.com/company/shucontech/", "https://www.linkedin.com/in/saksham9/"], "@id": "https://shuconmedai.com/#organization", "alternateName": ["Shucon", "ShuconTech", "Shucon MedAI Technologies"], "email": "saksham@shucontech.in", "areaServed": [{"@type": "Country", "name": "India"}, {"@type": "Country", "name": "United Arab Emirates"}], "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": "saksham@shucontech.in", "telephone": "+91-87555-04999", "areaServed": ["IN", "AE"], "availableLanguage": ["English", "Hindi"]}], "knowsAbout": ["Healthcare AI agents", "Hospital revenue leakage detection", "Hospital management software", "Insurance claim automation", "AI voice agents for hospitals", "Diagnostic centre software"]}</script>
@@ -42,19 +44,33 @@
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Shucon MedAI healthcare operations products", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://shuconmedai.com/agents/revenue-leakage/", "name": "Revenue Leakage Detection Agents"}, {"@type": "ListItem", "position": 2, "url": "https://shuconmedai.com/agents/stakeholder-action/", "name": "Stakeholder Action Agents"}, {"@type": "ListItem", "position": 3, "url": "https://shuconmedai.com/agents/patient-engagement/", "name": "Patient Engagement Agents"}, {"@type": "ListItem", "position": 4, "url": "https://shuconmedai.com/agents/insurance-claims/", "name": "Insurance Claims Agents"}, {"@type": "ListItem", "position": 5, "url": "https://shuconmedai.com/platform/hospital-management-system/", "name": "Hospital Management System"}, {"@type": "ListItem", "position": 6, "url": "https://shuconmedai.com/solutions/diagnostics-centres/", "name": "Diagnostics Centre Platform"}, {"@type": "ListItem", "position": 7, "url": "https://shuconmedai.com/custom-healthcare-ai/", "name": "Custom Healthcare AI"}]}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What healthcare operations can Shucon MedAI agents automate?", "acceptedAnswer": {"@type": "Answer", "text": "Shucon MedAI agents support revenue leakage detection, operational exception routing, patient calls and follow-ups, insurance claim workflows, diagnostics operations, clinical documentation and custom hospital workflows."}}, {"@type": "Question", "name": "Does Shucon MedAI replace an existing HMS?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Organizations can deploy individual agents over existing hospital systems or adopt Shucon's complete hospital management platform. Deployment can be phased by workflow, department or facility."}}, {"@type": "Question", "name": "Can Shucon MedAI run on-premise?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Shucon MedAI supports on-premise and customer-controlled cloud deployment for healthcare organizations with specific privacy, security or infrastructure requirements."}}, {"@type": "Question", "name": "Can Shucon build a custom healthcare AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Shucon can design agents around an organization's standard operating procedures, systems, escalation rules and human approval requirements."}}]}</script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-5D6VNZNNKQ');
+      /* Load gtag.js after first interaction or shortly after page load, keeping it off the critical path. */
+      (function () {
+        var loaded = false, events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          events.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ';
+          document.head.appendChild(s);
+        }
+        events.forEach(function (e) { addEventListener(e, load, { passive: true, once: true }); });
+        addEventListener('load', function () { setTimeout(load, 3500); });
+      })();
     </script>
 <link rel="stylesheet" href="css/site-ui.css?v=6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://shuconmedai.com/#website", "name": "Shucon MedAI", "alternateName": "Shucon", "url": "https://shuconmedai.com/", "publisher": {"@id": "https://shuconmedai.com/#organization"}, "inLanguage": "en-IN"}</script>
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="UbWEq0aYWth4TX9ekG3Cww" async></script>
 </head>
 <body class="home-page">
-    <nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="./" aria-label="Shucon MedAI home"><img src="images/logo-header.png" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="ai-agents/">AI agents</a></li><li><a href="platform/hospital-management-system/">HMS platform</a></li><li><a href="solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="tools/">Tools</a></li><li><a href="blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="./#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+    <nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="./" aria-label="Shucon MedAI home"><img src="images/logo-header-278.webp" alt="Shucon MedAI" width="139" height="40" fetchpriority="high"></a><ul class="nav-links" id="navLinks"><li><a href="ai-agents/">AI agents</a></li><li><a href="platform/hospital-management-system/">HMS platform</a></li><li><a href="solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="tools/">Tools</a></li><li><a href="blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="./#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
 
     <main>
         <header class="agent-hero" id="top">
@@ -289,13 +305,13 @@
                 <div class="contact-grid">
                     <div class="contact-info">
                         <div class="cinfo">
-                            <div><h4>Email</h4><a href="mailto:saksham@shucontech.in">saksham@shucontech.in</a></div>
+                            <div><h3>Email</h3><a href="mailto:saksham@shucontech.in">saksham@shucontech.in</a></div>
                         </div>
                         <div class="cinfo">
-                            <div><h4>Deployment</h4><p>India, UAE and international healthcare organizations</p></div>
+                            <div><h3>Deployment</h3><p>India, UAE and international healthcare organizations</p></div>
                         </div>
                         <div class="cinfo">
-                            <div><h4>Infrastructure</h4><p>Cloud, customer-controlled cloud or on-premise</p></div>
+                            <div><h3>Infrastructure</h3><p>Cloud, customer-controlled cloud or on-premise</p></div>
                         </div>
                     </div>
                     <div class="form-card contact-card">
@@ -325,6 +341,6 @@
     <footer class="footer"><div class="wrap"><div class="footer-top footer-4"><div class="footer-brand"><p>AI agents and connected software for healthcare operations.</p><a class="footer-mail" href="mailto:saksham@shucontech.in">saksham@shucontech.in</a><br><a class="footer-demo" data-event="demo_clicked" href="./#contact">Book a demo &rarr;</a></div><div class="footer-col"><h4>AI agents</h4><a href="agents/revenue-leakage/">Revenue leakage</a><a href="agents/stakeholder-action/">Stakeholder action</a><a href="agents/patient-engagement/">Patient engagement</a><a href="agents/insurance-claims/">Insurance claims</a><a href="ai-agents/">All AI agents</a></div><div class="footer-col"><h4>Platform</h4><a href="platform/hospital-management-system/">Hospital management system</a><a href="solutions/diagnostics-centres/">Diagnostics centres</a><a href="custom-healthcare-ai/">Custom healthcare AI</a><a href="hospital-ai/">Hospital AI</a></div><div class="footer-col"><h4>Resources</h4><a href="blog/">Insights</a><a href="tools/">Free tools &amp; calculators</a><a href="hospital-revenue-leakage/">Revenue leakage guide</a><a href="hospital-revenue-leakage-checklist/">25-point leakage checklist</a><a href="leadership/saksham-gupta/">CEO profile</a></div></div><div class="footer-bottom"><p>&copy; <span id="year2"></span> Shucon MedAI. All rights reserved.</p><a href="https://www.linkedin.com/company/shucontech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
 
     <a href="#top" id="back-top" aria-label="Back to top">&#8593;</a>
-    <script src="js/site.js?v=8"></script>
+    <script src="js/site.js?v=9"></script>
 </body>
 </html>
