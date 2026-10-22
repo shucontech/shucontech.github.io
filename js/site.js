@@ -150,9 +150,9 @@
   var ticking = false;
   function onScroll() {
     var y = window.scrollY;
+    var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom + y : 600;
     if (nav) nav.classList.toggle('is-scrolled', y > 8);
     if (backTop) backTop.classList.toggle('show', y > 900);
-    var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom + y : 600;
     sticky.classList.toggle('show', y > heroBottom - 80 && !contactVisible && !document.querySelector('.demo-modal[open]'));
     if (progress) {
       var rect = article.getBoundingClientRect();
@@ -165,7 +165,7 @@
   window.addEventListener('scroll', function () {
     if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
   }, { passive: true });
-  onScroll();
+  window.requestAnimationFrame(onScroll);
 
   /* Lead forms */
   var CHIPS = ['Revenue leakage', 'Insurance claims', 'Patient calls', 'Stakeholder actions', 'HMS platform', 'Diagnostics', 'Custom agent'];
