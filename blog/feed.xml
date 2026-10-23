@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Wed, 21 Oct 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Fri, 23 Oct 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>Cashless Claim Process in Hospitals: Step-by-Step Guide</title>
+			<link>https://shuconmedai.com/blog/cashless-claim-process-hospital.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/cashless-claim-process-hospital.html</guid>
+			<pubDate>Fri, 23 Oct 2026 06:00:00 +0530</pubDate>
+			<category>Insurance &amp; claims</category>
+			<description>Cashless claim process hospital guide for TPA desks: steps, documents, TAT controls, deductions and practical SOPs for India.</description>
+		</item>
 		<item>
 			<title>Hospital KPIs: 25 Metrics Every Hospital Administrator Should Track</title>
 			<link>https://shuconmedai.com/blog/hospital-kpis-list.html</link>
