@@ -89,6 +89,8 @@ PRODUCT_PAGES = {
     'hospital-billing-leakage/index.html': ['revenue-leakage', 'insurance-claims'],
     'hospital-operations-ai/index.html': ['stakeholder-action', 'patient-engagement'],
     'hospital-ai/index.html': ['ai-agents', 'stakeholder-action'],
+    'hmis/index.html': ['hms'],
+    'pacs/index.html': ['diagnostics'],
 }
 
 REQUIRED = ['slug', 'date', 'title', 'h1', 'description', 'lede', 'category', 'product', 'keywords', 'faqs']
