@@ -12,10 +12,10 @@
 
 ## Platform
 - [Hospital management system (HMS)](https://shuconmedai.com/platform/hospital-management-system/): OPD, IPD, EMR, billing, pharmacy, inventory, lab, radiology, OT, insurance and analytics.
-- [Diagnostic centre, lab and radiology software](https://shuconmedai.com/solutions/diagnostics-centres/): Bookings, samples, LIS/RIS workflows, reporting, billing and referrals.
+- [Diagnostic centre, lab and radiology software](https://shuconmedai.com/solutions/diagnostics-centres/): Bookings, samples, Shucon's own LIS, RIS and PACS integrated with billing, reporting and referrals.
 - [AI for hospitals in the UAE](https://shuconmedai.com/uae-hospital-ai/)
 - [What is HMIS? Full form and modules](https://shuconmedai.com/hmis/): Hospital Management Information System explained, HMIS for clinics, HMIS and LIMS.
-- [What is PACS? Full form in radiology](https://shuconmedai.com/pacs/): Picture Archiving and Communication System explained, PACS vs RIS, DICOM and choosing a PACS.
+- [What is PACS? Full form in radiology](https://shuconmedai.com/pacs/): Picture Archiving and Communication System explained, PACS vs RIS, DICOM, choosing a PACS, and Shucon's PACS with integrated RIS, LIS and billing.
 
 ## Resources
 - [Hospital revenue leakage: causes and fixes](https://shuconmedai.com/blog/hospital-revenue-leakage-guide.html)
