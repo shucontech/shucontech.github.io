@@ -92,6 +92,9 @@ PRODUCT_PAGES = {
     'hmis/index.html': ['hms'],
     'pacs/index.html': ['diagnostics'],
     'ris/index.html': ['diagnostics'],
+    'lis/index.html': ['diagnostics'],
+    'hospital-billing-software/index.html': ['revenue-leakage', 'insurance-claims'],
+    'hospital-statistics-formulas/index.html': ['stakeholder-action'],
 }
 
 REQUIRED = ['slug', 'date', 'title', 'h1', 'description', 'lede', 'category', 'product', 'keywords', 'faqs']
