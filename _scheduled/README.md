@@ -26,9 +26,10 @@ on shuconmedai.com. They **are** visible to anyone who can see the GitHub repo.
 | Preview what publishes on a date | `python3 _scheduled/publish.py --date 2026-11-30 --dry-run` |
 | Publish now | GitHub → Actions → *Publish scheduled posts* → *Run workflow*, or run `python3 _scheduled/publish.py` locally and push. |
 
-`calendar.csv` lists all 156 planned topics. Rows with status `written` exist in `posts/`; `brief`
+`calendar.csv` lists every planned topic. Rows with status `written` exist in `posts/`; `brief`
 rows still need writing, and `brief - needs fact-check` topics cover regulations (PM-JAY, CGHS,
 NABH, GST, DPDP, etc.) that must be checked against the current official source before publishing.
+Rows marked `covered by …` are already answered by a live page or another post and should not be written.
 
 ## Post format
 

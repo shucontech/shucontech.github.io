@@ -38,30 +38,34 @@ go_live,slug,working_title,primary_keyword,category,product,status
 2026-12-30,hospital-kpi-dashboard,Building a Hospital KPI Dashboard Leadership Actually Uses,hospital dashboard,Hospital operations,stakeholder-action,brief
 2027-01-01,what-is-hospital-management-system,What is a Hospital Management System (HMS)?,what is hospital management system,Hospital software,hms,brief
 2027-01-04,reimbursement-vs-cashless-claims,Reimbursement vs Cashless Claims: A Hospital Perspective,reimbursement vs cashless,Insurance & claims,insurance-claims,brief
+2027-01-05,tpa-desk-in-hospital,"TPA Desk in Hospital: Meaning, Full Form, Roles and Daily Workflow",tpa desk in hospital,Insurance & claims,insurance-claims,written
 2027-01-06,consumables-billing-leakage,Consumables Billing Leakage in Hospitals,consumables billing hospital,Revenue leakage,revenue-leakage,brief
+2027-01-07,opd-process-flow-hospital,"OPD Process in Hospital: Step-by-Step Flow, Bottlenecks and Footfall Growth",opd process in hospital,Patient experience,patient-engagement,written
 2027-01-08,ai-for-insurance-claims,AI for Hospital Insurance Claims,ai insurance claims hospital,Healthcare AI,ai-agents,brief
 2027-01-11,fefo-vs-fifo-pharmacy,FEFO vs FIFO in Hospital Pharmacy,fefo vs fifo,Pharmacy & inventory,pharmacy,brief
+2027-01-12,discharge-summary-format,"Discharge Summary Format in Hospital: Template, Contents and Insurance Claim Checklist",discharge summary format,Insurance & claims,insurance-claims,written
 2027-01-13,case-mix-index,Case Mix Index Explained for Indian Hospitals,case mix index,Hospital finance,stakeholder-action,brief
 2027-01-15,opd-queue-management,OPD Queue Management: Reduce Waiting Time,opd queue management,Patient experience,patient-engagement,brief
-2027-01-18,lis-laboratory-information-system,What is a Laboratory Information System (LIS)?,laboratory information system,Diagnostics,diagnostics,brief
+2027-01-18,lis-laboratory-information-system,What is a Laboratory Information System (LIS)?,laboratory information system,Diagnostics,diagnostics,covered by /lis/ page
+2027-01-19,pharmacy-audit-checklist,"Hospital Pharmacy Audit Checklist: Stock, Expiry, Controlled Drugs and Billing",pharmacy audit checklist,Pharmacy & inventory,pharmacy,written
 2027-01-20,hospital-ebitda-margin,Hospital EBITDA Margin: Benchmarks and Levers,hospital ebitda margin,Hospital finance,stakeholder-action,brief
-2027-01-22,insurance-desk-sop,Hospital Insurance Desk SOP,insurance desk sop,Insurance & claims,insurance-claims,brief
+2027-01-22,insurance-desk-sop,Hospital Insurance Desk SOP,insurance desk sop,Insurance & claims,insurance-claims,covered by tpa-desk-in-hospital post
 2027-01-25,icu-billing-errors,ICU Billing Errors and How to Prevent Them,icu billing,Revenue leakage,revenue-leakage,brief
 2027-01-27,stock-audit-procedure-hospital,Stock Audit Procedure for Hospital Stores and Pharmacy,stock audit procedure,Pharmacy & inventory,pharmacy,brief
 2027-01-29,ai-revenue-cycle-management,AI in Revenue Cycle Management,ai revenue cycle management,Healthcare AI,ai-agents,brief
 2027-02-01,his-vs-hms-vs-erp,HIS vs HMS vs Hospital ERP,hospital erp,Hospital software,hms,brief
 2027-02-03,patient-leakage-referral-leakage,Patient Leakage: Why Patients Don't Return and How to Fix It,patient leakage,Patient experience,patient-engagement,brief
 2027-02-05,revenue-per-opd-patient,Average Revenue Per OPD Patient,revenue per opd patient,Hospital finance,stakeholder-action,brief
-2027-02-08,discharge-summary-insurance-checklist,Discharge Summary Documentation for Insurance Claims,discharge summary insurance,Insurance & claims,insurance-claims,brief
+2027-02-08,discharge-summary-insurance-checklist,Discharge Summary Documentation for Insurance Claims,discharge summary insurance,Insurance & claims,insurance-claims,covered by discharge-summary-format post
 2027-02-10,package-billing-overruns,Package Billing Overruns: Controlling Costs in Fixed Packages,package billing hospital,Revenue leakage,revenue-leakage,brief
-2027-02-12,ris-pacs-explained,RIS and PACS Explained for Diagnostic Centres,ris pacs,Diagnostics,diagnostics,brief
+2027-02-12,ris-pacs-explained,RIS and PACS Explained for Diagnostic Centres,ris pacs,Diagnostics,diagnostics,covered by /ris/ and /pacs/ pages
 2027-02-15,generative-ai-hospital-governance,Generative AI in Hospitals: Risks and Governance,generative ai hospital,Healthcare AI,ai-agents,brief
 2027-02-17,indent-management-hospital,Ward Indent Management in Hospitals,indent management hospital,Pharmacy & inventory,pharmacy,brief
 2027-02-19,bed-census-midnight-census,Midnight Census and Bed Census Explained,midnight census hospital,Hospital finance,stakeholder-action,brief
 2027-02-22,tpa-query-management,Managing TPA Queries Faster,tpa query,Insurance & claims,insurance-claims,brief
 2027-02-24,data-migration-old-hms,Migrating Data From an Old HMS,hms data migration,Hospital software,hms,brief
 2027-02-26,interim-billing-ipd,Interim Billing for IPD Patients,interim bill hospital,Revenue leakage,revenue-leakage,brief
-2027-03-01,ipd-admission-process,IPD Admission Process Checklist,ipd admission process,Hospital operations,stakeholder-action,brief
+2027-03-01,admission-process-in-hospital,Admission Process in Hospital: Step-by-Step IPD Admission Procedure,admission process in hospital,Hospital operations,hms,written
 2027-03-03,how-to-start-ai-in-hospital,How to Start With AI in a Hospital: A 90-Day Plan,ai in hospital,Healthcare AI,ai-agents,brief
 2027-03-05,reorder-level-formula,Reorder Level Formula for Hospital Inventory,reorder level formula,Pharmacy & inventory,pharmacy,brief
 2027-03-08,gross-vs-net-collection-rate,Gross vs Net Collection Rate,net collection rate,Hospital finance,stakeholder-action,brief

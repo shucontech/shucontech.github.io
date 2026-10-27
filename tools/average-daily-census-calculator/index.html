@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en-IN"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5D6VNZNNKQ');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Average Daily Census Calculator &amp; Formula | Shucon MedAI</title>
+<meta name="keywords" content="average daily census, average daily census formula, average daily census calculation, average daily census hospital, average daily census meaning, ADC calculator, inpatient census">
+<meta name="description" content="Free average daily census calculator for hospitals. Enter inpatient service days and days in the period to get ADC, plus implied bed occupancy if you add beds.">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0b1a3a">
+<link rel="canonical" href="https://shuconmedai.com/tools/average-daily-census-calculator/">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="Shucon MedAI"><meta property="og:url" content="https://shuconmedai.com/tools/average-daily-census-calculator/">
+<meta property="og:title" content="Average Daily Census Calculator: How Many Inpatients on an Average Day?"><meta property="og:description" content="Free average daily census calculator for hospitals. Enter inpatient service days and days in the period to get ADC, plus implied bed occupancy if you add beds.">
+<meta property="og:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Average Daily Census Calculator for Hospitals"><meta name="twitter:description" content="Free average daily census calculator for hospitals. Enter inpatient service days and days in the period to get ADC, plus implied bed occupancy if you add beds."><meta name="twitter:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml"><link rel="icon" href="/images/favicon/favicon-96x96.png" sizes="96x96" type="image/png"><link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/shucon-vc.css?v=2"><link rel="stylesheet" href="../../css/blog.css?v=2"><link rel="stylesheet" href="../../css/commercial.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Average Daily Census Calculator", "url": "https://shuconmedai.com/tools/average-daily-census-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}, "description": "Free average daily census calculator for hospitals: calculate average inpatients per day from inpatient service days, with implied bed occupancy.", "isPartOf": {"@type": "CollectionPage", "@id": "https://shuconmedai.com/tools/"}, "publisher": {"@type": "Organization", "@id": "https://shuconmedai.com/#organization", "name": "Shucon MedAI"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shuconmedai.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://shuconmedai.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Hospital management calculators", "item": "https://shuconmedai.com/tools/#management-calculators"}, {"@type": "ListItem", "position": 4, "name": "Average Daily Census Calculator", "item": "https://shuconmedai.com/tools/average-daily-census-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the average daily census meaning in a hospital?", "acceptedAnswer": {"@type": "Answer", "text": "Average daily census (ADC) means the average number of admitted inpatients a hospital has on any day of a period, usually based on the midnight census. It shows the typical daily inpatient load."}}, {"@type": "Question", "name": "What is the average daily census formula?", "acceptedAnswer": {"@type": "Answer", "text": "Average daily census = Total inpatient service days ÷ Number of days in the period. Inpatient service days are the sum of the daily midnight census for the period."}}, {"@type": "Question", "name": "How do you do an average daily census calculation?", "acceptedAnswer": {"@type": "Answer", "text": "Record the number of admitted patients in beds at midnight each day, add these counts for the whole period, then divide by the number of days. For example, 2,604 inpatient service days in a 31-day month give an average daily census of 84."}}, {"@type": "Question", "name": "What are inpatient service days?", "acceptedAnswer": {"@type": "Answer", "text": "Inpatient service days are the total days of care given to admitted patients in a period, counted from the daily midnight census. Many hospitals call the same number occupied bed days."}}, {"@type": "Question", "name": "How is average daily census related to bed occupancy rate?", "acceptedAnswer": {"@type": "Answer", "text": "Divide average daily census by available beds and multiply by 100 to get bed occupancy. For example, an ADC of 84 in a 120-bed hospital means 70% occupancy."}}, {"@type": "Question", "name": "Should average daily census include day-care or observation patients?", "acceptedAnswer": {"@type": "Answer", "text": "Average daily census normally counts admitted inpatients at the midnight census. Day-care, observation and emergency beds should be defined consistently and usually reported separately so comparisons stay fair."}}]}</script>
+<link rel="stylesheet" href="../../css/site-ui.css?v=6">
+<style>
+.calc{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:start}
+.calc-card{background:#fff;border:1px solid #e3e7f0;border-radius:18px;padding:28px;box-shadow:0 18px 50px rgba(16,24,45,.07)}
+.calc-card h2{font-size:20px;margin:0 0 18px}
+.field{margin-bottom:18px}
+.field label{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:14.5px;color:#1a2236;margin-bottom:7px}
+.field label small{font-weight:500;color:#6b7690}
+.field .in{display:flex;align-items:center;border:1.5px solid #d5dbe8;border-radius:12px;background:#fbfcfe;transition:border-color .2s}
+.field .in:focus-within{border-color:#7c5cff;background:#fff}
+.field .in span{padding:0 12px;color:#6b7690;font-weight:600;font-size:15px;white-space:nowrap}
+.field input{flex:1;min-width:0;border:0;background:transparent;padding:13px 14px;font:600 17px/1.2 inherit;color:#0b1a3a;outline:0}
+.field .hint{font-size:12.5px;color:#7b86a0;margin-top:6px}
+.result{background:radial-gradient(520px 300px at 90% 0%,rgba(124,92,255,.28),transparent 70%),#0b1122;color:#fff;border:0}
+.result .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a99bff;font-weight:700}
+.result .big{font:800 clamp(44px,6vw,64px)/1 var(--serif,inherit);letter-spacing:-.03em;margin:10px 0 6px}
+.result .sub{color:#aebbd8;font-size:14.5px}
+.result .band{margin:18px 0 22px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.07);font-size:14.5px;color:#dbe3f5}
+.result .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.result .stat{background:rgba(255,255,255,.06);border-radius:12px;padding:14px}
+.result .stat b{display:block;font-size:20px}
+.result .stat small{color:#9fb0d0;font-size:12.5px}
+.uplift{border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+.uplift p{margin:0 0 10px;color:#dbe3f5;font-size:15px}
+.uplift input[type=range]{width:100%;accent-color:#7c5cff}
+.uplift .win{font-size:26px;font-weight:800;color:#5ee0a0;margin:10px 0 2px}
+.uplift .winsub{color:#9fb0d0;font-size:13.5px}
+.result .btn{margin-top:22px;width:100%;justify-content:center}
+.result .alt-link{display:block;text-align:center;margin-top:12px;color:#c6d2ea;font-size:14px}
+.calc-copy{max-width:780px}
+.calc-copy h2{margin-top:36px}
+.calc-copy blockquote{margin:16px 0;padding:16px 20px;border-left:3px solid #7c5cff;background:#f6f4ff;border-radius:0 12px 12px 0;font-weight:700;color:#1a2236}
+.calc-copy table{width:100%;border-collapse:collapse;margin:16px 0}
+.calc-copy th,.calc-copy td{text-align:left;padding:10px 12px;border-bottom:1px solid #e3e7f0;font-size:15px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.calc>*{min-width:0}
+.result .warn{color:#ffc4b8}
+.calc-copy ul.related li{margin-bottom:6px}
+</style>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="UbWEq0aYWth4TX9ekG3Cww" async></script>
+</head><body>
+<nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="../../" aria-label="Shucon MedAI home"><img src="../../images/logo-header.png" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="../../ai-agents/">AI agents</a></li><li><a href="../../platform/hospital-management-system/">HMS platform</a></li><li><a href="../../solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="../../hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="../../tools/">Tools</a></li><li><a href="../../blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="../../#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<header class="commercial-hero"><div class="wrap"><div class="breadcrumbs"><a href="../../">Home</a> / <a href="../">Tools</a> / <a href="../#management-calculators">Management calculators</a></div><span class="eyebrow on-dark">Free hospital management calculator</span><h1>Average Daily Census Calculator</h1><p class="hero-lead">Average daily census (ADC) is the average number of inpatients in a hospital on any day of a period: average daily census = total inpatient service days ÷ number of days in the period, where inpatient service days are the sum of the daily midnight census.</p><div class="proof-line"><span>No sign-up</span><span>Runs in your browser</span><span>Nothing is stored or sent</span></div></div></header>
+<main>
+<section class="page-section alt"><div class="wrap">
+<div class="calc">
+<form class="calc-card" id="adcForm" autocomplete="off" onsubmit="return false">
+<h2>Your hospital</h2>
+<div class="field"><label for="ipd">Total inpatient service days</label><div class="in"><input id="ipd" type="number" inputmode="numeric" min="0" step="1" value="2604"><span>days</span></div><div class="hint">The sum of your daily midnight census: admitted patients in beds at midnight, added up for each day.</div></div>
+<div class="field"><label for="days">Days in the period</label><div class="in"><input id="days" type="number" inputmode="numeric" min="0" step="1" value="31"><span>days</span></div><div class="hint">Use 30 or 31 for a month, 91 for a quarter, 365 for a year.</div></div>
+<div class="field"><label for="beds">Available beds <small>optional</small></label><div class="in"><input id="beds" type="number" inputmode="numeric" min="0" step="1" value="120"><span>beds</span></div><div class="hint">Add operational beds to see implied bed occupancy.</div></div>
+</form>
+<div class="calc-card result" aria-live="polite">
+<div class="label">Your average daily census</div>
+<div class="big" id="outAdc">84</div>
+<div class="sub">inpatients on an average day</div>
+<div class="band" id="outBand"></div>
+<div class="grid2">
+<div class="stat"><b id="outOcc">70%</b><small>implied bed occupancy</small></div>
+<div class="stat"><b id="outEmpty">36</b><small>average empty beds per day</small></div>
+<div class="stat"><b id="outAbd">3,720</b><small>available bed days</small></div>
+<div class="stat"><b id="outYear">30,660</b><small>inpatient days a year at this ADC</small></div>
+</div>
+<div class="uplift">
+<p>If average daily census rises by <b id="outUp">5 patients</b></p>
+<input id="up" type="range" min="1" max="30" step="1" value="5" aria-label="Increase in average daily census">
+<div class="win" id="outWin">+155 inpatient days</div>
+<div class="winsub" id="outWinSub">in this period, and occupancy rises by 4.2 percentage points</div>
+</div>
+<a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Get census and occupancy tracked daily</a>
+<a class="alt-link" href="../../agents/stakeholder-action/">Or see how stakeholder action agents work &rarr;</a>
+</div>
+</div>
+</div></section>
+<section class="page-section"><div class="wrap"><div class="prose calc-copy">
+<h2>How this average daily census calculator works</h2>
+<p><strong>Average daily census</strong> turns a month or year of inpatient activity into one easy number: how many admitted patients the hospital was looking after on a typical day. It is the basis for nurse staffing, diet and linen planning, and it links directly to bed occupancy.</p>
+<blockquote>Average daily census = Total inpatient service days ÷ Number of days in the period</blockquote>
+<blockquote>Implied bed occupancy = Average daily census ÷ Available beds × 100</blockquote>
+<p><strong>Inpatient service days</strong> are counted from the daily midnight census: the number of admitted patients in beds at midnight, added up for every day in the period. This is the same number many hospitals call occupied bed days, which is why ADC ÷ available beds gives the same answer as the <a href="../bed-occupancy-rate-calculator/">bed occupancy rate formula</a> when the bed count is constant.</p>
+<h2>Average daily census calculation: worked example</h2>
+<p>A 120-bed hospital adds up its midnight census for every day of a 31-day month and gets 2,604 inpatient service days.</p>
+<table><thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead><tbody>
+<tr><td>Average daily census</td><td>2,604 ÷ 31</td><td>84 patients</td></tr>
+<tr><td>Implied bed occupancy</td><td>84 ÷ 120 × 100</td><td>70%</td></tr>
+<tr><td>Average empty beds</td><td>120 − 84</td><td>36 beds</td></tr>
+<tr><td>Check with bed days</td><td>2,604 ÷ (120 × 31) × 100</td><td>70%</td></tr>
+</tbody></table>
+<h2>Average daily census in hospital operations</h2>
+<p>ADC is most useful when it is tracked by ward and bed type, not just for the whole hospital. ICU, general ward, maternity and paediatrics each have different demand patterns and staffing needs, and a single hospital-wide average can hide a ward that is consistently full while another is half empty. Day-care, observation and emergency beds should be defined consistently and usually reported separately, so that month-to-month and branch-to-branch comparisons stay fair.</p>
+<p>Because ADC is an average, it also hides peaks. Read it alongside the day-by-day census, weekday and weekend patterns, and the discharge timing that decides whether a patient counts at midnight.</p>
+<h2>Related calculators and guides</h2>
+<ul class="related"><li><a href="../bed-occupancy-rate-calculator/">Bed Occupancy Rate Calculator</a>: Bed occupancy rate (BOR) as a % of available bed days</li><li><a href="../alos-calculator/">ALOS Calculator</a>: Average Length of Stay in days per discharge</li><li><a href="../bed-turnover-rate-calculator/">Bed Turnover Rate Calculator</a>: Discharges per bed and bed turnover interval</li><li><a href="../arpob-calculator/">ARPOB Calculator</a>: Average Revenue Per Occupied Bed from net IPD revenue</li></ul>
+<p>To go from census to capacity decisions, read the <a href="../../blog/bed-occupancy-rate-formula.html">bed occupancy rate formula guide</a>, which explains occupied bed days, operational beds and common reporting mistakes.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is the average daily census meaning in a hospital?</h3><p>Average daily census (ADC) means the average number of admitted inpatients a hospital has on any day of a period, usually based on the midnight census. It shows the typical daily inpatient load.</p><h3>What is the average daily census formula?</h3><p>Average daily census = Total inpatient service days ÷ Number of days in the period. Inpatient service days are the sum of the daily midnight census for the period.</p><h3>How do you do an average daily census calculation?</h3><p>Record the number of admitted patients in beds at midnight each day, add these counts for the whole period, then divide by the number of days. For example, 2,604 inpatient service days in a 31-day month give an average daily census of 84.</p><h3>What are inpatient service days?</h3><p>Inpatient service days are the total days of care given to admitted patients in a period, counted from the daily midnight census. Many hospitals call the same number occupied bed days.</p><h3>How is average daily census related to bed occupancy rate?</h3><p>Divide average daily census by available beds and multiply by 100 to get bed occupancy. For example, an ADC of 84 in a 120-bed hospital means 70% occupancy.</p><h3>Should average daily census include day-care or observation patients?</h3><p>Average daily census normally counts admitted inpatients at the midnight census. Day-care, observation and emergency beds should be defined consistently and usually reported separately so comparisons stay fair.</p>
+</div></div></section>
+<section class="page-section dark page-cta"><div class="wrap"><div class="section-head"><span class="eyebrow on-dark">From number to action</span><h2 class="section-title">Want census and occupancy tracked for you every day?</h2><p class="section-sub">Shucon MedAI agents watch occupancy, discharges, billing and claims continuously and tell each owner what needs action today.</p></div><div class="hero-actions"><a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Book a 30-minute demo</a><a class="btn btn-ghost" href="../../agents/stakeholder-action/">Explore stakeholder action agents</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-top footer-4"><div class="footer-brand"><p>AI agents and connected software for healthcare operations.</p><a class="footer-mail" href="mailto:saksham@shucontech.in">saksham@shucontech.in</a><br><a class="footer-demo" data-event="demo_clicked" href="../../#contact">Book a demo &rarr;</a></div><div class="footer-col"><h4>AI agents</h4><a href="../../agents/revenue-leakage/">Revenue leakage</a><a href="../../agents/stakeholder-action/">Stakeholder action</a><a href="../../agents/patient-engagement/">Patient engagement</a><a href="../../agents/insurance-claims/">Insurance claims</a><a href="../../ai-agents/">All AI agents</a></div><div class="footer-col"><h4>Platform</h4><a href="../../platform/hospital-management-system/">Hospital management system</a><a href="../../solutions/diagnostics-centres/">Diagnostics centres</a><a href="../../custom-healthcare-ai/">Custom healthcare AI</a><a href="../../hospital-ai/">Hospital AI</a></div><div class="footer-col"><h4>Resources</h4><a href="../../blog/">Insights</a><a href="../../tools/">Free tools &amp; calculators</a><a href="../../hospital-revenue-leakage/">Revenue leakage guide</a><a href="../../hospital-revenue-leakage-checklist/">25-point leakage checklist</a><a href="../../glossary/">Hospital glossary</a><a href="../../hospital-statistics-formulas/">Hospital statistics formulas</a><a href="../../leadership/saksham-gupta/">CEO profile</a></div></div><div class="footer-bottom"><p>&copy; <span id="year2"></span> Shucon MedAI. All rights reserved.</p><a href="https://www.linkedin.com/company/shucontech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var ids=["ipd", "days", "beds", "up"];
+  var q=new URLSearchParams(location.search);
+  ids.forEach(function(k){ if(q.has(k)) $(k).value=q.get(k); });
+  function num(n,d,min){ return n.toLocaleString('en-IN',{minimumFractionDigits:min||0,maximumFractionDigits:d}); }
+  function val(k){ var v=parseFloat($(k).value); return isFinite(v)?v:0; }
+  function set(k,t){ $(k).textContent=t; }
+  var tracked=false;
+  function calc(e){
+    var ipd=val('ipd'), days=val('days'), beds=val('beds'), up=val('up'), res=null;
+    set('outUp',num(up,0)+(up===1?' patient':' patients'));
+    var b=$('outBand');b.className='band';
+    if(!(ipd>0) || !(days>0)){
+      set('outAdc','—');b.textContent='Enter total inpatient service days and the number of days in the period to calculate.';
+      ['outOcc','outEmpty','outAbd','outYear','outWin'].forEach(function(k){set(k,'—')});set('outWinSub','');
+      return;
+    }
+    var a=ipd/days; res=a;
+    set('outAdc',num(a,1));
+    set('outYear',num(a*365,0));
+    set('outWin','+'+num(up*days,0)+' inpatient days');
+    if(beds>0){
+      var occ=a/beds*100;
+      set('outOcc',num(occ,1)+'%');
+      set('outEmpty',num(Math.max(beds-a,0),1));
+      set('outAbd',num(beds*days,1));
+      set('outWinSub','in this period, and occupancy rises by '+num(up/beds*100,1)+' percentage points');
+      if(a>beds){ b.className='band warn'; b.textContent='Average daily census is higher than your bed count. Check that the bed count includes every bed used (including extra or surge beds) and that the census total covers the same period.'; }
+      else b.textContent='On an average day, about '+num(a,0)+' of your '+num(beds,0)+' beds were occupied at the midnight census.';
+    } else {
+      ['outOcc','outEmpty','outAbd'].forEach(function(k){set(k,'—')});
+      set('outWinSub','in this period');
+      b.textContent='On an average day, about '+num(a,0)+' admitted patients were in beds at the midnight census. Add your bed count to see implied occupancy.';
+    }
+    if(e && !tracked && res!==null && isFinite(res) && typeof gtag==='function'){ tracked=true; gtag('event','adc_calculated',{adc:Math.round(res*100)/100}); }
+    var p=new URLSearchParams();ids.forEach(function(k){ if($(k).value!=='') p.set(k,$(k).value); });
+    if(e) history.replaceState(null,'','?'+p.toString());
+  }
+  ids.forEach(function(k){ $(k).addEventListener('input',calc); });
+  calc();
+})();
+</script>
+<script src="../../js/site.js?v=8"></script>
+<a href="#" id="back-top" aria-label="Back to top">&#8593;</a>
+</body></html>

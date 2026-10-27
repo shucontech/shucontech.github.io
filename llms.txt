@@ -12,14 +12,25 @@
 
 ## Platform
 - [Hospital management system (HMS)](https://shuconmedai.com/platform/hospital-management-system/): OPD, IPD, EMR, billing, pharmacy, inventory, lab, radiology, OT, insurance and analytics.
-- [Diagnostic centre, lab and radiology software](https://shuconmedai.com/solutions/diagnostics-centres/): Bookings, samples, LIS/RIS workflows, reporting, billing and referrals.
+- [Diagnostic centre, lab and radiology software](https://shuconmedai.com/solutions/diagnostics-centres/): Bookings, samples, Shucon's own LIS, RIS and PACS integrated with billing, reporting and referrals.
 - [AI for hospitals in the UAE](https://shuconmedai.com/uae-hospital-ai/)
+- [What is HMIS? Full form and modules](https://shuconmedai.com/hmis/): Hospital Management Information System explained, HMIS for clinics, HMIS and LIMS.
+- [What is PACS? Full form in radiology](https://shuconmedai.com/pacs/): Picture Archiving and Communication System explained, PACS vs RIS, DICOM, choosing a PACS, and Shucon's PACS with integrated RIS, LIS and billing.
+- [What is a radiology information system (RIS)?](https://shuconmedai.com/ris/): RIS functions, workflow, RIS vs PACS, choosing a RIS, and Shucon's RIS with integrated PACS, LIS and billing.
+- [What is a laboratory information system (LIS)?](https://shuconmedai.com/lis/): LIS and LIMS full forms, LIS functions, pathology lab software, HMIS LIMS integration, and Shucon's LIS with integrated RIS, PACS and billing.
+- [Hospital billing software](https://shuconmedai.com/hospital-billing-software/): OPD, IPD, pharmacy, lab and radiology billing, packages, TPA claims and approval controls on one record.
 
 ## Resources
 - [Hospital revenue leakage: causes and fixes](https://shuconmedai.com/blog/hospital-revenue-leakage-guide.html)
 - [25-point hospital revenue leakage checklist](https://shuconmedai.com/hospital-revenue-leakage-checklist/)
+- [Hospital full forms glossary](https://shuconmedai.com/glossary/): full forms and meanings of hospital abbreviations such as OPD, IPD, TPA, MRD, CSSD, NABH, ABHA, EMR, LIS, PACS, ALOS and BOR.
+- [Hospital statistics formulas](https://shuconmedai.com/hospital-statistics-formulas/): bed occupancy rate, ALOS, average daily census, bed turnover, death rates and ARPOB with worked examples.
 - [Free hospital management tools](https://shuconmedai.com/tools/): calculators for hospital leaders
 - [ARPOB calculator](https://shuconmedai.com/tools/arpob-calculator/): calculate Average Revenue Per Occupied Bed and the value of raising it
+- [Bed occupancy rate calculator](https://shuconmedai.com/tools/bed-occupancy-rate-calculator/): BOR from beds, days and occupied bed days
+- [ALOS calculator](https://shuconmedai.com/tools/alos-calculator/): average length of stay from inpatient days and discharges
+- [Bed turnover rate calculator](https://shuconmedai.com/tools/bed-turnover-rate-calculator/): bed turnover rate and turnover interval
+- [Average daily census calculator](https://shuconmedai.com/tools/average-daily-census-calculator/): average daily census and implied occupancy
 - [Pharmacy revenue leakage case study](https://shuconmedai.com/case-study/hospital-pharmacy-revenue-leakage/)
 - [ARPOB formula and benchmarks](https://shuconmedai.com/blog/arpob-hospital-guide.html)
 - [Hospital pharmacy reconciliation guide](https://shuconmedai.com/blog/pharmacy-inventory-reconciliation.html)

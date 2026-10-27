@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="en-IN"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5D6VNZNNKQ');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALOS Calculator &amp; Formula in Hospital (Free) | Shucon MedAI</title>
+<meta name="keywords" content="ALOS calculator, ALOS formula, ALOS formula in hospital, ALOS calculation formula, how to calculate ALOS, ALOS full form in hospital, average length of stay calculator">
+<meta name="description" content="Free ALOS calculator for hospitals. Enter inpatient days and discharges to get Average Length of Stay, plus the bed days a shorter stay would free up.">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0b1a3a">
+<link rel="canonical" href="https://shuconmedai.com/tools/alos-calculator/">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="Shucon MedAI"><meta property="og:url" content="https://shuconmedai.com/tools/alos-calculator/">
+<meta property="og:title" content="ALOS Calculator: What Is Your Average Length of Stay?"><meta property="og:description" content="Free ALOS calculator for hospitals. Enter inpatient days and discharges to get Average Length of Stay, plus the bed days a shorter stay would free up.">
+<meta property="og:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ALOS Calculator for Hospitals"><meta name="twitter:description" content="Free ALOS calculator for hospitals. Enter inpatient days and discharges to get Average Length of Stay, plus the bed days a shorter stay would free up."><meta name="twitter:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml"><link rel="icon" href="/images/favicon/favicon-96x96.png" sizes="96x96" type="image/png"><link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/shucon-vc.css?v=2"><link rel="stylesheet" href="../../css/blog.css?v=2"><link rel="stylesheet" href="../../css/commercial.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "ALOS Calculator", "url": "https://shuconmedai.com/tools/alos-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}, "description": "Free ALOS calculator for hospitals: calculate Average Length of Stay from inpatient days and discharges, and the bed days a shorter stay would free up.", "isPartOf": {"@type": "CollectionPage", "@id": "https://shuconmedai.com/tools/"}, "publisher": {"@type": "Organization", "@id": "https://shuconmedai.com/#organization", "name": "Shucon MedAI"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shuconmedai.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://shuconmedai.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Hospital management calculators", "item": "https://shuconmedai.com/tools/#management-calculators"}, {"@type": "ListItem", "position": 4, "name": "ALOS Calculator", "item": "https://shuconmedai.com/tools/alos-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the ALOS full form in hospital?", "acceptedAnswer": {"@type": "Answer", "text": "ALOS stands for Average Length of Stay. In a hospital it is the average number of inpatient days used for each discharge in a selected period."}}, {"@type": "Question", "name": "What is the ALOS formula?", "acceptedAnswer": {"@type": "Answer", "text": "ALOS = Total inpatient days ÷ Total discharges (including deaths), with both numbers taken for the same period."}}, {"@type": "Question", "name": "How to calculate ALOS?", "acceptedAnswer": {"@type": "Answer", "text": "Add up inpatient days for the period (usually the sum of the daily midnight census), count all discharges including deaths in the same period, and divide the first by the second. For example, 2,400 inpatient days and 600 discharges give an ALOS of 4.0 days."}}, {"@type": "Question", "name": "Should deaths be included in the ALOS calculation formula?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The standard ALOS formula divides by total discharges including deaths, because a patient who dies in hospital has also left the bed and used inpatient days."}}, {"@type": "Question", "name": "What is a good ALOS for an Indian hospital?", "acceptedAnswer": {"@type": "Answer", "text": "There is no universal target. As an indicative range, many secondary hospitals track overall ALOS of 3 to 5 days, while complex tertiary units may naturally sit higher. Compare ALOS by specialty and ward rather than as one number."}}, {"@type": "Question", "name": "Is lower ALOS always better?", "acceptedAnswer": {"@type": "Answer", "text": "No. Lower ALOS is useful only when readmission risk, clinical outcomes and patient safety are protected. The goal is to remove avoidable administrative days, not necessary care."}}]}</script>
+<link rel="stylesheet" href="../../css/site-ui.css?v=6">
+<style>
+.calc{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:start}
+.calc-card{background:#fff;border:1px solid #e3e7f0;border-radius:18px;padding:28px;box-shadow:0 18px 50px rgba(16,24,45,.07)}
+.calc-card h2{font-size:20px;margin:0 0 18px}
+.field{margin-bottom:18px}
+.field label{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:14.5px;color:#1a2236;margin-bottom:7px}
+.field label small{font-weight:500;color:#6b7690}
+.field .in{display:flex;align-items:center;border:1.5px solid #d5dbe8;border-radius:12px;background:#fbfcfe;transition:border-color .2s}
+.field .in:focus-within{border-color:#7c5cff;background:#fff}
+.field .in span{padding:0 12px;color:#6b7690;font-weight:600;font-size:15px;white-space:nowrap}
+.field input{flex:1;min-width:0;border:0;background:transparent;padding:13px 14px;font:600 17px/1.2 inherit;color:#0b1a3a;outline:0}
+.field .hint{font-size:12.5px;color:#7b86a0;margin-top:6px}
+.result{background:radial-gradient(520px 300px at 90% 0%,rgba(124,92,255,.28),transparent 70%),#0b1122;color:#fff;border:0}
+.result .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a99bff;font-weight:700}
+.result .big{font:800 clamp(44px,6vw,64px)/1 var(--serif,inherit);letter-spacing:-.03em;margin:10px 0 6px}
+.result .sub{color:#aebbd8;font-size:14.5px}
+.result .band{margin:18px 0 22px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.07);font-size:14.5px;color:#dbe3f5}
+.result .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.result .stat{background:rgba(255,255,255,.06);border-radius:12px;padding:14px}
+.result .stat b{display:block;font-size:20px}
+.result .stat small{color:#9fb0d0;font-size:12.5px}
+.uplift{border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+.uplift p{margin:0 0 10px;color:#dbe3f5;font-size:15px}
+.uplift input[type=range]{width:100%;accent-color:#7c5cff}
+.uplift .win{font-size:26px;font-weight:800;color:#5ee0a0;margin:10px 0 2px}
+.uplift .winsub{color:#9fb0d0;font-size:13.5px}
+.result .btn{margin-top:22px;width:100%;justify-content:center}
+.result .alt-link{display:block;text-align:center;margin-top:12px;color:#c6d2ea;font-size:14px}
+.calc-copy{max-width:780px}
+.calc-copy h2{margin-top:36px}
+.calc-copy blockquote{margin:16px 0;padding:16px 20px;border-left:3px solid #7c5cff;background:#f6f4ff;border-radius:0 12px 12px 0;font-weight:700;color:#1a2236}
+.calc-copy table{width:100%;border-collapse:collapse;margin:16px 0}
+.calc-copy th,.calc-copy td{text-align:left;padding:10px 12px;border-bottom:1px solid #e3e7f0;font-size:15px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.calc>*{min-width:0}
+.result .warn{color:#ffc4b8}
+.calc-copy ul.related li{margin-bottom:6px}
+</style>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="UbWEq0aYWth4TX9ekG3Cww" async></script>
+</head><body>
+<nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="../../" aria-label="Shucon MedAI home"><img src="../../images/logo-header.png" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="../../ai-agents/">AI agents</a></li><li><a href="../../platform/hospital-management-system/">HMS platform</a></li><li><a href="../../solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="../../hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="../../tools/">Tools</a></li><li><a href="../../blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="../../#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<header class="commercial-hero"><div class="wrap"><div class="breadcrumbs"><a href="../../">Home</a> / <a href="../">Tools</a> / <a href="../#management-calculators">Management calculators</a></div><span class="eyebrow on-dark">Free hospital management calculator</span><h1>ALOS Calculator (Average Length of Stay)</h1><p class="hero-lead">ALOS (Average Length of Stay) is the average number of inpatient days used for each discharge in a hospital: ALOS = total inpatient days ÷ total discharges (including deaths) in the same period.</p><div class="proof-line"><span>No sign-up</span><span>Runs in your browser</span><span>Nothing is stored or sent</span></div></div></header>
+<main>
+<section class="page-section alt"><div class="wrap">
+<div class="calc">
+<form class="calc-card" id="alosForm" autocomplete="off" onsubmit="return false">
+<h2>Your hospital</h2>
+<div class="field"><label for="ipd">Total inpatient days in the period</label><div class="in"><input id="ipd" type="number" inputmode="numeric" min="0" step="1" value="2400"><span>days</span></div><div class="hint">Usually the sum of your daily midnight census (occupied bed days) for admitted patients only.</div></div>
+<div class="field"><label for="dis">Total discharges <small>including deaths</small></label><div class="in"><input id="dis" type="number" inputmode="numeric" min="0" step="1" value="600"><span>discharges</span></div><div class="hint">All patients discharged or expired in the same period.</div></div>
+<div class="field"><label for="days">Days in the period <small>optional</small></label><div class="in"><input id="days" type="number" inputmode="numeric" min="0" step="1" value="30"><span>days</span></div><div class="hint">Used to show average daily census and the capacity a shorter stay frees up.</div></div>
+</form>
+<div class="calc-card result" aria-live="polite">
+<div class="label">Your ALOS</div>
+<div class="big" id="outAlos">4.0</div>
+<div class="sub">days per discharge</div>
+<div class="band" id="outBand"></div>
+<div class="grid2">
+<div class="stat"><b id="outAdc">80</b><small>average daily census</small></div>
+<div class="stat"><b id="outDpd">20</b><small>discharges per day</small></div>
+</div>
+<div class="uplift">
+<p>If ALOS falls by <b id="outCut">0.3 days</b></p>
+<input id="cut" type="range" min="0.1" max="1.5" step="0.1" value="0.3" aria-label="ALOS reduction in days">
+<div class="win" id="outFreed">180 bed days freed</div>
+<div class="winsub" id="outFreedSub">about 6 beds of capacity over 30 days, with the same discharges</div>
+</div>
+<a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Get long-stay cases flagged daily</a>
+<a class="alt-link" href="../../agents/stakeholder-action/">Or see how stakeholder action agents work &rarr;</a>
+</div>
+</div>
+</div></section>
+<section class="page-section"><div class="wrap"><div class="prose calc-copy">
+<h2>How this ALOS calculator works</h2>
+<p><strong>Average Length of Stay</strong> divides all the inpatient days used in a period by the number of patients who left hospital in that period, whether discharged or expired. It shows how long, on average, each admission kept a bed.</p>
+<blockquote>ALOS = Total inpatient days in the period ÷ Total discharges (including deaths) in the period</blockquote>
+<p>Use inpatient days for admitted patients only, normally the sum of the daily midnight census. Do not mix in OPD observation hours unless your hospital has a formal short-stay unit that it reports separately. Use the same period for inpatient days and discharges, and the same definitions every month, so ALOS can be compared over time and across branches.</p>
+<h2>ALOS calculation formula: worked example</h2>
+<p>A hospital records 2,400 inpatient days and 600 discharges (including deaths) in October, a 31-day month.</p>
+<table><thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead><tbody>
+<tr><td>ALOS</td><td>2,400 ÷ 600</td><td>4.0 days</td></tr>
+<tr><td>After better discharge planning</td><td>2,220 ÷ 600</td><td>3.7 days</td></tr>
+<tr><td>Bed days freed</td><td>2,400 − 2,220 (or 0.3 × 600)</td><td>180 bed days</td></tr>
+<tr><td>Capacity freed per day</td><td>180 ÷ 31</td><td>about 5.8 beds</td></tr>
+</tbody></table>
+<p>A 0.3-day drop looks small, but with the same 600 discharges it releases 180 bed days in the month: room for more admissions without adding beds, provided the shorter stays are clinically safe.</p>
+<h2>Indicative ALOS range in India</h2>
+<p>Treat ALOS benchmarks as indicative, not universal targets. Many secondary hospitals track overall ALOS in the <strong>3 to 5 day</strong> range, while complex tertiary units may naturally sit higher. A maternity-focused nursing home, an oncology centre and an ICU-led tertiary hospital will have very different stay patterns, so compare ALOS by specialty, consultant, payer type and ward rather than relying on one hospital-wide number.</p>
+<h2>Common causes of high ALOS</h2>
+<ul>
+<li>Discharge planning that starts on the morning of discharge instead of at admission</li>
+<li>Diagnostic reports needed for discharge arriving late in the day</li>
+<li>Take-home medicines and final bills prepared only after clinical clearance</li>
+<li>Cashless approvals and TPA queries not ready when the patient is fit to go</li>
+<li>Late family counselling on discharge instructions or home care</li>
+</ul>
+<p>Each of these may add only a few hours, but together they can push a 2 pm discharge past midnight and add a whole inpatient day.</p>
+<h2>Related calculators and guides</h2>
+<ul class="related"><li><a href="../bed-occupancy-rate-calculator/">Bed Occupancy Rate Calculator</a>: Bed occupancy rate (BOR) as a % of available bed days</li><li><a href="../bed-turnover-rate-calculator/">Bed Turnover Rate Calculator</a>: Discharges per bed and bed turnover interval</li><li><a href="../average-daily-census-calculator/">Average Daily Census Calculator</a>: Average inpatients per day and implied occupancy</li><li><a href="../arpob-calculator/">ARPOB Calculator</a>: Average Revenue Per Occupied Bed from net IPD revenue</li></ul>
+<p>For causes of high ALOS, ways to reduce it safely and how CFOs should read it, read the full <a href="../../blog/alos-average-length-of-stay.html">ALOS (average length of stay) guide</a>, and see how it links to the <a href="../../blog/bed-occupancy-rate-formula.html">bed occupancy rate formula</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is the ALOS full form in hospital?</h3><p>ALOS stands for Average Length of Stay. In a hospital it is the average number of inpatient days used for each discharge in a selected period.</p><h3>What is the ALOS formula?</h3><p>ALOS = Total inpatient days ÷ Total discharges (including deaths), with both numbers taken for the same period.</p><h3>How to calculate ALOS?</h3><p>Add up inpatient days for the period (usually the sum of the daily midnight census), count all discharges including deaths in the same period, and divide the first by the second. For example, 2,400 inpatient days and 600 discharges give an ALOS of 4.0 days.</p><h3>Should deaths be included in the ALOS calculation formula?</h3><p>Yes. The standard ALOS formula divides by total discharges including deaths, because a patient who dies in hospital has also left the bed and used inpatient days.</p><h3>What is a good ALOS for an Indian hospital?</h3><p>There is no universal target. As an indicative range, many secondary hospitals track overall ALOS of 3 to 5 days, while complex tertiary units may naturally sit higher. Compare ALOS by specialty and ward rather than as one number.</p><h3>Is lower ALOS always better?</h3><p>No. Lower ALOS is useful only when readmission risk, clinical outcomes and patient safety are protected. The goal is to remove avoidable administrative days, not necessary care.</p>
+</div></div></section>
+<section class="page-section dark page-cta"><div class="wrap"><div class="section-head"><span class="eyebrow on-dark">From number to action</span><h2 class="section-title">Want long-stay cases flagged before they become another day?</h2><p class="section-sub">Shucon MedAI agents watch occupancy, discharges, billing and claims continuously and tell each owner what needs action today.</p></div><div class="hero-actions"><a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Book a 30-minute demo</a><a class="btn btn-ghost" href="../../agents/stakeholder-action/">Explore stakeholder action agents</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-top footer-4"><div class="footer-brand"><p>AI agents and connected software for healthcare operations.</p><a class="footer-mail" href="mailto:saksham@shucontech.in">saksham@shucontech.in</a><br><a class="footer-demo" data-event="demo_clicked" href="../../#contact">Book a demo &rarr;</a></div><div class="footer-col"><h4>AI agents</h4><a href="../../agents/revenue-leakage/">Revenue leakage</a><a href="../../agents/stakeholder-action/">Stakeholder action</a><a href="../../agents/patient-engagement/">Patient engagement</a><a href="../../agents/insurance-claims/">Insurance claims</a><a href="../../ai-agents/">All AI agents</a></div><div class="footer-col"><h4>Platform</h4><a href="../../platform/hospital-management-system/">Hospital management system</a><a href="../../solutions/diagnostics-centres/">Diagnostics centres</a><a href="../../custom-healthcare-ai/">Custom healthcare AI</a><a href="../../hospital-ai/">Hospital AI</a></div><div class="footer-col"><h4>Resources</h4><a href="../../blog/">Insights</a><a href="../../tools/">Free tools &amp; calculators</a><a href="../../hospital-revenue-leakage/">Revenue leakage guide</a><a href="../../hospital-revenue-leakage-checklist/">25-point leakage checklist</a><a href="../../glossary/">Hospital glossary</a><a href="../../hospital-statistics-formulas/">Hospital statistics formulas</a><a href="../../leadership/saksham-gupta/">CEO profile</a></div></div><div class="footer-bottom"><p>&copy; <span id="year2"></span> Shucon MedAI. All rights reserved.</p><a href="https://www.linkedin.com/company/shucontech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var ids=["ipd", "dis", "days", "cut"];
+  var q=new URLSearchParams(location.search);
+  ids.forEach(function(k){ if(q.has(k)) $(k).value=q.get(k); });
+  function num(n,d,min){ return n.toLocaleString('en-IN',{minimumFractionDigits:min||0,maximumFractionDigits:d}); }
+  function val(k){ var v=parseFloat($(k).value); return isFinite(v)?v:0; }
+  function set(k,t){ $(k).textContent=t; }
+  var tracked=false;
+  function calc(e){
+    var ipd=val('ipd'), dis=val('dis'), days=val('days'), cut=val('cut'), res=null;
+    set('outCut',num(cut,1)+' days');
+    if(!(ipd>0) || !(dis>0)){
+      set('outAlos','—');set('outBand','Enter total inpatient days and total discharges (including deaths) to calculate.');
+      ['outAdc','outDpd','outFreed'].forEach(function(k){set(k,'—')});set('outFreedSub','');
+    } else {
+      var a=ipd/dis; res=a;
+      set('outAlos',num(a,2,1));
+      set('outAdc',days>0?num(ipd/days,1):'—');
+      set('outDpd',days>0?num(dis/days,1):'—');
+      var b=$('outBand');
+      if(a<3) b.textContent='Below the indicative 3–5 day range many secondary hospitals track. This can reflect a short-stay or day-care heavy mix; check readmissions before reading it as pure efficiency.';
+      else if(a<=5) b.textContent='Within the indicative 3–5 day range many secondary hospitals track. Compare it by specialty, ward and payer to find the units that need attention.';
+      else b.textContent='Above the indicative 3–5 day range many secondary hospitals track. That can be normal for complex tertiary, ICU or oncology mix; review long-stay cases for avoidable administrative days.';
+      if(cut>=a){ set('outFreed','—'); set('outFreedSub','The reduction is larger than your current ALOS.'); }
+      else {
+        var freed=cut*dis;
+        set('outFreed',num(freed,1)+' bed days freed');
+        set('outFreedSub',days>0?'about '+num(freed/days,1)+' beds of capacity over '+num(days,0)+' days, with the same discharges':'with the same number of discharges');
+      }
+    }
+    if(e && !tracked && res!==null && isFinite(res) && typeof gtag==='function'){ tracked=true; gtag('event','alos_calculated',{alos:Math.round(res*100)/100}); }
+    var p=new URLSearchParams();ids.forEach(function(k){ if($(k).value!=='') p.set(k,$(k).value); });
+    if(e) history.replaceState(null,'','?'+p.toString());
+  }
+  ids.forEach(function(k){ $(k).addEventListener('input',calc); });
+  calc();
+})();
+</script>
+<script src="../../js/site.js?v=8"></script>
+<a href="#" id="back-top" aria-label="Back to top">&#8593;</a>
+</body></html>
