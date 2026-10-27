@@ -91,6 +91,7 @@ PRODUCT_PAGES = {
     'hospital-ai/index.html': ['ai-agents', 'stakeholder-action'],
     'hmis/index.html': ['hms'],
     'pacs/index.html': ['diagnostics'],
+    'ris/index.html': ['diagnostics'],
 }
 
 REQUIRED = ['slug', 'date', 'title', 'h1', 'description', 'lede', 'category', 'product', 'keywords', 'faqs']

@@ -16,6 +16,7 @@
 - [AI for hospitals in the UAE](https://shuconmedai.com/uae-hospital-ai/)
 - [What is HMIS? Full form and modules](https://shuconmedai.com/hmis/): Hospital Management Information System explained, HMIS for clinics, HMIS and LIMS.
 - [What is PACS? Full form in radiology](https://shuconmedai.com/pacs/): Picture Archiving and Communication System explained, PACS vs RIS, DICOM, choosing a PACS, and Shucon's PACS with integrated RIS, LIS and billing.
+- [What is a radiology information system (RIS)?](https://shuconmedai.com/ris/): RIS functions, workflow, RIS vs PACS, choosing a RIS, and Shucon's RIS with integrated PACS, LIS and billing.
 
 ## Resources
 - [Hospital revenue leakage: causes and fixes](https://shuconmedai.com/blog/hospital-revenue-leakage-guide.html)

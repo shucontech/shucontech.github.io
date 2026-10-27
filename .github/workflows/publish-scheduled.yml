@@ -40,7 +40,7 @@ jobs:
           fi
           git config user.name "shucon-publisher[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A blog sitemap.xml llms.txt index.html agents platform solutions custom-healthcare-ai ai-agents hospital-pharmacy-inventory hospital-revenue-leakage hospital-billing-leakage hospital-operations-ai hospital-ai hmis pacs
+          git add -A blog sitemap.xml llms.txt index.html agents platform solutions custom-healthcare-ai ai-agents hospital-pharmacy-inventory hospital-revenue-leakage hospital-billing-leakage hospital-operations-ai hospital-ai hmis pacs ris
           git commit -m "Publish scheduled posts ($(TZ=Asia/Kolkata date +%F))"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
