@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en-IN"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5D6VNZNNKQ');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bed Occupancy Rate Calculator &amp; Formula (Free) | Shucon MedAI</title>
+<meta name="keywords" content="bed occupancy rate calculator, bed occupancy rate formula, bed occupancy rate formula in hospital, bed occupancy rate formula with example, bed occupancy rate per month, BOR full form in hospital, hospital occupancy calculator">
+<meta name="description" content="Free bed occupancy rate (BOR) calculator for hospitals. Enter beds, days and occupied bed days to get BOR %, average occupied beds and empty bed days.">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0b1a3a">
+<link rel="canonical" href="https://shuconmedai.com/tools/bed-occupancy-rate-calculator/">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="Shucon MedAI"><meta property="og:url" content="https://shuconmedai.com/tools/bed-occupancy-rate-calculator/">
+<meta property="og:title" content="Bed Occupancy Rate Calculator: How Full Are Your Beds, Really?"><meta property="og:description" content="Free bed occupancy rate (BOR) calculator for hospitals. Enter beds, days and occupied bed days to get BOR %, average occupied beds and empty bed days.">
+<meta property="og:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Bed Occupancy Rate Calculator for Hospitals"><meta name="twitter:description" content="Free bed occupancy rate (BOR) calculator for hospitals. Enter beds, days and occupied bed days to get BOR %, average occupied beds and empty bed days."><meta name="twitter:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml"><link rel="icon" href="/images/favicon/favicon-96x96.png" sizes="96x96" type="image/png"><link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/shucon-vc.css?v=2"><link rel="stylesheet" href="../../css/blog.css?v=2"><link rel="stylesheet" href="../../css/commercial.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bed Occupancy Rate Calculator", "url": "https://shuconmedai.com/tools/bed-occupancy-rate-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}, "description": "Free bed occupancy rate (BOR) calculator for hospitals: calculate BOR %, available bed days, average occupied beds and empty bed days for any period.", "isPartOf": {"@type": "CollectionPage", "@id": "https://shuconmedai.com/tools/"}, "publisher": {"@type": "Organization", "@id": "https://shuconmedai.com/#organization", "name": "Shucon MedAI"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shuconmedai.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://shuconmedai.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Hospital management calculators", "item": "https://shuconmedai.com/tools/#management-calculators"}, {"@type": "ListItem", "position": 4, "name": "Bed Occupancy Rate Calculator", "item": "https://shuconmedai.com/tools/bed-occupancy-rate-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is BOR in a hospital?", "acceptedAnswer": {"@type": "Answer", "text": "BOR is the full form of Bed Occupancy Rate (sometimes called bed occupancy ratio). It is the percentage of a hospital’s available inpatient bed days that were actually used by admitted patients in a period."}}, {"@type": "Question", "name": "What is the bed occupancy rate formula?", "acceptedAnswer": {"@type": "Answer", "text": "Bed occupancy rate = (Occupied bed days ÷ Available bed days) × 100, where available bed days = available beds × days in the period. Use the same period for both numbers."}}, {"@type": "Question", "name": "What is the bed occupancy rate formula with example?", "acceptedAnswer": {"@type": "Answer", "text": "A hospital with 140 operational beds in a 30-day month has 140 × 30 = 4,200 available bed days. If it records 3,150 occupied bed days, its bed occupancy rate is 3,150 ÷ 4,200 × 100 = 75%."}}, {"@type": "Question", "name": "How do you calculate bed occupancy rate per month?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply available beds by the days in the month to get available bed days, then divide the month’s occupied bed days by that number and multiply by 100. For example, 100 beds in a 31-day month give 3,100 available bed days; 2,480 occupied bed days means 80% occupancy."}}, {"@type": "Question", "name": "How do I calculate occupied bed days?", "acceptedAnswer": {"@type": "Answer", "text": "Add up the number of admitted patients in beds at each daily midnight census across the period. If you only know the average midnight census, multiply it by the number of days in the period."}}, {"@type": "Question", "name": "What is a good bed occupancy rate for a hospital?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single ideal rate. Many hospitals aim for a range that keeps beds productive without crowding, but the right level depends on specialty mix, emergency load and staffing. Very high occupancy can delay admissions and stretch nursing teams."}}]}</script>
+<link rel="stylesheet" href="../../css/site-ui.css?v=6">
+<style>
+.calc{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:start}
+.calc-card{background:#fff;border:1px solid #e3e7f0;border-radius:18px;padding:28px;box-shadow:0 18px 50px rgba(16,24,45,.07)}
+.calc-card h2{font-size:20px;margin:0 0 18px}
+.field{margin-bottom:18px}
+.field label{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:14.5px;color:#1a2236;margin-bottom:7px}
+.field label small{font-weight:500;color:#6b7690}
+.field .in{display:flex;align-items:center;border:1.5px solid #d5dbe8;border-radius:12px;background:#fbfcfe;transition:border-color .2s}
+.field .in:focus-within{border-color:#7c5cff;background:#fff}
+.field .in span{padding:0 12px;color:#6b7690;font-weight:600;font-size:15px;white-space:nowrap}
+.field input{flex:1;min-width:0;border:0;background:transparent;padding:13px 14px;font:600 17px/1.2 inherit;color:#0b1a3a;outline:0}
+.field .hint{font-size:12.5px;color:#7b86a0;margin-top:6px}
+.result{background:radial-gradient(520px 300px at 90% 0%,rgba(124,92,255,.28),transparent 70%),#0b1122;color:#fff;border:0}
+.result .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a99bff;font-weight:700}
+.result .big{font:800 clamp(44px,6vw,64px)/1 var(--serif,inherit);letter-spacing:-.03em;margin:10px 0 6px}
+.result .sub{color:#aebbd8;font-size:14.5px}
+.result .band{margin:18px 0 22px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.07);font-size:14.5px;color:#dbe3f5}
+.result .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.result .stat{background:rgba(255,255,255,.06);border-radius:12px;padding:14px}
+.result .stat b{display:block;font-size:20px}
+.result .stat small{color:#9fb0d0;font-size:12.5px}
+.uplift{border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+.uplift p{margin:0 0 10px;color:#dbe3f5;font-size:15px}
+.uplift input[type=range]{width:100%;accent-color:#7c5cff}
+.uplift .win{font-size:26px;font-weight:800;color:#5ee0a0;margin:10px 0 2px}
+.uplift .winsub{color:#9fb0d0;font-size:13.5px}
+.result .btn{margin-top:22px;width:100%;justify-content:center}
+.result .alt-link{display:block;text-align:center;margin-top:12px;color:#c6d2ea;font-size:14px}
+.calc-copy{max-width:780px}
+.calc-copy h2{margin-top:36px}
+.calc-copy blockquote{margin:16px 0;padding:16px 20px;border-left:3px solid #7c5cff;background:#f6f4ff;border-radius:0 12px 12px 0;font-weight:700;color:#1a2236}
+.calc-copy table{width:100%;border-collapse:collapse;margin:16px 0}
+.calc-copy th,.calc-copy td{text-align:left;padding:10px 12px;border-bottom:1px solid #e3e7f0;font-size:15px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.calc>*{min-width:0}
+.result .warn{color:#ffc4b8}
+.calc-copy ul.related li{margin-bottom:6px}
+</style>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="UbWEq0aYWth4TX9ekG3Cww" async></script>
+</head><body>
+<nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="../../" aria-label="Shucon MedAI home"><img src="../../images/logo-header.png" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="../../ai-agents/">AI agents</a></li><li><a href="../../platform/hospital-management-system/">HMS platform</a></li><li><a href="../../solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="../../hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="../../tools/">Tools</a></li><li><a href="../../blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="../../#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<header class="commercial-hero"><div class="wrap"><div class="breadcrumbs"><a href="../../">Home</a> / <a href="../">Tools</a> / <a href="../#management-calculators">Management calculators</a></div><span class="eyebrow on-dark">Free hospital management calculator</span><h1>Bed Occupancy Rate Calculator</h1><p class="hero-lead">Bed occupancy rate (BOR) is the percentage of a hospital’s available bed capacity that admitted patients actually used in a period: BOR = (occupied bed days ÷ available bed days) × 100, where available bed days = available beds × days in the period.</p><div class="proof-line"><span>No sign-up</span><span>Runs in your browser</span><span>Nothing is stored or sent</span></div></div></header>
+<main>
+<section class="page-section alt"><div class="wrap">
+<div class="calc">
+<form class="calc-card" id="borForm" autocomplete="off" onsubmit="return false">
+<h2>Your hospital</h2>
+<div class="field"><label for="beds">Available (operational) beds</label><div class="in"><input id="beds" type="number" inputmode="numeric" min="0" step="1" value="140"><span>beds</span></div><div class="hint">Count beds that could actually be staffed and used. Exclude beds closed for renovation or staffing gaps.</div></div>
+<div class="field"><label for="days">Days in the period</label><div class="in"><input id="days" type="number" inputmode="numeric" min="0" step="1" value="30"><span>days</span></div><div class="hint">Use 30 or 31 for a month, 91 for a quarter, 365 for a year.</div></div>
+<div class="field"><label for="obd">Occupied bed days</label><div class="in"><input id="obd" type="number" inputmode="numeric" min="0" step="1" value="3150"><span>bed days</span></div><div class="hint">The sum of your daily midnight census: add the number of admitted patients in beds at midnight on each day of the period.</div></div>
+<div class="field"><label for="adc">Or average midnight census <small>optional</small></label><div class="in"><input id="adc" type="number" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 105"><span>patients</span></div><div class="hint">Only used if occupied bed days is blank: occupied bed days ≈ average census × days.</div></div>
+</form>
+<div class="calc-card result" aria-live="polite">
+<div class="label">Your bed occupancy rate</div>
+<div class="big" id="outBor">75%</div>
+<div class="sub">of available bed days used by admitted patients</div>
+<div class="band" id="outBand"></div>
+<div class="grid2">
+<div class="stat"><b id="outAbd">4,200</b><small>available bed days</small></div>
+<div class="stat"><b id="outAvg">105</b><small>average occupied beds per day</small></div>
+<div class="stat"><b id="outEmpty">1,050</b><small>empty bed days</small></div>
+<div class="stat"><b id="outEmptyAvg">35</b><small>average empty beds per day</small></div>
+</div>
+<div class="uplift">
+<p>Each 1 percentage point of occupancy equals</p>
+<div class="win" id="outPp">42 occupied bed days</div>
+<div class="winsub" id="outPpSub">in this period, or 1.4 more occupied beds every day</div>
+</div>
+<a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Get occupancy tracked for you daily</a>
+<a class="alt-link" href="../../agents/stakeholder-action/">Or see how stakeholder action agents work &rarr;</a>
+</div>
+</div>
+</div></section>
+<section class="page-section"><div class="wrap"><div class="prose calc-copy">
+<h2>How this bed occupancy rate calculator works</h2>
+<p><strong>Bed occupancy rate</strong> compares the bed days admitted patients actually used with the bed days your operational beds could have provided in the same period. It tells you how much of your inpatient capacity was used, which is why it is reviewed daily for operations and monthly for finance.</p>
+<blockquote>Bed occupancy rate = (Occupied bed days ÷ Available bed days) × 100</blockquote>
+<blockquote>Available bed days = Available beds × Days in the period</blockquote>
+<p><strong>Occupied bed days</strong> are usually the sum of the daily midnight census: the number of admitted patients in a bed at midnight, added up for every day of the period. If you only know your average midnight census, multiply it by the number of days. The calculator also shows average occupied beds (occupied bed days ÷ days) and empty bed days (available bed days − occupied bed days).</p>
+<h2>Bed occupancy rate formula with example</h2>
+<p>A 150-bed hospital has 10 beds closed for renovation, so it has 140 operational beds in a 30-day month. Its daily midnight census adds up to 3,150 occupied bed days.</p>
+<table><thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead><tbody>
+<tr><td>Available bed days</td><td>140 × 30</td><td>4,200</td></tr>
+<tr><td>Occupied bed days</td><td>Sum of daily midnight census</td><td>3,150</td></tr>
+<tr><td>Bed occupancy rate</td><td>3,150 ÷ 4,200 × 100</td><td>75%</td></tr>
+<tr><td>Average occupied beds</td><td>3,150 ÷ 30</td><td>105</td></tr>
+<tr><td>Empty bed days</td><td>4,200 − 3,150</td><td>1,050</td></tr>
+</tbody></table>
+<p>Each percentage point of occupancy in this example is 42 bed days a month (1% of 4,200), or 1.4 more occupied beds on an average day.</p>
+<h2>Bed occupancy rate per month</h2>
+<p>To calculate bed occupancy rate per month, use the number of days in that month and the occupied bed days recorded in that same month. A 100-bed hospital in a 31-day month has 100 × 31 = 3,100 available bed days. If the month’s midnight census adds up to 2,480 occupied bed days, monthly bed occupancy is 2,480 ÷ 3,100 × 100 = 80%. Keep both numbers for the same period; mixing a month’s census with a different number of days will distort the rate.</p>
+<h2>What is a good bed occupancy rate?</h2>
+<p>There is no single ideal occupancy for every hospital. A consistently low rate can point to weak demand, poor referral conversion or service gaps. A consistently very high rate can mean crowding, discharge delays and no room for emergencies. ICU, maternity, paediatrics and elective surgery beds have different demand patterns, so review them separately, and compare your own trend over time before comparing with other hospitals.</p>
+<h2>Common mistakes in occupancy reporting</h2>
+<ul>
+<li>Counting sanctioned beds instead of operational beds, which makes occupancy look weaker than reality</li>
+<li>Including OPD or day-care patients in occupied bed days without defining them consistently</li>
+<li>Combining ICU, ward, maternity and day-care beds into one number that hides where the pressure is</li>
+<li>Using a month’s census with a different number of days in the denominator</li>
+</ul>
+<h2>Related calculators and guides</h2>
+<ul class="related"><li><a href="../alos-calculator/">ALOS Calculator</a>: Average Length of Stay in days per discharge</li><li><a href="../bed-turnover-rate-calculator/">Bed Turnover Rate Calculator</a>: Discharges per bed and bed turnover interval</li><li><a href="../average-daily-census-calculator/">Average Daily Census Calculator</a>: Average inpatients per day and implied occupancy</li><li><a href="../arpob-calculator/">ARPOB Calculator</a>: Average Revenue Per Occupied Bed from net IPD revenue</li></ul>
+<p>For definitions, levers to improve occupancy and dashboard ideas, read the full <a href="../../blog/bed-occupancy-rate-formula.html">bed occupancy rate formula guide</a> and the <a href="../../blog/alos-average-length-of-stay.html">ALOS guide</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is BOR in a hospital?</h3><p>BOR is the full form of Bed Occupancy Rate (sometimes called bed occupancy ratio). It is the percentage of a hospital’s available inpatient bed days that were actually used by admitted patients in a period.</p><h3>What is the bed occupancy rate formula?</h3><p>Bed occupancy rate = (Occupied bed days ÷ Available bed days) × 100, where available bed days = available beds × days in the period. Use the same period for both numbers.</p><h3>What is the bed occupancy rate formula with example?</h3><p>A hospital with 140 operational beds in a 30-day month has 140 × 30 = 4,200 available bed days. If it records 3,150 occupied bed days, its bed occupancy rate is 3,150 ÷ 4,200 × 100 = 75%.</p><h3>How do you calculate bed occupancy rate per month?</h3><p>Multiply available beds by the days in the month to get available bed days, then divide the month’s occupied bed days by that number and multiply by 100. For example, 100 beds in a 31-day month give 3,100 available bed days; 2,480 occupied bed days means 80% occupancy.</p><h3>How do I calculate occupied bed days?</h3><p>Add up the number of admitted patients in beds at each daily midnight census across the period. If you only know the average midnight census, multiply it by the number of days in the period.</p><h3>What is a good bed occupancy rate for a hospital?</h3><p>There is no single ideal rate. Many hospitals aim for a range that keeps beds productive without crowding, but the right level depends on specialty mix, emergency load and staffing. Very high occupancy can delay admissions and stretch nursing teams.</p>
+</div></div></section>
+<section class="page-section dark page-cta"><div class="wrap"><div class="section-head"><span class="eyebrow on-dark">From number to action</span><h2 class="section-title">Want bed occupancy tracked for you every day?</h2><p class="section-sub">Shucon MedAI agents watch occupancy, discharges, billing and claims continuously and tell each owner what needs action today.</p></div><div class="hero-actions"><a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Book a 30-minute demo</a><a class="btn btn-ghost" href="../../agents/stakeholder-action/">Explore stakeholder action agents</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-top footer-4"><div class="footer-brand"><p>AI agents and connected software for healthcare operations.</p><a class="footer-mail" href="mailto:saksham@shucontech.in">saksham@shucontech.in</a><br><a class="footer-demo" data-event="demo_clicked" href="../../#contact">Book a demo &rarr;</a></div><div class="footer-col"><h4>AI agents</h4><a href="../../agents/revenue-leakage/">Revenue leakage</a><a href="../../agents/stakeholder-action/">Stakeholder action</a><a href="../../agents/patient-engagement/">Patient engagement</a><a href="../../agents/insurance-claims/">Insurance claims</a><a href="../../ai-agents/">All AI agents</a></div><div class="footer-col"><h4>Platform</h4><a href="../../platform/hospital-management-system/">Hospital management system</a><a href="../../solutions/diagnostics-centres/">Diagnostics centres</a><a href="../../custom-healthcare-ai/">Custom healthcare AI</a><a href="../../hospital-ai/">Hospital AI</a></div><div class="footer-col"><h4>Resources</h4><a href="../../blog/">Insights</a><a href="../../tools/">Free tools &amp; calculators</a><a href="../../hospital-revenue-leakage/">Revenue leakage guide</a><a href="../../hospital-revenue-leakage-checklist/">25-point leakage checklist</a><a href="../../glossary/">Hospital glossary</a><a href="../../hospital-statistics-formulas/">Hospital statistics formulas</a><a href="../../leadership/saksham-gupta/">CEO profile</a></div></div><div class="footer-bottom"><p>&copy; <span id="year2"></span> Shucon MedAI. All rights reserved.</p><a href="https://www.linkedin.com/company/shucontech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var ids=["beds", "days", "obd", "adc"];
+  var q=new URLSearchParams(location.search);
+  ids.forEach(function(k){ if(q.has(k)) $(k).value=q.get(k); });
+  function num(n,d,min){ return n.toLocaleString('en-IN',{minimumFractionDigits:min||0,maximumFractionDigits:d}); }
+  function val(k){ var v=parseFloat($(k).value); return isFinite(v)?v:0; }
+  function set(k,t){ $(k).textContent=t; }
+  var tracked=false;
+  function calc(e){
+    var beds=val('beds'), days=val('days'), obdIn=val('obd'), adc=val('adc'), res=null;
+    var obd=obdIn>0?obdIn:(adc>0?adc*days:0);
+    if(!(beds>0) || !(days>0) || !(obd>0)){
+      set('outBor','—');set('outBand','Enter available beds, days in the period and occupied bed days (or average midnight census) to calculate.');
+      ['outAbd','outAvg','outEmpty','outEmptyAvg','outPp'].forEach(function(k){set(k,'—')});set('outPpSub','');
+    } else {
+      var abd=beds*days, bor=obd/abd*100, empty=abd-obd; res=bor;
+      set('outBor',num(bor,1)+'%');
+      set('outAbd',num(abd,1));
+      set('outAvg',num(obd/days,1));
+      set('outEmpty',num(Math.max(empty,0),1));
+      set('outEmptyAvg',num(Math.max(empty,0)/days,1));
+      set('outPp',num(abd/100,1)+' occupied bed days');
+      set('outPpSub','in this period, or '+num(beds/100,2)+' more occupied beds every day');
+      var b=$('outBand');b.className='band';
+      if(bor>100){ b.className='band warn'; b.textContent='Occupied bed days are higher than available bed days. Check that the bed count includes every bed actually used (including extra or surge beds) and that both numbers cover the same period.'; }
+      else if(bor>=90){ b.textContent='High occupancy: about '+num(bor,0)+' of every 100 available bed days were used. Beds are productive, but sustained levels like this can delay emergency admissions, stretch nursing teams and leave little room for surges.'; }
+      else { b.textContent='About '+num(bor,0)+' of every 100 available bed days were used by admitted patients. Read it alongside ALOS and bed turnover to see whether the gap is demand, discharge flow or staffing.'; }
+    }
+    if(e && !tracked && res!==null && isFinite(res) && typeof gtag==='function'){ tracked=true; gtag('event','bor_calculated',{bor:Math.round(res*100)/100}); }
+    var p=new URLSearchParams();ids.forEach(function(k){ if($(k).value!=='') p.set(k,$(k).value); });
+    if(e) history.replaceState(null,'','?'+p.toString());
+  }
+  ids.forEach(function(k){ $(k).addEventListener('input',calc); });
+  calc();
+})();
+</script>
+<script src="../../js/site.js?v=8"></script>
+<a href="#" id="back-top" aria-label="Back to top">&#8593;</a>
+</body></html>

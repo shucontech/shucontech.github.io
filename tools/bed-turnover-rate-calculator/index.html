@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en-IN"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5D6VNZNNKQ');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bed Turnover Rate Calculator &amp; Formula | Shucon MedAI</title>
+<meta name="keywords" content="bed turnover rate calculator, bed turnover rate formula, bed turnover rate formula in hospital, bed turnover interval, bed turnover interval formula, hospital bed turnover">
+<meta name="description" content="Free bed turnover rate calculator for hospitals. Get discharges per bed and the bed turnover interval, the average days a bed stays empty between patients.">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0b1a3a">
+<link rel="canonical" href="https://shuconmedai.com/tools/bed-turnover-rate-calculator/">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="Shucon MedAI"><meta property="og:url" content="https://shuconmedai.com/tools/bed-turnover-rate-calculator/">
+<meta property="og:title" content="Bed Turnover Rate Calculator: How Many Patients Does Each Bed Serve?"><meta property="og:description" content="Free bed turnover rate calculator for hospitals. Get discharges per bed and the bed turnover interval, the average days a bed stays empty between patients.">
+<meta property="og:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Bed Turnover Rate Calculator for Hospitals"><meta name="twitter:description" content="Free bed turnover rate calculator for hospitals. Get discharges per bed and the bed turnover interval, the average days a bed stays empty between patients."><meta name="twitter:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml"><link rel="icon" href="/images/favicon/favicon-96x96.png" sizes="96x96" type="image/png"><link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/shucon-vc.css?v=2"><link rel="stylesheet" href="../../css/blog.css?v=2"><link rel="stylesheet" href="../../css/commercial.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bed Turnover Rate Calculator", "url": "https://shuconmedai.com/tools/bed-turnover-rate-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}, "description": "Free bed turnover rate calculator for hospitals: calculate discharges per available bed and the bed turnover interval between patients.", "isPartOf": {"@type": "CollectionPage", "@id": "https://shuconmedai.com/tools/"}, "publisher": {"@type": "Organization", "@id": "https://shuconmedai.com/#organization", "name": "Shucon MedAI"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shuconmedai.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://shuconmedai.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Hospital management calculators", "item": "https://shuconmedai.com/tools/#management-calculators"}, {"@type": "ListItem", "position": 4, "name": "Bed Turnover Rate Calculator", "item": "https://shuconmedai.com/tools/bed-turnover-rate-calculator/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is bed turnover rate in a hospital?", "acceptedAnswer": {"@type": "Answer", "text": "Bed turnover rate is the number of discharged patients each available bed served during a period. It shows how actively beds are being used for new admissions."}}, {"@type": "Question", "name": "What is the bed turnover rate formula?", "acceptedAnswer": {"@type": "Answer", "text": "Bed turnover rate = Total discharges during the period ÷ Average available beds during the period. Use the same discharge definition, including deaths if that is your policy, every month."}}, {"@type": "Question", "name": "How do you use the bed turnover rate formula in hospital reporting?", "acceptedAnswer": {"@type": "Answer", "text": "Take the month’s discharges and divide by the average beds that were actually available. For example, 420 discharges with 95 average available beds gives 420 ÷ 95 = 4.42, so each bed served about 4.4 patients that month."}}, {"@type": "Question", "name": "What is bed turnover interval?", "acceptedAnswer": {"@type": "Answer", "text": "Bed turnover interval is the average time a bed stays empty between one patient leaving and the next being admitted. Bed turnover interval = (Available bed days − Occupied bed days) ÷ Total discharges. For example, (2,945 − 2,210) ÷ 420 = 1.75 days, or about 42 hours."}}, {"@type": "Question", "name": "What is the difference between bed turnover rate and bed occupancy rate?", "acceptedAnswer": {"@type": "Answer", "text": "Occupancy shows how full beds were; turnover shows how many patients moved through each bed. A hospital can have high occupancy with low turnover when stays are long, or moderate occupancy with high turnover when short-stay cases dominate."}}, {"@type": "Question", "name": "What is a good bed turnover rate?", "acceptedAnswer": {"@type": "Answer", "text": "There is no universal good bed turnover rate. It depends on specialty mix, case complexity, demand and bed category, so compare against your own trend and set expectations by department."}}]}</script>
+<link rel="stylesheet" href="../../css/site-ui.css?v=6">
+<style>
+.calc{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:start}
+.calc-card{background:#fff;border:1px solid #e3e7f0;border-radius:18px;padding:28px;box-shadow:0 18px 50px rgba(16,24,45,.07)}
+.calc-card h2{font-size:20px;margin:0 0 18px}
+.field{margin-bottom:18px}
+.field label{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:14.5px;color:#1a2236;margin-bottom:7px}
+.field label small{font-weight:500;color:#6b7690}
+.field .in{display:flex;align-items:center;border:1.5px solid #d5dbe8;border-radius:12px;background:#fbfcfe;transition:border-color .2s}
+.field .in:focus-within{border-color:#7c5cff;background:#fff}
+.field .in span{padding:0 12px;color:#6b7690;font-weight:600;font-size:15px;white-space:nowrap}
+.field input{flex:1;min-width:0;border:0;background:transparent;padding:13px 14px;font:600 17px/1.2 inherit;color:#0b1a3a;outline:0}
+.field .hint{font-size:12.5px;color:#7b86a0;margin-top:6px}
+.result{background:radial-gradient(520px 300px at 90% 0%,rgba(124,92,255,.28),transparent 70%),#0b1122;color:#fff;border:0}
+.result .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a99bff;font-weight:700}
+.result .big{font:800 clamp(44px,6vw,64px)/1 var(--serif,inherit);letter-spacing:-.03em;margin:10px 0 6px}
+.result .sub{color:#aebbd8;font-size:14.5px}
+.result .band{margin:18px 0 22px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.07);font-size:14.5px;color:#dbe3f5}
+.result .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.result .stat{background:rgba(255,255,255,.06);border-radius:12px;padding:14px}
+.result .stat b{display:block;font-size:20px}
+.result .stat small{color:#9fb0d0;font-size:12.5px}
+.uplift{border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+.uplift p{margin:0 0 10px;color:#dbe3f5;font-size:15px}
+.uplift input[type=range]{width:100%;accent-color:#7c5cff}
+.uplift .win{font-size:26px;font-weight:800;color:#5ee0a0;margin:10px 0 2px}
+.uplift .winsub{color:#9fb0d0;font-size:13.5px}
+.result .btn{margin-top:22px;width:100%;justify-content:center}
+.result .alt-link{display:block;text-align:center;margin-top:12px;color:#c6d2ea;font-size:14px}
+.calc-copy{max-width:780px}
+.calc-copy h2{margin-top:36px}
+.calc-copy blockquote{margin:16px 0;padding:16px 20px;border-left:3px solid #7c5cff;background:#f6f4ff;border-radius:0 12px 12px 0;font-weight:700;color:#1a2236}
+.calc-copy table{width:100%;border-collapse:collapse;margin:16px 0}
+.calc-copy th,.calc-copy td{text-align:left;padding:10px 12px;border-bottom:1px solid #e3e7f0;font-size:15px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.calc>*{min-width:0}
+.result .warn{color:#ffc4b8}
+.calc-copy ul.related li{margin-bottom:6px}
+</style>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="UbWEq0aYWth4TX9ekG3Cww" async></script>
+</head><body>
+<nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="../../" aria-label="Shucon MedAI home"><img src="../../images/logo-header.png" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="../../ai-agents/">AI agents</a></li><li><a href="../../platform/hospital-management-system/">HMS platform</a></li><li><a href="../../solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="../../hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="../../tools/">Tools</a></li><li><a href="../../blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="../../#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<header class="commercial-hero"><div class="wrap"><div class="breadcrumbs"><a href="../../">Home</a> / <a href="../">Tools</a> / <a href="../#management-calculators">Management calculators</a></div><span class="eyebrow on-dark">Free hospital management calculator</span><h1>Bed Turnover Rate Calculator</h1><p class="hero-lead">Bed turnover rate is the number of patients each available hospital bed served in a period: bed turnover rate = total discharges (including deaths) ÷ average available beds, and bed turnover interval = (available bed days − occupied bed days) ÷ total discharges.</p><div class="proof-line"><span>No sign-up</span><span>Runs in your browser</span><span>Nothing is stored or sent</span></div></div></header>
+<main>
+<section class="page-section alt"><div class="wrap">
+<div class="calc">
+<form class="calc-card" id="btrForm" autocomplete="off" onsubmit="return false">
+<h2>Your hospital</h2>
+<div class="field"><label for="dis">Total discharges <small>including deaths</small></label><div class="in"><input id="dis" type="number" inputmode="numeric" min="0" step="1" value="420"><span>discharges</span></div><div class="hint">All patients discharged or expired in the period.</div></div>
+<div class="field"><label for="beds">Average available beds</label><div class="in"><input id="beds" type="number" inputmode="decimal" min="0" step="0.1" value="95"><span>beds</span></div><div class="hint">Exclude beds closed for maintenance or staffing gaps for the period.</div></div>
+<div class="field"><label for="days">Days in the period</label><div class="in"><input id="days" type="number" inputmode="numeric" min="0" step="1" value="31"><span>days</span></div><div class="hint">Use the number of days in the month or period.</div></div>
+<div class="field"><label for="obd">Occupied bed days <small>for interval</small></label><div class="in"><input id="obd" type="number" inputmode="numeric" min="0" step="1" value="2210"><span>bed days</span></div><div class="hint">Sum of the daily midnight census. Needed for the bed turnover interval.</div></div>
+<div class="field"><label for="abd">Available bed days <small>optional</small></label><div class="in"><input id="abd" type="number" inputmode="numeric" min="0" step="1" placeholder="Auto: beds × days"><span>bed days</span></div><div class="hint">Leave blank to use average available beds × days.</div></div>
+</form>
+<div class="calc-card result" aria-live="polite">
+<div class="label">Your bed turnover rate</div>
+<div class="big" id="outBtr">4.42</div>
+<div class="sub">discharges per available bed in the period</div>
+<div class="band" id="outBand"></div>
+<div class="grid2">
+<div class="stat"><b id="outBti">1.75 days</b><small>bed turnover interval</small></div>
+<div class="stat"><b id="outHours">42 hours</b><small>empty time between patients</small></div>
+<div class="stat"><b id="outEmpty">735</b><small>empty bed days</small></div>
+<div class="stat"><b id="outYear">52.1</b><small>turnover per bed, annualised</small></div>
+</div>
+<div class="uplift">
+<p>If empty time falls by <b id="outCut">8 hours</b> per discharge</p>
+<input id="cut" type="range" min="2" max="24" step="2" value="8" aria-label="Reduction in empty hours per discharge">
+<div class="win" id="outFreed">140 bed days freed</div>
+<div class="winsub" id="outFreedSub">about 4.5 beds of capacity each day of the period, if demand exists</div>
+</div>
+<a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Get bed turnaround delays flagged daily</a>
+<a class="alt-link" href="../../agents/stakeholder-action/">Or see how stakeholder action agents work &rarr;</a>
+</div>
+</div>
+</div></section>
+<section class="page-section"><div class="wrap"><div class="prose calc-copy">
+<h2>How this bed turnover rate calculator works</h2>
+<p><strong>Bed turnover rate</strong> tells you how many patients moved through each available bed in a period. <strong>Bed turnover interval</strong> tells you how long, on average, a bed stood empty between one patient leaving and the next being admitted. Together they show how well beds, discharges, housekeeping and admissions are working as one flow.</p>
+<blockquote>Bed turnover rate = Total discharges in the period ÷ Average available beds in the period</blockquote>
+<blockquote>Bed turnover interval = (Available bed days − Occupied bed days) ÷ Total discharges</blockquote>
+<p>Available bed days are average available beds × days in the period. Occupied bed days are the sum of the daily midnight census. Use the same discharge definition every month; this calculator includes deaths, as many hospitals count all separations from inpatient care, but document whichever definition you use.</p>
+<h2>Bed turnover rate formula in hospital: worked example</h2>
+<p>A 100-bed hospital has 5 beds closed for maintenance, so it averages 95 available beds in a 31-day month. It records 420 discharges and 2,210 occupied bed days.</p>
+<table><thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead><tbody>
+<tr><td>Bed turnover rate</td><td>420 ÷ 95</td><td>4.42 per bed</td></tr>
+<tr><td>Available bed days</td><td>95 × 31</td><td>2,945</td></tr>
+<tr><td>Empty bed days</td><td>2,945 − 2,210</td><td>735</td></tr>
+<tr><td>Bed turnover interval</td><td>735 ÷ 420</td><td>1.75 days (42 hours)</td></tr>
+<tr><td>Bed occupancy rate</td><td>2,210 ÷ 2,945 × 100</td><td>75.0%</td></tr>
+</tbody></table>
+<p>Each available bed served about 4.4 patients in the month, and on average stood empty for about 42 hours between patients.</p>
+<h2>Bed turnover rate vs bed occupancy rate</h2>
+<p>Occupancy asks how full the beds were; turnover asks how many patients moved through each bed. Read them together:</p>
+<ul>
+<li><strong>High occupancy, low turnover:</strong> long stays, complex cases or discharge delays</li>
+<li><strong>Low occupancy, high turnover:</strong> short-stay cases but weak demand or capacity mismatch</li>
+<li><strong>High occupancy, high turnover:</strong> strong demand and active patient flow; watch staff pressure</li>
+<li><strong>Low occupancy, low turnover:</strong> a demand, referral or service-line issue</li>
+</ul>
+<h2>What is a good bed turnover rate?</h2>
+<p>There is no universal good bed turnover rate. It depends on specialty mix, case complexity, local demand, payer mix and bed category: a day-care-heavy surgical unit will turn beds faster than a medical ICU. Compare against your own three-month and twelve-month trend, set expectations by department, and discuss the outliers. Reducing empty-bed time creates value only when there is patient demand and safe staffing, so never push turnover faster than clinical readiness allows.</p>
+<h2>Related calculators and guides</h2>
+<ul class="related"><li><a href="../bed-occupancy-rate-calculator/">Bed Occupancy Rate Calculator</a>: Bed occupancy rate (BOR) as a % of available bed days</li><li><a href="../alos-calculator/">ALOS Calculator</a>: Average Length of Stay in days per discharge</li><li><a href="../average-daily-census-calculator/">Average Daily Census Calculator</a>: Average inpatients per day and implied occupancy</li><li><a href="../arpob-calculator/">ARPOB Calculator</a>: Average Revenue Per Occupied Bed from net IPD revenue</li></ul>
+<p>For how occupancy and length of stay drive bed turnover, read the <a href="../../blog/bed-occupancy-rate-formula.html">bed occupancy rate formula guide</a> and the <a href="../../blog/alos-average-length-of-stay.html">ALOS (average length of stay) guide</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is bed turnover rate in a hospital?</h3><p>Bed turnover rate is the number of discharged patients each available bed served during a period. It shows how actively beds are being used for new admissions.</p><h3>What is the bed turnover rate formula?</h3><p>Bed turnover rate = Total discharges during the period ÷ Average available beds during the period. Use the same discharge definition, including deaths if that is your policy, every month.</p><h3>How do you use the bed turnover rate formula in hospital reporting?</h3><p>Take the month’s discharges and divide by the average beds that were actually available. For example, 420 discharges with 95 average available beds gives 420 ÷ 95 = 4.42, so each bed served about 4.4 patients that month.</p><h3>What is bed turnover interval?</h3><p>Bed turnover interval is the average time a bed stays empty between one patient leaving and the next being admitted. Bed turnover interval = (Available bed days − Occupied bed days) ÷ Total discharges. For example, (2,945 − 2,210) ÷ 420 = 1.75 days, or about 42 hours.</p><h3>What is the difference between bed turnover rate and bed occupancy rate?</h3><p>Occupancy shows how full beds were; turnover shows how many patients moved through each bed. A hospital can have high occupancy with low turnover when stays are long, or moderate occupancy with high turnover when short-stay cases dominate.</p><h3>What is a good bed turnover rate?</h3><p>There is no universal good bed turnover rate. It depends on specialty mix, case complexity, demand and bed category, so compare against your own trend and set expectations by department.</p>
+</div></div></section>
+<section class="page-section dark page-cta"><div class="wrap"><div class="section-head"><span class="eyebrow on-dark">From number to action</span><h2 class="section-title">Want delayed discharges and empty beds flagged every day?</h2><p class="section-sub">Shucon MedAI agents watch occupancy, discharges, billing and claims continuously and tell each owner what needs action today.</p></div><div class="hero-actions"><a class="btn btn-primary" data-event="demo_clicked" href="../../#contact">Book a 30-minute demo</a><a class="btn btn-ghost" href="../../agents/stakeholder-action/">Explore stakeholder action agents</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-top footer-4"><div class="footer-brand"><p>AI agents and connected software for healthcare operations.</p><a class="footer-mail" href="mailto:saksham@shucontech.in">saksham@shucontech.in</a><br><a class="footer-demo" data-event="demo_clicked" href="../../#contact">Book a demo &rarr;</a></div><div class="footer-col"><h4>AI agents</h4><a href="../../agents/revenue-leakage/">Revenue leakage</a><a href="../../agents/stakeholder-action/">Stakeholder action</a><a href="../../agents/patient-engagement/">Patient engagement</a><a href="../../agents/insurance-claims/">Insurance claims</a><a href="../../ai-agents/">All AI agents</a></div><div class="footer-col"><h4>Platform</h4><a href="../../platform/hospital-management-system/">Hospital management system</a><a href="../../solutions/diagnostics-centres/">Diagnostics centres</a><a href="../../custom-healthcare-ai/">Custom healthcare AI</a><a href="../../hospital-ai/">Hospital AI</a></div><div class="footer-col"><h4>Resources</h4><a href="../../blog/">Insights</a><a href="../../tools/">Free tools &amp; calculators</a><a href="../../hospital-revenue-leakage/">Revenue leakage guide</a><a href="../../hospital-revenue-leakage-checklist/">25-point leakage checklist</a><a href="../../glossary/">Hospital glossary</a><a href="../../hospital-statistics-formulas/">Hospital statistics formulas</a><a href="../../leadership/saksham-gupta/">CEO profile</a></div></div><div class="footer-bottom"><p>&copy; <span id="year2"></span> Shucon MedAI. All rights reserved.</p><a href="https://www.linkedin.com/company/shucontech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var ids=["dis", "beds", "days", "obd", "abd", "cut"];
+  var q=new URLSearchParams(location.search);
+  ids.forEach(function(k){ if(q.has(k)) $(k).value=q.get(k); });
+  function num(n,d,min){ return n.toLocaleString('en-IN',{minimumFractionDigits:min||0,maximumFractionDigits:d}); }
+  function val(k){ var v=parseFloat($(k).value); return isFinite(v)?v:0; }
+  function set(k,t){ $(k).textContent=t; }
+  var tracked=false;
+  function calc(e){
+    var dis=val('dis'), beds=val('beds'), days=val('days'), obd=val('obd'), abdIn=val('abd'), cut=val('cut'), res=null;
+    set('outCut',num(cut,0)+' hours');
+    var abd=abdIn>0?abdIn:(beds>0&&days>0?beds*days:0);
+    var b=$('outBand');b.className='band';
+    if(!(dis>0) || !(beds>0)){
+      set('outBtr','—');b.textContent='Enter total discharges (including deaths) and average available beds to calculate.';
+      ['outBti','outHours','outEmpty','outYear','outFreed'].forEach(function(k){set(k,'—')});set('outFreedSub','');
+      return;
+    }
+    var r=dis/beds; res=r;
+    set('outBtr',num(r,2));
+    set('outYear',days>0?num(r*365/days,1):'—');
+    if(!(obd>0) || !(abd>0)){
+      ['outBti','outHours','outEmpty','outFreed'].forEach(function(k){set(k,'—')});set('outFreedSub','');
+      b.textContent='Each available bed served about '+num(r,1)+' discharged patients. Add days in the period and occupied bed days to get the bed turnover interval.';
+    } else if(obd>abd){
+      ['outBti','outHours','outEmpty','outFreed'].forEach(function(k){set(k,'—')});set('outFreedSub','');
+      b.className='band warn';b.textContent='Occupied bed days are higher than available bed days. Check the bed count, the days in the period and that both numbers cover the same period.';
+    } else {
+      var empty=abd-obd, bti=empty/dis;
+      set('outBti',num(bti,2)+' days');
+      set('outHours',num(bti*24,1)+' hours');
+      set('outEmpty',num(empty,1));
+      b.textContent='Each available bed served about '+num(r,1)+' discharged patients, and stayed empty for about '+num(bti*24,0)+' hours between patients on average. Bed occupancy for the same period was '+num(obd/abd*100,1)+'%.';
+      var freed=Math.min(cut*dis/24,empty), perDay=days>0?days:(abd/beds);
+      set('outFreed',num(freed,1)+' bed days freed');
+      set('outFreedSub','about '+num(freed/perDay,1)+' beds of capacity each day of the period, if demand exists');
+    }
+    if(e && !tracked && res!==null && isFinite(res) && typeof gtag==='function'){ tracked=true; gtag('event','bed_turnover_calculated',{bed_turnover:Math.round(res*100)/100}); }
+    var p=new URLSearchParams();ids.forEach(function(k){ if($(k).value!=='') p.set(k,$(k).value); });
+    if(e) history.replaceState(null,'','?'+p.toString());
+  }
+  ids.forEach(function(k){ $(k).addEventListener('input',calc); });
+  calc();
+})();
+</script>
+<script src="../../js/site.js?v=8"></script>
+<a href="#" id="back-top" aria-label="Back to top">&#8593;</a>
+</body></html>

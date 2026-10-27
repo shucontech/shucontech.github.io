@@ -197,6 +197,30 @@
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
+	<url>
+		<loc>https://shuconmedai.com/tools/bed-occupancy-rate-calculator/</loc>
+		<lastmod>2026-10-27</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/tools/alos-calculator/</loc>
+		<lastmod>2026-10-27</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/tools/bed-turnover-rate-calculator/</loc>
+		<lastmod>2026-10-27</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://shuconmedai.com/tools/average-daily-census-calculator/</loc>
+		<lastmod>2026-10-27</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
 <!-- AUTO:SITEMAP:START -->
 	<url>
 		<loc>https://shuconmedai.com/blog/charge-capture-in-hospitals.html</loc>

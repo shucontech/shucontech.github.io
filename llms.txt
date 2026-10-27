@@ -27,6 +27,10 @@
 - [Hospital statistics formulas](https://shuconmedai.com/hospital-statistics-formulas/): bed occupancy rate, ALOS, average daily census, bed turnover, death rates and ARPOB with worked examples.
 - [Free hospital management tools](https://shuconmedai.com/tools/): calculators for hospital leaders
 - [ARPOB calculator](https://shuconmedai.com/tools/arpob-calculator/): calculate Average Revenue Per Occupied Bed and the value of raising it
+- [Bed occupancy rate calculator](https://shuconmedai.com/tools/bed-occupancy-rate-calculator/): BOR from beds, days and occupied bed days
+- [ALOS calculator](https://shuconmedai.com/tools/alos-calculator/): average length of stay from inpatient days and discharges
+- [Bed turnover rate calculator](https://shuconmedai.com/tools/bed-turnover-rate-calculator/): bed turnover rate and turnover interval
+- [Average daily census calculator](https://shuconmedai.com/tools/average-daily-census-calculator/): average daily census and implied occupancy
 - [Pharmacy revenue leakage case study](https://shuconmedai.com/case-study/hospital-pharmacy-revenue-leakage/)
 - [ARPOB formula and benchmarks](https://shuconmedai.com/blog/arpob-hospital-guide.html)
 - [Hospital pharmacy reconciliation guide](https://shuconmedai.com/blog/pharmacy-inventory-reconciliation.html)
