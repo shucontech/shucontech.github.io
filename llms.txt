@@ -38,6 +38,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [Bed Turnover Rate: Formula, Interval and What It Tells You](https://shuconmedai.com/blog/bed-turnover-rate.html): Bed turnover rate formula explained with turnover interval, examples, interpretation and links to occupancy, ALOS and hospital finance.
 - [How to Choose Hospital Management Software: A Buyer's Checklist](https://shuconmedai.com/blog/how-to-choose-hospital-management-software.html): How to choose hospital management software: practical HMS checklist for modules, billing, pharmacy, claims, cloud, cost and rollout.
 - [Charge Capture in Hospitals: Why Services Go Unbilled and How to Fix It](https://shuconmedai.com/blog/charge-capture-in-hospitals.html): Charge capture hospital guide: why services go unbilled, where leakage starts, and how billing, pharmacy, OT and nursing can fix it.
 - [Cashless Claim Process in Hospitals: Step-by-Step Guide](https://shuconmedai.com/blog/cashless-claim-process-hospital.html): Cashless claim process hospital guide for TPA desks: steps, documents, TAT controls, deductions and practical SOPs for India.
