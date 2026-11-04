@@ -38,6 +38,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [Hospital Billing Process: Step-by-Step From Admission to Discharge](https://shuconmedai.com/blog/hospital-billing-process.html): Understand the hospital billing process from admission to discharge, with charge capture, insurance checks, examples and control points.
 - [AI Voice Agents for Hospitals: Use Cases, Benefits and Risks](https://shuconmedai.com/blog/ai-voice-agents-for-hospitals.html): AI voice agent for hospitals guide: use cases, benefits, risks, governance and practical rollout steps for patient calls and follow-ups.
 - [Bed Turnover Rate: Formula, Interval and What It Tells You](https://shuconmedai.com/blog/bed-turnover-rate.html): Bed turnover rate formula explained with turnover interval, examples, interpretation and links to occupancy, ALOS and hospital finance.
 - [How to Choose Hospital Management Software: A Buyer's Checklist](https://shuconmedai.com/blog/how-to-choose-hospital-management-software.html): How to choose hospital management software: practical HMS checklist for modules, billing, pharmacy, claims, cloud, cost and rollout.
