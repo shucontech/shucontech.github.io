@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Fri, 06 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Mon, 09 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>Hospital Revenue Cycle Management in India: A Practical Guide</title>
+			<link>https://shuconmedai.com/blog/hospital-revenue-cycle-management-india.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-revenue-cycle-management-india.html</guid>
+			<pubDate>Mon, 09 Nov 2026 06:00:00 +0530</pubDate>
+			<category>Revenue leakage</category>
+			<description>A practical guide to hospital revenue cycle management India workflows, from registration to billing, claims, collections and leakage control.</description>
+		</item>
 		<item>
 			<title>Pre-Authorization for Cashless Hospitalisation: Process and Checklist</title>
 			<link>https://shuconmedai.com/blog/pre-authorization-cashless-hospitalisation.html</link>
