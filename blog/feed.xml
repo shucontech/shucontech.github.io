@@ -13,7 +13,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-software-cost-india.html</guid>
 			<pubDate>Wed, 11 Nov 2026 06:00:00 +0530</pubDate>
 			<category>Hospital software</category>
-			<description>Understand hospital software cost India pricing drivers, modules, deployment choices, implementation effort and hidden HMS cost items.</description>
+			<description>What hospital management software costs in India: the pricing drivers, a first-year cost example in INR and the hidden costs to check in every quote.</description>
 		</item>
 		<item>
 			<title>Hospital Revenue Cycle Management in India: A Practical Guide</title>
@@ -21,7 +21,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-revenue-cycle-management-india.html</guid>
 			<pubDate>Mon, 09 Nov 2026 06:00:00 +0530</pubDate>
 			<category>Revenue leakage</category>
-			<description>A practical guide to hospital revenue cycle management India workflows, from registration to billing, claims, collections and leakage control.</description>
+			<description>Hospital revenue cycle management in India explained: the RCM stages from registration to collections, the metrics to track and where revenue leaks.</description>
 		</item>
 		<item>
 			<title>Pre-Authorization for Cashless Hospitalisation: Process and Checklist</title>
@@ -29,7 +29,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/pre-authorization-cashless-hospitalisation.html</guid>
 			<pubDate>Fri, 06 Nov 2026 06:00:00 +0530</pubDate>
 			<category>Insurance &amp; claims</category>
-			<description>Follow the pre authorization process in hospital cashless claims, with documents, INR example, common queries and readiness controls.</description>
+			<description>The pre-authorization process for cashless hospitalisation: steps, documents, common insurer queries and an INR example of the approval gap.</description>
 		</item>
 		<item>
 			<title>Hospital Billing Process: Step-by-Step From Admission to Discharge</title>
@@ -37,7 +37,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-billing-process.html</guid>
 			<pubDate>Wed, 04 Nov 2026 06:00:00 +0530</pubDate>
 			<category>Revenue leakage</category>
-			<description>Understand the hospital billing process from admission to discharge, with charge capture, insurance checks, examples and control points.</description>
+			<description>The hospital billing process step by step, from registration and admission estimate to charge capture, interim checks, discharge billing and settlement.</description>
 		</item>
 		<item>
 			<title>AI Voice Agents for Hospitals: Use Cases, Benefits and Risks</title>
@@ -45,7 +45,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/ai-voice-agents-for-hospitals.html</guid>
 			<pubDate>Mon, 02 Nov 2026 06:00:00 +0530</pubDate>
 			<category>Healthcare AI</category>
-			<description>AI voice agent for hospitals guide: use cases, benefits, risks, governance and practical rollout steps for patient calls and follow-ups.</description>
+			<description>How AI voice agents handle hospital reminders, no-show recovery and discharge follow-up calls, with the benefits, risks and a safe way to roll one out.</description>
 		</item>
 		<item>
 			<title>Bed Turnover Rate: Formula, Interval and What It Tells You</title>
@@ -53,7 +53,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/bed-turnover-rate.html</guid>
 			<pubDate>Fri, 30 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Hospital finance</category>
-			<description>Bed turnover rate formula explained with turnover interval, examples, interpretation and links to occupancy, ALOS and hospital finance.</description>
+			<description>Bed turnover rate = discharges ÷ available beds. Learn the formula, the bed turnover interval, a worked example and what the rate indicates.</description>
 		</item>
 		<item>
 			<title>How to Choose Hospital Management Software: A Buyer&#x27;s Checklist</title>
@@ -61,7 +61,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/how-to-choose-hospital-management-software.html</guid>
 			<pubDate>Wed, 28 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Hospital software</category>
-			<description>How to choose hospital management software: practical HMS checklist for modules, billing, pharmacy, claims, cloud, cost and rollout.</description>
+			<description>How to choose hospital management software: map your workflows, make vendors demo real cases, compare the true cost and plan a phased rollout.</description>
 		</item>
 		<item>
 			<title>Charge Capture in Hospitals: Why Services Go Unbilled and How to Fix It</title>
@@ -69,7 +69,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/charge-capture-in-hospitals.html</guid>
 			<pubDate>Mon, 26 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Revenue leakage</category>
-			<description>Charge capture hospital guide: why services go unbilled, where leakage starts, and how billing, pharmacy, OT and nursing can fix it.</description>
+			<description>Charge capture means every billable service reaches the final bill. See why services go unbilled, a worked INR example and the controls that fix it.</description>
 		</item>
 		<item>
 			<title>Cashless Claim Process in Hospitals: Step-by-Step Guide</title>
@@ -77,7 +77,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/cashless-claim-process-hospital.html</guid>
 			<pubDate>Fri, 23 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Insurance &amp; claims</category>
-			<description>Cashless claim process hospital guide for TPA desks: steps, documents, TAT controls, deductions and practical SOPs for India.</description>
+			<description>The cashless claim process in hospitals, step by step: eligibility, pre-authorisation, approvals, discharge and claim submission, with TPA desk controls.</description>
 		</item>
 		<item>
 			<title>Hospital KPIs: 25 Metrics Every Hospital Administrator Should Track</title>
@@ -85,7 +85,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-kpis-list.html</guid>
 			<pubDate>Wed, 21 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Hospital finance</category>
-			<description>Hospital KPIs explained for Indian hospitals: track finance, occupancy, claims, operations and patient flow with 25 practical metrics.</description>
+			<description>25 hospital KPIs with owners: financial, bed utilisation, insurance claims, revenue leakage and patient flow metrics, plus how to build a KPI dashboard.</description>
 		</item>
 		<item>
 			<title>AI Agents in Healthcare: What They Are and How Hospitals Use Them</title>
@@ -93,7 +93,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/ai-agents-in-healthcare.html</guid>
 			<pubDate>Mon, 19 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Healthcare AI</category>
-			<description>AI agents in healthcare explained for hospitals: what they do, practical use cases, human oversight, risks and implementation steps.</description>
+			<description>What AI agents in healthcare are, how they differ from chatbots, and practical hospital use cases, with the human oversight, risks and rollout steps to plan.</description>
 		</item>
 		<item>
 			<title>OPD to IPD Conversion Ratio: Formula, Benchmarks and How to Improve It</title>
@@ -101,7 +101,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/opd-to-ipd-conversion-ratio.html</guid>
 			<pubDate>Fri, 16 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Hospital finance</category>
-			<description>OPD to IPD conversion ratio formula, examples, indicative benchmarks and practical steps to improve admission follow-up in hospitals.</description>
+			<description>OPD to IPD conversion rate formula with a worked example, indicative benchmarks and ethical ways to improve admission follow-up in hospitals.</description>
 		</item>
 		<item>
 			<title>Hospital Management System Modules: The Complete List for Hospitals and Nursing Homes</title>
@@ -109,7 +109,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/hospital-management-system-modules.html</guid>
 			<pubDate>Wed, 14 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Hospital software</category>
-			<description>Hospital management system modules explained: OPD, IPD, billing, pharmacy, lab, inventory, TPA, MIS and AI workflows for hospitals.</description>
+			<description>The complete list of hospital management system modules: OPD, IPD, billing, pharmacy, lab, inventory, TPA and MIS, and which to roll out first.</description>
 		</item>
 		<item>
 			<title>Bed Occupancy Rate Formula: How to Calculate Hospital Occupancy and Use It</title>
@@ -117,7 +117,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/bed-occupancy-rate-formula.html</guid>
 			<pubDate>Mon, 12 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Hospital finance</category>
-			<description>Bed occupancy rate formula for hospitals, with examples, indicative benchmarks and actions to improve bed utilisation without unsafe crowding.</description>
+			<description>Bed occupancy rate = occupied bed days ÷ available bed days × 100. See a worked monthly example, which beds to count and how to read the result.</description>
 		</item>
 		<item>
 			<title>TPA Claim Rejection Reasons and How Hospitals Can Prevent Them</title>
@@ -125,7 +125,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/tpa-claim-rejection-reasons.html</guid>
 			<pubDate>Fri, 09 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Insurance &amp; claims</category>
-			<description>TPA claim rejection reasons explained for hospitals, with prevention steps for documentation, billing, coding and cashless approvals.</description>
+			<description>The common reasons TPAs and insurers reject hospital claims, from incomplete papers to bill mismatches, and stage-wise steps to prevent them.</description>
 		</item>
 		<item>
 			<title>What is ALOS in a Hospital? Average Length of Stay Formula, Example and How to Improve It</title>
@@ -133,7 +133,7 @@
 			<guid isPermaLink="true">https://shuconmedai.com/blog/alos-average-length-of-stay.html</guid>
 			<pubDate>Wed, 07 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Hospital finance</category>
-			<description>ALOS in hospital means average inpatient stay. Learn the formula, example, indicative benchmarks and ways to reduce ALOS safely.</description>
+			<description>ALOS means Average Length of Stay: inpatient days ÷ discharges. See the formula, a worked example, indicative benchmarks and safe ways to reduce it.</description>
 		</item>
 		<item>
 			<title>Revenue Leakage in Hospitals: 7 Silent Ways You&#x27;re Losing Money</title>

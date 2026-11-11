@@ -44,6 +44,7 @@ Rows marked `covered by …` are already answered by a live page or another post
   "breadcrumb": "Bed turnover rate",
   "description": "120–155 characters, includes the primary keyword, written as a reason to click.",
   "lede": "One or two sentences shown under the H1.",
+  "takeaways": ["3 or 4 one-sentence bullets shown in the Key takeaways box at the top."],
   "category": "Hospital finance",
   "product": "stakeholder-action",
   "keywords": ["bed turnover rate", "bed turnover rate formula", "..."],
@@ -56,10 +57,21 @@ Rows marked `covered by …` are already answered by a live page or another post
 ...
 ```
 
-- `title` ≤ 60 characters (shown in Google). `h1` can be longer.
+- `title` ≤ 60 characters (shown in Google). `h1` can be longer. Write both as natural phrases
+  ("AR Days in Hospitals", not "AR days hospital"); the same goes for the first sentence and headings.
+- `takeaways` (optional but recommended): 3–4 bullets, 50–190 characters each. The first one answers the
+  search query directly (the definition, or the formula written out). Use only facts that are in the post.
+  They render as the "Key takeaways" box and as `abstract` in the article schema.
+- `modified` (optional, `YYYY-MM-DD`): set it when a live post is materially edited. It shows an
+  "Updated" date on the page and updates `dateModified` and the sitemap `lastmod`.
+- `tool` (optional): which free tool the post promotes inline and in the side rail. One of `arpob`, `bor`,
+  `alos`, `btr`, `adc`, `checklist`, `formulas`, `tools`, `glossary`. If omitted, `POST_TOOL` / `PRODUCT_TOOL`
+  in `publish.py` pick one from the slug or product.
 - `product` is one of: `revenue-leakage`, `insurance-claims`, `patient-engagement`,
   `stakeholder-action`, `hms`, `diagnostics`, `pharmacy`, `custom-ai`, `ai-agents`. It picks the CTA
   and which product page lists the post.
+- Every `<h2>` automatically gets an id and an entry in the "On this page" table of contents, so keep
+  H2s short and descriptive (aim for 6–9 per post).
 - The body is just the article content: `p`, `h2`, `h3`, `ul`, `ol`, `table`, `blockquote` (for formulas),
   and `<div class="callout"><h4>..</h4><p>..</p></div>`. Leave out the H1, FAQ section, CTA, author box and
   related posts; the template adds those.

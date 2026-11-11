@@ -5,7 +5,33 @@
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var path = window.location.pathname;
 
+  /* GA4: configured here so every page is measured, and loaded after first interaction
+     (or shortly after load) so it never competes with rendering. */
+  var GA_ID = 'G-5D6VNZNNKQ';
   window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+  }
+  (function () {
+    var loaded = false;
+    var wake = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+    function loadGa() {
+      if (loaded) return;
+      loaded = true;
+      wake.forEach(function (e) { window.removeEventListener(e, loadGa); });
+      if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) return;
+      var tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(tag);
+    }
+    wake.forEach(function (e) { window.addEventListener(e, loadGa, { passive: true }); });
+    if (document.readyState === 'complete') setTimeout(loadGa, 3500);
+    else window.addEventListener('load', function () { setTimeout(loadGa, 3500); });
+  }());
+
   window.trackShuconEvent = function (name, parameters) {
     var payload = parameters || {};
     if (typeof window.gtag === 'function') window.gtag('event', name, payload);
@@ -50,7 +76,7 @@
   }
   if (links) {
     var section = function (p) {
-      var m = p.replace(/index\.html$/, '').match(/\/(ai-agents|agents|platform|solutions|hospital-revenue-leakage|blog)\//);
+      var m = p.replace(/index\.html$/, '').match(/\/(ai-agents|agents|platform|solutions|hospital-revenue-leakage|tools|blog)\//);
       if (!m) return null;
       return m[1] === 'agents' ? 'ai-agents' : m[1];
     };
@@ -92,51 +118,57 @@
   waFab.addEventListener('click', function () { window.trackShuconEvent('whatsapp_clicked', { source: 'fab' }); });
   document.body.appendChild(waFab);
 
+  /* A corner card, not a modal: it never covers what the visitor came to read, and it only
+     appears once they have shown interest (time on page plus some scrolling). */
   var WA_KEY = 'shucon_wa_prompt_seen';
   var waSeen = false;
   try { waSeen = window.localStorage.getItem(WA_KEY) === '1'; } catch (e) { waSeen = false; }
   if (!waSeen) {
+    var waReadyAt = Date.now() + 20000;
+    var waShown = false;
     var showWaPrompt = function () {
+      if (waShown) return;
       var active = document.activeElement;
       if (document.hidden || document.querySelector('.demo-modal[open]') || (active && /INPUT|TEXTAREA|SELECT/.test(active.tagName))) {
         setTimeout(showWaPrompt, 5000);
         return;
       }
+      waShown = true;
       try { window.localStorage.setItem(WA_KEY, '1'); } catch (e) { /* storage unavailable */ }
-      var box = document.createElement('dialog');
+      var box = document.createElement('aside');
       box.className = 'wa-prompt';
-      box.setAttribute('aria-labelledby', 'waPromptTitle');
-      box.setAttribute('tabindex', '-1');
+      box.setAttribute('aria-label', 'Message the CEO on WhatsApp');
       box.innerHTML =
-        '<button type="button" class="wa-prompt-close" aria-label="Close">&times;</button>' +
-        '<img class="wa-prompt-photo" src="' + root + 'images/saksham-gupta-linkedin.jpg" alt="Saksham Gupta" width="88" height="88">' +
-        '<h2 id="waPromptTitle">Talk directly to our CEO</h2>' +
-        '<div class="wa-prompt-who"><strong>Saksham Gupta</strong><span>CEO &middot; Ex-Microsoft, core AI Copilot team</span></div>' +
+        '<button type="button" class="wa-prompt-close" aria-label="Dismiss">&times;</button>' +
+        '<div class="wa-prompt-head"><img class="wa-prompt-photo" src="' + root + 'images/saksham-gupta-linkedin.jpg" alt="" width="48" height="48">' +
+        '<div class="wa-prompt-who"><strong>Saksham Gupta</strong><span>CEO &middot; Ex-Microsoft, core AI Copilot team</span></div></div>' +
         '<p>Exploring AI agents for your hospital? Message me on WhatsApp and I&rsquo;ll help you find the right place to start.</p>' +
-        '<a class="wa-prompt-cta" href="' + WA_URL + '" target="_blank" rel="noopener">' + waIcon + 'Chat on WhatsApp</a>' +
-        '<button type="button" class="wa-prompt-later">Maybe later</button>';
+        '<a class="wa-prompt-cta" href="' + WA_URL + '" target="_blank" rel="noopener">' + waIcon + 'Chat on WhatsApp</a>';
       document.body.appendChild(box);
-      if (typeof box.showModal === 'function') box.showModal(); else box.setAttribute('open', '');
-      box.focus();
       window.requestAnimationFrame(function () { box.classList.add('show'); });
+      document.body.classList.add('wa-prompt-open');
       window.trackShuconEvent('whatsapp_prompt_shown', { page: path });
-      var closed = false;
       var close = function () {
-        if (closed) return;
-        closed = true;
         box.classList.remove('show');
-        setTimeout(function () { if (box.open && box.close) box.close(); box.remove(); }, reduceMotion ? 0 : 250);
+        document.body.classList.remove('wa-prompt-open');
+        setTimeout(function () { box.remove(); }, reduceMotion ? 0 : 300);
       };
-      box.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
-      box.addEventListener('click', function (e) { if (e.target === box) close(); });
       box.querySelector('.wa-prompt-close').addEventListener('click', close);
-      box.querySelector('.wa-prompt-later').addEventListener('click', close);
       box.querySelector('.wa-prompt-cta').addEventListener('click', function () {
         window.trackShuconEvent('whatsapp_clicked', { source: 'prompt' });
         close();
       });
+      document.addEventListener('keydown', function onKey(e) {
+        if (e.key === 'Escape') { close(); document.removeEventListener('keydown', onKey); }
+      });
     };
-    setTimeout(showWaPrompt, 15000);
+    var waTry = function () {
+      var depth = (window.scrollY + window.innerHeight) / Math.max(1, document.documentElement.scrollHeight);
+      if (!waShown && Date.now() >= waReadyAt && (depth > 0.35 || window.scrollY > 900)) showWaPrompt();
+    };
+    window.addEventListener('scroll', waTry, { passive: true });
+    setTimeout(waTry, 20500);
+    setTimeout(showWaPrompt, 60000);
   }
 
   var contactVisible = false;
@@ -148,11 +180,14 @@
   }
 
   var ticking = false;
+  var updateToc = null;
   function onScroll() {
     var y = window.scrollY;
     var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom + y : 600;
     if (nav) nav.classList.toggle('is-scrolled', y > 8);
     if (backTop) backTop.classList.toggle('show', y > 900);
+    waFab.classList.toggle('is-compact', y > 320);
+    if (updateToc) updateToc();
     sticky.classList.toggle('show', y > heroBottom - 80 && !contactVisible && !document.querySelector('.demo-modal[open]'));
     if (progress) {
       var rect = article.getBoundingClientRect();
@@ -405,6 +440,202 @@
     };
     tick();
     if (!reduceMotion) setInterval(function () { if (!document.hidden) tick(); }, 2800);
+  }
+
+  /* Articles: table of contents, section tracking, heading links and sharing */
+  var toc = document.querySelector('.toc');
+  if (toc) {
+    var wideRail = window.matchMedia('(min-width: 1101px)');
+    var syncToc = function () { if (wideRail.matches) toc.open = true; };
+    syncToc();
+    if (wideRail.addEventListener) wideRail.addEventListener('change', syncToc);
+    toc.querySelector('summary').addEventListener('click', function (e) { if (wideRail.matches) e.preventDefault(); });
+    var tocLinks = {};
+    toc.querySelectorAll('a[href^="#"]').forEach(function (a) { tocLinks[a.getAttribute('href').slice(1)] = a; });
+    toc.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a) return;
+      if (!wideRail.matches) toc.open = false;
+      window.trackShuconEvent('toc_clicked', { section: a.textContent.trim(), page_path: path });
+    });
+    var heads = Array.prototype.filter.call(document.querySelectorAll('.prose h2[id]'), function (h) { return tocLinks[h.id]; });
+    var setCurrent = function (id) {
+      Object.keys(tocLinks).forEach(function (k) {
+        if (k === id) tocLinks[k].setAttribute('aria-current', 'true'); else tocLinks[k].removeAttribute('aria-current');
+      });
+    };
+    var lastCurrent = null;
+    updateToc = function () {
+      var current = '';
+      for (var i = 0; i < heads.length; i++) {
+        if (heads[i].getBoundingClientRect().top <= 140) current = heads[i].id;
+      }
+      if (current !== lastCurrent) { lastCurrent = current; setCurrent(current); }
+    };
+    updateToc();
+    heads.forEach(function (h) {
+      var a = document.createElement('a');
+      a.className = 'h-anchor';
+      a.href = '#' + h.id;
+      a.textContent = '#';
+      a.setAttribute('aria-label', 'Link to this section');
+      h.appendChild(a);
+    });
+  }
+
+  var shareTargets = document.querySelectorAll('[data-share]');
+  if (shareTargets.length) {
+    var canonical = document.querySelector('link[rel="canonical"]');
+    var shareUrl = canonical ? canonical.href : window.location.href.split('#')[0];
+    var h1 = document.querySelector('h1');
+    var shareTitle = h1 ? h1.textContent.trim() : document.title;
+    var icons = {
+      whatsapp: '<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>',
+      linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.05c.53-1 1.83-1.75 3.4-1.75 3.3 0 4.25 2.1 4.25 5.2v6.05h-4v-5.4c0-1.3-.25-2.5-1.75-2.5s-1.75 1.1-1.75 2.4v5.5h-4v-11z"/></svg>',
+      link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>'
+    };
+    shareTargets.forEach(function (box) {
+      var label = box.getAttribute('data-share-label') || 'Share';
+      box.innerHTML =
+        '<span class="share-label">' + label + '</span>' +
+        '<a data-net="whatsapp" target="_blank" rel="noopener nofollow" href="https://wa.me/?text=' + encodeURIComponent(shareTitle + ' ' + shareUrl) + '">' + icons.whatsapp + 'WhatsApp</a>' +
+        '<a data-net="linkedin" target="_blank" rel="noopener nofollow" href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl) + '">' + icons.linkedin + 'LinkedIn</a>' +
+        '<button type="button" data-net="copy">' + icons.link + '<span>Copy link</span></button>';
+      box.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-net]');
+        if (!el) return;
+        window.trackShuconEvent('share_clicked', { network: el.dataset.net, page_path: path });
+        if (el.dataset.net !== 'copy') return;
+        var text = el.querySelector('span');
+        var done = function () { text.textContent = 'Link copied'; setTimeout(function () { text.textContent = 'Copy link'; }, 2000); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(shareUrl).then(done, function () { window.prompt('Copy this link', shareUrl); });
+        else window.prompt('Copy this link', shareUrl);
+      });
+    });
+  }
+
+  /* Search helper: every typed word must start a word in the text, so "tpa" does not match "outpatient" */
+  function wordMatcher(query) {
+    var parts = query.trim().toLowerCase().split(/\s+/).filter(Boolean).map(function (t) {
+      return new RegExp('(^|[^a-z0-9])' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    });
+    return function (text) { return parts.every(function (re) { return re.test(text); }); };
+  }
+
+  /* Blog hub: search and category filter */
+  var hubGrid = document.querySelector('[data-blog-grid]');
+  if (hubGrid) {
+    var hubCards = Array.prototype.slice.call(hubGrid.querySelectorAll('.post-card'));
+    var counts = {};
+    hubCards.forEach(function (c) {
+      var cat = c.getAttribute('data-cat') || (c.querySelector('.post-tag') || {}).textContent || 'Other';
+      c.setAttribute('data-cat', cat.trim());
+      counts[cat.trim()] = (counts[cat.trim()] || 0) + 1;
+      c.setAttribute('data-text', c.textContent.toLowerCase());
+    });
+    var toolsBar = document.createElement('div');
+    toolsBar.className = 'blog-tools';
+    var cats = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
+    toolsBar.innerHTML =
+      '<div class="blog-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+      '<input type="search" placeholder="Search guides: ARPOB, TPA, discharge, billing..." aria-label="Search guides"></div>' +
+      '<div class="blog-filter" role="group" aria-label="Filter guides by topic"><button type="button" data-cat="" aria-pressed="true">All <span>' + hubCards.length + '</span></button>' +
+      cats.map(function (c) { return '<button type="button" data-cat="' + c.replace(/&/g, '&amp;').replace(/"/g, '&quot;') + '" aria-pressed="false">' + c.replace(/&/g, '&amp;') + ' <span>' + counts[c] + '</span></button>'; }).join('') + '</div>' +
+      '<p class="blog-count" aria-live="polite"></p>';
+    hubGrid.parentNode.insertBefore(toolsBar, hubGrid);
+    var empty = document.createElement('p');
+    empty.className = 'blog-empty';
+    empty.hidden = true;
+    empty.textContent = 'No guides match that search yet. Try a broader term or another topic.';
+    hubGrid.appendChild(empty);
+    var searchBox = toolsBar.querySelector('input');
+    var countEl = toolsBar.querySelector('.blog-count');
+    var activeCat = '';
+    var applyFilter = function () {
+      var q = searchBox.value.trim().toLowerCase();
+      var matches = wordMatcher(q);
+      var shown = 0;
+      hubCards.forEach(function (c) {
+        var ok = (!activeCat || c.getAttribute('data-cat') === activeCat) && matches(c.getAttribute('data-text'));
+        c.hidden = !ok;
+        if (ok) { shown++; c.classList.add('revealed'); }
+      });
+      hubGrid.classList.toggle('is-filtered', !!(activeCat || q));
+      empty.hidden = shown !== 0;
+      countEl.textContent = (activeCat || q) ? shown + (shown === 1 ? ' guide' : ' guides') + (activeCat ? ' in ' + activeCat : '') + (q ? ' matching "' + searchBox.value.trim() + '"' : '') : '';
+    };
+    var searchTimer;
+    searchBox.addEventListener('input', function () {
+      applyFilter();
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(function () {
+        if (searchBox.value.trim()) window.trackShuconEvent('blog_search', { search_term: searchBox.value.trim() });
+      }, 1200);
+    });
+    toolsBar.querySelector('.blog-filter').addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      activeCat = b.getAttribute('data-cat');
+      toolsBar.querySelectorAll('.blog-filter button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      applyFilter();
+      window.trackShuconEvent('blog_filter_used', { category: activeCat || 'all' });
+    });
+  }
+
+  /* Glossary: live search across terms */
+  var glossSearch = document.querySelector('[data-glossary-search]');
+  if (glossSearch) {
+    var terms = Array.prototype.slice.call(document.querySelectorAll('[data-term]'));
+    var groups = Array.prototype.slice.call(document.querySelectorAll('[data-term-group]'));
+    var glossCount = document.querySelector('[data-glossary-count]');
+    terms.forEach(function (t) { t.setAttribute('data-text', t.textContent.toLowerCase()); });
+    var glossTimer;
+    glossSearch.addEventListener('input', function () {
+      var q = glossSearch.value.trim().toLowerCase();
+      var shown = 0;
+      var matches = wordMatcher(q);
+      terms.forEach(function (t) {
+        var ok = matches(t.getAttribute('data-text'));
+        t.hidden = !ok;
+        if (ok) { shown++; t.classList.add('revealed'); }
+      });
+      groups.forEach(function (g) { g.hidden = !!q && !g.querySelector('[data-term]:not([hidden])'); if (!g.hidden) g.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('revealed'); }); });
+      if (glossCount) glossCount.textContent = q ? (shown ? shown + (shown === 1 ? ' term matches "' : ' terms match "') + glossSearch.value.trim() + '"' : 'No term matches "' + glossSearch.value.trim() + '". Try the abbreviation, such as TPA or ALOS.') : '';
+      clearTimeout(glossTimer);
+      glossTimer = setTimeout(function () { if (q) window.trackShuconEvent('glossary_search', { search_term: q }); }, 1200);
+    });
+  }
+
+  /* Homepage: revenue-at-risk estimator */
+  var est = document.querySelector('[data-estimator]');
+  if (est) {
+    var inr = function (n) {
+      if (n >= 1e7) return '₹' + (n / 1e7).toFixed(n >= 1e8 ? 1 : 2).replace(/\.?0+$/, '') + ' crore';
+      if (n >= 1e5) return '₹' + (n / 1e5).toFixed(n >= 1e6 ? 0 : 1).replace(/\.0$/, '') + ' lakh';
+      return '₹' + Math.round(n).toLocaleString('en-IN');
+    };
+    var field = function (name) { return est.querySelector('[name="' + name + '"]'); };
+    var out = function (name) { return est.querySelector('[data-out="' + name + '"]'); };
+    var touched = false;
+    var calc = function () {
+      var beds = +field('beds').value, occ = +field('occ').value, arpob = +field('arpob').value;
+      var monthly = beds * (occ / 100) * arpob * 30;
+      out('beds').textContent = beds;
+      out('occ').textContent = occ + '%';
+      out('arpob').textContent = '₹' + arpob.toLocaleString('en-IN');
+      out('revenue').textContent = inr(monthly);
+      out('low').textContent = inr(monthly * 0.01);
+      out('high').textContent = inr(monthly * 0.05);
+      out('year').textContent = inr(monthly * 0.01 * 12) + ' to ' + inr(monthly * 0.05 * 12);
+      est.querySelectorAll('input[type="range"]').forEach(function (r) {
+        r.style.setProperty('--fill', ((r.value - r.min) / (r.max - r.min)) * 100 + '%');
+      });
+    };
+    est.addEventListener('input', function () {
+      calc();
+      if (!touched) { touched = true; window.trackShuconEvent('estimator_used', { page_path: path }); }
+    });
+    calc();
   }
 
   /* Count-up metrics */
