@@ -97,6 +97,40 @@ PRODUCT_PAGES = {
     'hospital-statistics-formulas/index.html': ['stakeholder-action'],
 }
 
+# Free tools promoted inside articles: path, title, one-line pitch, link label
+TOOLS = {
+    'arpob': ('tools/arpob-calculator/', 'Free ARPOB calculator',
+              'Enter beds, occupancy and IPD revenue to get your ARPOB, and what a ₹1,000 rise is worth a year.', 'Open the calculator'),
+    'bor': ('tools/bed-occupancy-rate-calculator/', 'Free bed occupancy rate calculator',
+            'Enter beds, days and occupied bed days to get BOR %, average occupied beds and empty bed days.', 'Open the calculator'),
+    'alos': ('tools/alos-calculator/', 'Free ALOS calculator',
+             'Enter inpatient days and discharges to get average length of stay, plus the bed days a shorter stay frees up.', 'Open the calculator'),
+    'btr': ('tools/bed-turnover-rate-calculator/', 'Free bed turnover rate calculator',
+            'Get discharges per bed and the turnover interval, the average days a bed stays empty between patients.', 'Open the calculator'),
+    'adc': ('tools/average-daily-census-calculator/', 'Free average daily census calculator',
+            'Enter inpatient service days and days in the period to get ADC, plus implied bed occupancy.', 'Open the calculator'),
+    'checklist': ('hospital-revenue-leakage-checklist/', '25-point revenue leakage audit checklist',
+                  'Audit billing, pharmacy, inventory, cancellations, claims and discharge controls. Free and printable.', 'Use the checklist'),
+    'formulas': ('hospital-statistics-formulas/', 'Hospital statistics formulas, in one page',
+                 'Bed occupancy rate, ALOS, average daily census, bed turnover, death rates and ARPOB with worked examples.', 'See the formulas'),
+    'tools': ('tools/', 'Free hospital calculators',
+              'ARPOB, bed occupancy rate, ALOS, bed turnover and average daily census. No sign-up, runs in your browser.', 'Open the tools'),
+    'glossary': ('glossary/', 'Hospital full forms glossary',
+                 'Plain-English meanings of OPD, IPD, TPA, MRD, NABH, EMR, LIS, PACS, ALOS, ARPOB and more.', 'Browse the glossary'),
+}
+# Which tool an article promotes: by slug first, then by product. None = no inline promo.
+POST_TOOL = {
+    'bed-occupancy-rate-formula': 'bor', 'alos-average-length-of-stay': 'alos', 'bed-turnover-rate': 'btr',
+    'hospital-kpis-list': 'formulas', 'hospital-mis-report': 'formulas', 'discharge-process-tat': 'alos',
+    'how-to-increase-hospital-revenue': 'arpob', 'payer-mix-hospital': 'arpob', 'opd-to-ipd-conversion-ratio': 'tools',
+    'emr-vs-ehr-vs-hms': 'glossary', 'tpa-desk-in-hospital': 'glossary', 'admission-process-in-hospital': 'glossary',
+    'opd-process-flow-hospital': 'glossary', 'hospital-management-system-modules': 'glossary',
+}
+PRODUCT_TOOL = {
+    'revenue-leakage': 'checklist', 'pharmacy': 'checklist', 'insurance-claims': 'checklist',
+    'stakeholder-action': 'formulas', 'hms': 'tools', 'diagnostics': 'glossary',
+}
+
 REQUIRED = ['slug', 'date', 'title', 'h1', 'description', 'lede', 'category', 'product', 'keywords', 'faqs']
 META_RE = re.compile(r'^\s*<!--\s*(\{.*?\})\s*-->\s*', re.S)
 POSTLINK_RE = re.compile(r'<a\s+href="post:([a-z0-9-]+)"\s*>(.*?)</a>', re.S)
@@ -166,6 +200,13 @@ def check(posts):
                 problems.append(f'{s}: broken link {href}')
         if len(p['faqs']) < 3:
             problems.append(f'{s}: needs at least 3 FAQs')
+        tk = p.get('takeaways')
+        if tk is not None:
+            if not 3 <= len(tk) <= 4:
+                problems.append(f'{s}: takeaways must have 3-4 bullets')
+            for t in tk:
+                if not 50 <= len(t) <= 190:
+                    problems.append(f'{s}: takeaway length {len(t)}: {t[:40]}')
     return problems
 
 
@@ -183,7 +224,7 @@ def resolve_links(body, live):
 
 def card(slug, title, tag, desc, minutes, prefix=''):
     meta = f'<div class="post-meta"><span>{minutes} min read</span></div>' if minutes else ''
-    return (f'<article class="post-card"><div class="pc-body"><span class="post-tag">{esc(tag)}</span>'
+    return (f'<article class="post-card" data-cat="{esc(tag)}"><div class="pc-body"><span class="post-tag">{esc(tag)}</span>'
             f'<h2><a href="{prefix}{slug}.html">{esc(title)}</a></h2><p>{esc(desc)}</p>{meta}</div></article>')
 
 
@@ -208,6 +249,59 @@ def pick_related(p, live_posts):
             t, tag, _, _, desc = LEGACY[s]
             out.append(card(s, t, tag, desc, None))
     return '\n'.join(out)
+
+
+def slugify(text):
+    text = html.unescape(re.sub(r'<[^>]+>', '', text)).lower()
+    return re.sub(r'[^a-z0-9]+', '-', text).strip('-')[:60].strip('-') or 'section'
+
+
+def add_heading_ids(body):
+    """Give every <h2> a stable id (for deep links and the table of contents)."""
+    toc, used = [], set()
+
+    def sub(m):
+        attrs, inner = m.group(1), m.group(2)
+        found = re.search(r'id="([^"]+)"', attrs)
+        hid = found.group(1) if found else slugify(inner)
+        base, n = hid, 2
+        while hid in used:
+            hid, n = f'{base}-{n}', n + 1
+        used.add(hid)
+        toc.append((hid, html.unescape(re.sub(r'<[^>]+>', '', inner)).strip()))
+        return m.group(0) if found else f'<h2 id="{hid}"{attrs}>{inner}</h2>'
+    return re.sub(r'<h2([^>]*)>(.*?)</h2>', sub, body, flags=re.S), toc
+
+
+def toc_html(toc):
+    items = ''.join(f'<li><a href="#{hid}">{esc(text)}</a></li>' for hid, text in toc)
+    return (f'<details class="toc" id="toc"><summary>On this page</summary>'
+            f'<ol>{items}</ol></details>')
+
+
+def takeaways_html(items):
+    if not items:
+        return ''
+    lis = ''.join(f'<li>{esc(t)}</li>' for t in items)
+    return f'<section class="takeaways" aria-labelledby="key-takeaways"><h2 id="key-takeaways">Key takeaways</h2><ul>{lis}</ul></section>'
+
+
+def tool_for(p):
+    key = p.get('tool', POST_TOOL.get(p['slug'], PRODUCT_TOOL.get(p['product'])))
+    return TOOLS.get(key) if key else None
+
+
+def insert_tool_promo(body, tool):
+    """Place the free-tool card before the third section, once the reader is invested."""
+    if not tool:
+        return body
+    path, title, pitch, label = tool
+    starts = [m.start() for m in re.finditer(r'<h2[ >]', body)]
+    if len(starts) < 4:
+        return body
+    promo = (f'<a class="inline-tool" data-event="tool_promo_clicked" href="../{path}"><span class="it-tag">Free tool</span>'
+             f'<b>{esc(title)}</b><span class="it-pitch">{esc(pitch)}</span><em>{esc(label)} &rarr;</em></a>\n')
+    return body[:starts[2]] + promo + body[starts[2]:]
 
 
 def jsonld(obj):
@@ -237,19 +331,32 @@ def render(p, live_posts, live_slugs, template, today):
         {"@type": "ListItem", "position": 3, "name": p.get('breadcrumb', p['title']), "item": url}]}
     faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q['q'], "acceptedAnswer": {"@type": "Answer", "text": q['a']}} for q in p['faqs']]}
-    faq_html = '<h2>Frequently asked questions</h2>\n' + '\n'.join(
+    faq_html = '<h2 id="faq">Frequently asked questions</h2>\n' + '\n'.join(
         f'<h3>{esc(q["q"])}</h3>\n<p>{esc(q["a"])}</p>' for q in p['faqs'])
     cta = (f'<div class="cta-band"><h3>{esc(cta_h)}</h3><p>{esc(cta_p)}</p>'
            f'<a class="btn btn-primary" data-event="demo_clicked" href="../#contact">Book a 30-minute demo</a>'
            f'<a class="text-link" href="../{prod_path}">Explore {esc(prod_label.lower())}</a></div>')
+    modified = p.get('modified', p['date'])
+    if p.get('takeaways'):
+        posting['abstract'] = ' '.join(p['takeaways'])
+    body, toc = add_heading_ids(resolve_links(p['body'], live_slugs))
+    tool = tool_for(p)
+    body = insert_tool_promo(body, tool)
+    toc.append(('faq', 'Frequently asked questions'))
+    r_path, r_title, r_pitch, r_label = tool or (prod_path, prod_label, cta_p, 'Explore')
+    rail_card = (f'<a class="rail-card" data-event="rail_card_clicked" href="../{r_path}"><small>{"Free tool" if tool else "From Shucon MedAI"}</small>'
+                 f'<b>{esc(r_title)}</b><span>{esc(r_pitch)}</span><em>{esc(r_label)} &rarr;</em></a>')
+    updated = (f'<span class="dot"></span><span>Updated <time datetime="{modified}">{fmt_date(modified)}</time></span>'
+               if modified != p['date'] else '')
     vals = {
+        'TAKEAWAYS': takeaways_html(p.get('takeaways')), 'TOC': toc_html(toc), 'RAIL_CARD': rail_card, 'UPDATED': updated,
         'TITLE': esc(p['title']), 'DESCRIPTION': esc(p['description']),
         'KEYWORDS': esc(', '.join(p['keywords'])), 'URL': url, 'DATE': p['date'],
         'MODIFIED': p.get('modified', p['date']), 'CATEGORY': esc(p['category']),
         'TAG': esc(p['keywords'][0]), 'OG_TITLE': esc(p.get('og_title', p['h1'])),
         'JSONLD': '\n'.join(jsonld(x) for x in (posting, crumbs, faq)),
         'H1': esc(p['h1']), 'LEDE': esc(p['lede']), 'DATE_HUMAN': fmt_date(p['date']),
-        'MINUTES': str(p['minutes']), 'BODY': resolve_links(p['body'], live_slugs),
+        'MINUTES': str(p['minutes']), 'BODY': body,
         'FAQ': faq_html, 'CTA': cta, 'RELATED': pick_related(p, live_posts),
     }
     out = template
@@ -292,7 +399,8 @@ def load_all_slugs():
 def guides_block(items, heading, prefix):
     if not items:
         return ''
-    links = ''.join(f'<li><a href="{prefix}blog/{p["slug"]}.html">{esc(p["h1"])}</a></li>' for p in items)
+    links = ''.join(f'<li><a href="{prefix}blog/{p["slug"]}.html"><small>{esc(p["category"])} &middot; {p["minutes"]} min read</small>'
+                    f'{esc(p["h1"])}</a></li>' for p in items)
     return (f'<section class="auto-guides" aria-label="{esc(heading)}"><div class="wrap">'
             f'<span class="eyebrow">Guides</span><h2 class="section-title">{esc(heading)}</h2>'
             f'<ul>{links}</ul><a class="auto-guides-all" href="{prefix}blog/">All insights &rarr;</a></div></section>')

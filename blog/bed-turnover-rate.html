@@ -3,20 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5D6VNZNNKQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5D6VNZNNKQ');
-      document.addEventListener("DOMContentLoaded", function () {
-        var year = document.getElementById("year2");
-        if (year) { year.textContent = new Date().getFullYear(); }
-      });
-    </script>
-
-    <title>Bed Turnover Rate Formula and Interval</title>
-    <meta name="description" content="Bed turnover rate formula explained with turnover interval, examples, interpretation and links to occupancy, ALOS and hospital finance.">
+    <title>Bed Turnover Rate: Formula, Meaning &amp; Turnover Interval</title>
+    <meta name="description" content="Bed turnover rate = discharges ÷ available beds. Learn the formula, the bed turnover interval, a worked example and what the rate indicates.">
     <meta name="keywords" content="bed turnover rate formula, bed turnover rate, bed turnover interval, hospital bed utilisation, bed occupancy rate, average length of stay, hospital KPIs, inpatient metrics">
     <meta name="author" content="Saksham Gupta">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -29,43 +17,41 @@
     <meta property="og:site_name" content="Shucon MedAI">
     <meta property="og:url" content="https://shuconmedai.com/blog/bed-turnover-rate.html">
     <meta property="og:title" content="Bed Turnover Rate: Formula, Interval and What It Tells You">
-    <meta property="og:description" content="Bed turnover rate formula explained with turnover interval, examples, interpretation and links to occupancy, ALOS and hospital finance.">
+    <meta property="og:description" content="Bed turnover rate = discharges ÷ available beds. Learn the formula, the bed turnover interval, a worked example and what the rate indicates.">
     <meta property="og:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Shucon MedAI healthcare AI agents">
     <meta property="og:locale" content="en_IN">
     <meta property="article:published_time" content="2026-10-30">
-    <meta property="article:modified_time" content="2026-10-30">
+    <meta property="article:modified_time" content="2026-11-11">
     <meta property="article:author" content="Saksham Gupta">
     <meta property="article:section" content="Hospital finance">
     <meta property="article:tag" content="bed turnover rate formula">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bed Turnover Rate: Formula, Interval and What It Tells You">
-    <meta name="twitter:description" content="Bed turnover rate formula explained with turnover interval, examples, interpretation and links to occupancy, ALOS and hospital finance.">
+    <meta name="twitter:description" content="Bed turnover rate = discharges ÷ available beds. Learn the formula, the bed turnover interval, a worked example and what the rate indicates.">
     <meta name="twitter:image" content="https://shuconmedai.com/images/og-shucon-medai.jpg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="../fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/images/favicon/favicon-96x96.png" sizes="96x96" type="image/png">
     <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
     <link rel="alternate" type="application/rss+xml" title="Shucon MedAI Insights" href="https://shuconmedai.com/blog/feed.xml">
-    <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/shucon-vc.css?v=1">
-    <link rel="stylesheet" href="../css/blog.css?v=1">
+    <link rel="stylesheet" href="../css/blog.css?v=3">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Bed Turnover Rate: Formula, Interval and What It Tells You",
-  "description": "Bed turnover rate formula explained with turnover interval, examples, interpretation and links to occupancy, ALOS and hospital finance.",
+  "description": "Bed turnover rate = discharges ÷ available beds. Learn the formula, the bed turnover interval, a worked example and what the rate indicates.",
   "image": "https://shuconmedai.com/images/og-shucon-medai.jpg",
   "datePublished": "2026-10-30",
-  "dateModified": "2026-10-30",
+  "dateModified": "2026-11-11",
   "inLanguage": "en-IN",
   "articleSection": "Hospital finance",
   "keywords": "bed turnover rate formula, bed turnover rate, bed turnover interval, hospital bed utilisation, bed occupancy rate, average length of stay, hospital KPIs, inpatient metrics",
@@ -102,7 +88,8 @@
   "about": {
     "@type": "Thing",
     "name": "bed turnover rate formula"
-  }
+  },
+  "abstract": "Bed turnover rate = total discharges during a period ÷ average available beds during the same period. Example: 420 discharges in a month with 95 average available beds give a bed turnover rate of 4.42 discharges per bed. Bed turnover interval = (available bed days minus occupied bed days) ÷ total discharges; in the example, 735 ÷ 420 = 1.75 days. There is no universal good rate; it depends on specialty mix and case complexity, so read it with occupancy, ALOS and discharge TAT."
 }
 </script>
 <script type="application/ld+json">
@@ -125,7 +112,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Bed turnover",
+      "name": "Bed turnover rate",
       "item": "https://shuconmedai.com/blog/bed-turnover-rate.html"
     }
   ]
@@ -179,13 +166,13 @@
   ]
 }
 </script>
-    <link rel="stylesheet" href="../css/site-ui.css?v=6">
+    <link rel="stylesheet" href="../css/site-ui.css?v=7">
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="UbWEq0aYWth4TX9ekG3Cww" async></script>
 </head>
 
 <body>
 
-    <nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="../" aria-label="Shucon MedAI home"><img src="../images/logo-header.png" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="../ai-agents/">AI agents</a></li><li><a href="../platform/hospital-management-system/">HMS platform</a></li><li><a href="../solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="../hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="../tools/">Tools</a></li><li><a href="../blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="../#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+    <nav class="nav agent-nav"><div class="wrap nav-inner"><a class="nav-logo" href="../" aria-label="Shucon MedAI home"><img src="../images/logo-header-278.webp" alt="Shucon MedAI" width="139" height="40"></a><ul class="nav-links" id="navLinks"><li><a href="../ai-agents/">AI agents</a></li><li><a href="../platform/hospital-management-system/">HMS platform</a></li><li><a href="../solutions/diagnostics-centres/">Diagnostics</a></li><li><a href="../hospital-revenue-leakage/">Revenue intelligence</a></li><li><a href="../tools/">Tools</a></li><li><a href="../blog/">Insights</a></li><li><a class="nav-cta" data-event="demo_clicked" href="../#contact">Book a demo</a></li></ul><button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
 
     <header class="article-head">
         <div class="wrap">
@@ -193,15 +180,21 @@
             <span class="post-tag">Hospital finance</span>
             <h1>Bed Turnover Rate: Formula, Interval and What It Tells You</h1>
             <p class="lede">A practical guide for hospital administrators who want to know whether beds are moving efficiently without harming care quality.</p>
-            <div class="article-meta"><span>By <a href="../leadership/saksham-gupta/" rel="author">Saksham Gupta</a></span><span class="dot"></span><span>Oct 30, 2026</span><span class="dot"></span><span>7 min read</span></div>
+            <div class="article-meta"><span>By <a href="../leadership/saksham-gupta/" rel="author">Saksham Gupta</a></span><span class="dot"></span><span><time datetime="2026-10-30">Oct 30, 2026</time></span><span class="dot"></span><span>Updated <time datetime="2026-11-11">Nov 11, 2026</time></span><span class="dot"></span><span>7 min read</span></div>
         </div>
     </header>
 
     <article class="article">
+        <div class="wrap article-layout">
+        <aside class="article-rail" aria-label="On this page">
+<details class="toc" id="toc"><summary>On this page</summary><ol><li><a href="#bed-turnover-rate-formula">Bed turnover rate formula</a></li><li><a href="#bed-turnover-interval-formula">Bed turnover interval formula</a></li><li><a href="#bed-turnover-rate-vs-bed-occupancy-rate">Bed turnover rate vs bed occupancy rate</a></li><li><a href="#how-average-length-of-stay-affects-bed-turnover">How average length of stay affects bed turnover</a></li><li><a href="#what-is-a-good-bed-turnover-rate">What is a good bed turnover rate?</a></li><li><a href="#operational-levers-to-improve-bed-turnover-safely">Operational levers to improve bed turnover safely</a></li><li><a href="#financial-interpretation-of-bed-turnover">Financial interpretation of bed turnover</a></li><li><a href="#using-dashboards-and-agents-for-bed-turnover">Using dashboards and agents for bed turnover</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<a class="rail-card" data-event="rail_card_clicked" href="../tools/bed-turnover-rate-calculator/"><small>Free tool</small><b>Free bed turnover rate calculator</b><span>Get discharges per bed and the turnover interval, the average days a bed stays empty between patients.</span><em>Open the calculator &rarr;</em></a>
+        </aside>
         <div class="prose">
-<p><strong>Bed turnover rate formula is total discharges in a period divided by average available beds in the same period.</strong> It tells a hospital how many patients each bed served, while bed turnover interval tells how long a bed stayed empty between patients.</p>
+<section class="takeaways" aria-labelledby="key-takeaways"><h2 id="key-takeaways">Key takeaways</h2><ul><li>Bed turnover rate = total discharges during a period ÷ average available beds during the same period.</li><li>Example: 420 discharges in a month with 95 average available beds give a bed turnover rate of 4.42 discharges per bed.</li><li>Bed turnover interval = (available bed days minus occupied bed days) ÷ total discharges; in the example, 735 ÷ 420 = 1.75 days.</li><li>There is no universal good rate; it depends on specialty mix and case complexity, so read it with occupancy, ALOS and discharge TAT.</li></ul></section>
+<p><strong>The bed turnover rate formula is total discharges in a period divided by average available beds in the same period.</strong> It tells a hospital how many patients each bed served, while bed turnover interval tells how long a bed stayed empty between patients.</p>
 <p>For hospital administrators, bed turnover rate is useful because it connects capacity, patient flow, discharge efficiency and revenue opportunity. A bed is a scarce asset. If it remains blocked after discharge decision, the next admission waits. If it turns too fast without adequate cleaning, counselling and clinical readiness, patient experience and safety can suffer. The metric must therefore be read with occupancy, average length of stay and discharge TAT.</p>
-<h2>Bed turnover rate formula</h2>
+<h2 id="bed-turnover-rate-formula">Bed turnover rate formula</h2>
 <p>The standard formula is simple, but consistency matters. Use the same discharge definition every month and decide whether deaths are included according to your hospital reporting policy. Many hospitals include all separations from inpatient care, but internal definitions should be documented.</p>
 <blockquote>Bed turnover rate = Total discharges during the period ÷ Average available beds during the period</blockquote>
 <p>Example: a 100-bed hospital records 420 discharges in October. Average available beds were 95 because five beds were closed for maintenance. Bed turnover rate is 420 ÷ 95 = 4.42. In simple terms, each available bed served about 4.4 discharged patients during the month.</p>
@@ -216,13 +209,14 @@
 </tbody>
 </table></div>
 <p>For a broader KPI pack, place this next to <a href="hospital-kpis-list.html">hospital KPIs</a> for finance, occupancy, claims and patient flow rather than reviewing it alone.</p>
-<h2>Bed turnover interval formula</h2>
+<h2 id="bed-turnover-interval-formula">Bed turnover interval formula</h2>
 <p>Bed turnover interval measures empty-bed time. It helps administrators see whether beds are lying vacant because of cleaning delay, admission coordination, doctor decision timing, insurance approval or demand mismatch. A low interval can be good when the hospital has demand and smooth processes; a very low interval may also stress housekeeping and nursing if quality checks are skipped.</p>
 <blockquote>Bed turnover interval = (Available bed days - Occupied bed days) ÷ Total discharges</blockquote>
 <p>Worked example: a 95-bed hospital has 2,945 available bed days in a 31-day month. Occupied bed days are 2,210 and discharges are 420. Empty bed days are 735. Bed turnover interval is 735 ÷ 420 = 1.75 days, or about 42 hours between patients on average.</p>
 <p>If the hospital reduces avoidable discharge and cleaning delays by 8 hours per discharge for 200 eligible discharges, it frees 1,600 bed-hours, equal to about 67 bed-days. At an ARPOB of ₹18,000, this capacity could represent up to ₹12.06 lakh of monthly revenue opportunity if demand exists and clinical staffing can support it.</p>
 <div class="callout"><h4>Turnover interval needs demand context</h4><p>Reducing empty-bed time creates value only when there is patient demand and safe staffing. Do not push turnover faster than clinical readiness allows.</p></div>
-<h2>Bed turnover rate vs bed occupancy rate</h2>
+<a class="inline-tool" data-event="tool_promo_clicked" href="../tools/bed-turnover-rate-calculator/"><span class="it-tag">Free tool</span><b>Free bed turnover rate calculator</b><span class="it-pitch">Get discharges per bed and the turnover interval, the average days a bed stays empty between patients.</span><em>Open the calculator &rarr;</em></a>
+<h2 id="bed-turnover-rate-vs-bed-occupancy-rate">Bed turnover rate vs bed occupancy rate</h2>
 <p>Occupancy and turnover answer different questions. Occupancy asks: how full were the beds? Turnover asks: how many patients moved through each bed? A hospital can have high occupancy and low turnover when patients stay longer. It can also have moderate occupancy and high turnover when short-stay cases dominate.</p>
 <ul>
 <li><strong>High occupancy, low turnover:</strong> long stays, complex cases or discharge delays.</li>
@@ -231,14 +225,14 @@
 <li><strong>Low occupancy, low turnover:</strong> demand, referral or service-line issue.</li>
 </ul>
 <p>The denominator discipline is the same principle used across hospital KPI reporting. Use available bed days consistently in both metrics so the comparison is fair.</p>
-<h2>How average length of stay affects bed turnover</h2>
+<h2 id="how-average-length-of-stay-affects-bed-turnover">How average length of stay affects bed turnover</h2>
 <p>Average length of stay, or ALOS, is one of the strongest drivers of bed turnover. If stays are longer, the same bed serves fewer patients in a month. That may be appropriate for ICU, oncology, complex surgery or rehabilitation. It may be a problem if discharge decisions, insurance approvals or investigations are delayed without clinical reason.</p>
 <p>For example, assume a 60-bed unit runs at 75% occupancy. At ALOS of 5 days, approximate monthly discharges are 270. If clinically appropriate pathways reduce ALOS to 4.5 days, discharges can rise to about 300 without adding beds. At an average net IPD bill of ₹52,000, the additional 30 discharges may represent ₹15.6 lakh gross opportunity before considering case mix, staffing and variable costs.</p>
 <p>Review this with length of stay and readmission indicators. Reducing ALOS by rushing discharge can backfire if patients return or complain. The aim is to remove avoidable waiting, not necessary care.</p>
-<h2>What is a good bed turnover rate?</h2>
+<h2 id="what-is-a-good-bed-turnover-rate">What is a good bed turnover rate?</h2>
 <p>There is no universal good bed turnover rate. It depends on specialty mix, case complexity, local demand, payer mix, discharge processes and bed category. A day-care-heavy surgical unit will naturally turn beds faster than a medical ICU. A nursing home with maternity and short procedures will differ from a tertiary hospital with oncology and critical care.</p>
 <p>Many hospitals compare against their own three-month and twelve-month trend before comparing with peers. Indicative targets should be set by department. For example, ward beds may have a different expected range from ICU beds. The metric becomes more useful when outliers are discussed: why did one ward turnover slow despite similar occupancy? Why did one branch have faster turnover but more discharge complaints?</p>
-<h2>Operational levers to improve bed turnover safely</h2>
+<h2 id="operational-levers-to-improve-bed-turnover-safely">Operational levers to improve bed turnover safely</h2>
 <p>Improving turnover is mostly about reducing avoidable waiting. The work is cross-functional: doctors make discharge decisions, nursing prepares patients, pharmacy closes returns, billing prepares bills, TPA manages approval, housekeeping cleans beds and admissions allocates the next patient.</p>
 <ol>
 <li>Identify likely discharges the previous evening.</li>
@@ -247,20 +241,20 @@
 <li>Track bill settlement to bed-clean time.</li>
 <li>Give admissions visibility of expected bed availability.</li>
 </ol>
-<p>Insurance cases need special attention because final approval can block patient exit. The <a href="cashless-claim-process-hospital.html">cashless claim process hospital</a> guide shows where approvals and query replies affect discharge flow.</p>
+<p>Insurance cases need special attention because final approval can block patient exit. The <a href="cashless-claim-process-hospital.html">cashless claim process</a> guide shows where approvals and query replies affect discharge flow.</p>
 <p>Software design also matters. If bed status, discharge order, pharmacy return, bill readiness and housekeeping status sit in separate systems, administrators discover delays only after relatives start waiting at the counter. A connected platform, selected through a practical <a href="how-to-choose-hospital-management-software.html">hospital management software checklist</a>, should expose the bed journey from expected discharge to ready-for-next-admission.</p>
-<h2>Financial interpretation of bed turnover</h2>
+<h2 id="financial-interpretation-of-bed-turnover">Financial interpretation of bed turnover</h2>
 <p>Bed turnover should not be treated as only an operations metric. It affects revenue, ARPOB, staffing, housekeeping workload, consumable planning and patient satisfaction. A faster bed cycle can increase revenue if demand exists and the hospital has clinical capacity. But if turnover is achieved by admitting lower-complexity cases only, ARPOB may fall.</p>
 <p>Finance teams should compare turnover with revenue per occupied bed, payer mix, discharge TAT, readmission trend and patient complaints. If turnover improves while ARPOB and contribution fall, case mix may have shifted. If turnover falls while occupancy remains high, bottlenecks may be increasing length of stay. The <a href="arpob-hospital-guide.html">ARPOB guide</a> helps connect utilisation to revenue quality.</p>
 <p>For example, if turnover rises from 3.8 to 4.3 in a 100-bed hospital but ARPOB drops from ₹21,000 to ₹18,500, leadership should ask whether shorter-stay, lower-value cases replaced complex admissions. The right answer may still be positive if contribution improved, but the decision needs finance and operations in the same review.</p>
-<h2>Using dashboards and agents for bed turnover</h2>
+<h2 id="using-dashboards-and-agents-for-bed-turnover">Using dashboards and agents for bed turnover</h2>
 <p>A useful bed dashboard should show expected discharges, delayed discharges, housekeeping queues, available beds, blocked beds and next admissions. It should separate reasons: doctor decision pending, pharmacy pending, billing pending, TPA approval pending, patient payment pending, housekeeping pending and no demand.</p>
 <p>The most useful view is not yesterday's average; it is today's exception list with time since delay started and the next accountable person.</p>
 <p><a href="../agents/stakeholder-action/">Stakeholder action agents</a> can convert these reasons into owned tasks for nursing, billing, TPA, housekeeping and admissions. Shucon MedAI should be used to highlight exceptions and handoffs faster; final decisions about discharge readiness must remain with the clinical and hospital operations team.</p>
 
 <div class="cta-band"><h3>Turn hospital data into owned next actions</h3><p>Shucon MedAI agents tell leadership, finance, operations, nursing and pharmacy exactly what needs attention today, and who owns it.</p><a class="btn btn-primary" data-event="demo_clicked" href="../#contact">Book a 30-minute demo</a><a class="text-link" href="../agents/stakeholder-action/">Explore stakeholder action agents</a></div>
 
-<h2>Frequently asked questions</h2>
+<h2 id="faq">Frequently asked questions</h2>
 <h3>What is bed turnover rate?</h3>
 <p>Bed turnover rate is the number of discharges, including deaths where counted by hospital policy, per available bed in a period. It shows how many patients each bed served.</p>
 <h3>What is the bed turnover rate formula?</h3>
@@ -276,6 +270,8 @@
                 <img src="../images/saksham-gupta-linkedin.jpg" alt="Saksham Gupta" width="64" height="64" loading="lazy">
                 <div><b>Saksham Gupta</b><span>Founder &amp; CEO, Shucon MedAI. Former engineer on Microsoft's core AI Copilot team, now building AI agents for hospital operations in India and the UAE.</span><a href="../leadership/saksham-gupta/">More about Saksham &rarr;</a></div>
             </div>
+            <div class="share-row share-end" data-share data-share-label="Found this useful? Share it with your team"></div>
+        </div>
         </div>
     </article>
 
@@ -283,15 +279,15 @@
         <div class="wrap">
             <h2>Keep reading</h2>
             <div class="post-grid">
-<article class="post-card"><div class="pc-body"><span class="post-tag">Hospital finance</span><h2><a href="hospital-kpis-list.html">Hospital KPIs: 25 Metrics Every Hospital Administrator Should Track</a></h2><p>Hospital KPIs explained for Indian hospitals: track finance, occupancy, claims, operations and patient flow with 25 practical metrics.</p><div class="post-meta"><span>7 min read</span></div></div></article>
-<article class="post-card"><div class="pc-body"><span class="post-tag">Hospital finance</span><h2><a href="arpob-hospital-guide.html">What is ARPOB in a Hospital? Full Form, Formula and Benchmarks</a></h2><p>Average Revenue Per Occupied Bed: the formula, India benchmarks and what drags it down.</p></div></article>
-<article class="post-card"><div class="pc-body"><span class="post-tag">Insurance &amp; claims</span><h2><a href="cashless-claim-process-hospital.html">Cashless Claim Process in Hospitals: Step-by-Step Guide</a></h2><p>Cashless claim process hospital guide for TPA desks: steps, documents, TAT controls, deductions and practical SOPs for India.</p><div class="post-meta"><span>7 min read</span></div></div></article>
+<article class="post-card" data-cat="Hospital finance"><div class="pc-body"><span class="post-tag">Hospital finance</span><h2><a href="hospital-kpis-list.html">Hospital KPIs: 25 Metrics Every Hospital Administrator Should Track</a></h2><p>25 hospital KPIs with owners: financial, bed utilisation, insurance claims, revenue leakage and patient flow metrics, plus how to build a KPI dashboard.</p><div class="post-meta"><span>7 min read</span></div></div></article>
+<article class="post-card" data-cat="Hospital finance"><div class="pc-body"><span class="post-tag">Hospital finance</span><h2><a href="arpob-hospital-guide.html">What is ARPOB in a Hospital? Full Form, Formula and Benchmarks</a></h2><p>Average Revenue Per Occupied Bed: the formula, India benchmarks and what drags it down.</p></div></article>
+<article class="post-card" data-cat="Insurance &amp; claims"><div class="pc-body"><span class="post-tag">Insurance &amp; claims</span><h2><a href="cashless-claim-process-hospital.html">Cashless Claim Process in Hospitals: Step-by-Step Guide</a></h2><p>The cashless claim process in hospitals, step by step: eligibility, pre-authorisation, approvals, discharge and claim submission, with TPA desk controls.</p><div class="post-meta"><span>7 min read</span></div></div></article>
             </div>
         </div>
     </section>
 
     <footer class="footer"><div class="wrap"><div class="footer-top footer-4"><div class="footer-brand"><p>AI agents and connected software for healthcare operations.</p><a class="footer-mail" href="mailto:saksham@shucontech.in">saksham@shucontech.in</a><br><a class="footer-demo" data-event="demo_clicked" href="../#contact">Book a demo &rarr;</a></div><div class="footer-col"><h4>AI agents</h4><a href="../agents/revenue-leakage/">Revenue leakage</a><a href="../agents/stakeholder-action/">Stakeholder action</a><a href="../agents/patient-engagement/">Patient engagement</a><a href="../agents/insurance-claims/">Insurance claims</a><a href="../ai-agents/">All AI agents</a></div><div class="footer-col"><h4>Platform</h4><a href="../platform/hospital-management-system/">Hospital management system</a><a href="../solutions/diagnostics-centres/">Diagnostics centres</a><a href="../custom-healthcare-ai/">Custom healthcare AI</a><a href="../hospital-ai/">Hospital AI</a></div><div class="footer-col"><h4>Resources</h4><a href="../blog/">Insights</a><a href="../tools/">Free tools &amp; calculators</a><a href="../hospital-revenue-leakage/">Revenue leakage guide</a><a href="../hospital-revenue-leakage-checklist/">25-point leakage checklist</a><a href="../glossary/">Hospital glossary</a><a href="../hospital-statistics-formulas/">Hospital statistics formulas</a><a href="../leadership/saksham-gupta/">CEO profile</a></div></div><div class="footer-bottom"><p>&copy; <span id="year2"></span> Shucon MedAI. All rights reserved.</p><a href="https://www.linkedin.com/company/shucontech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
-<script src="../js/site.js?v=8"></script>
+<script src="../js/site.js?v=10"></script>
 <a href="#" id="back-top" aria-label="Back to top">&#8593;</a>
 </body>
 
