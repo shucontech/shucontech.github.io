@@ -38,6 +38,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [Hospital Software Cost in India: What Drives HMS Pricing](https://shuconmedai.com/blog/hospital-software-cost-india.html): Understand hospital software cost India pricing drivers, modules, deployment choices, implementation effort and hidden HMS cost items.
 - [Hospital Revenue Cycle Management in India: A Practical Guide](https://shuconmedai.com/blog/hospital-revenue-cycle-management-india.html): A practical guide to hospital revenue cycle management India workflows, from registration to billing, claims, collections and leakage control.
 - [Pre-Authorization for Cashless Hospitalisation: Process and Checklist](https://shuconmedai.com/blog/pre-authorization-cashless-hospitalisation.html): Follow the pre authorization process in hospital cashless claims, with documents, INR example, common queries and readiness controls.
 - [Hospital Billing Process: Step-by-Step From Admission to Discharge](https://shuconmedai.com/blog/hospital-billing-process.html): Understand the hospital billing process from admission to discharge, with charge capture, insurance checks, examples and control points.
