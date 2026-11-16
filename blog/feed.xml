@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Fri, 13 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Mon, 16 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>AR Days in Hospitals: How to Calculate and Reduce Receivable Days</title>
+			<link>https://shuconmedai.com/blog/ar-days-hospital.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/ar-days-hospital.html</guid>
+			<pubDate>Mon, 16 Nov 2026 06:00:00 +0530</pubDate>
+			<category>Hospital finance</category>
+			<description>AR days show how long hospital receivables stay unpaid. Learn the AR days formula, a worked INR example, ageing buckets and how to reduce them.</description>
+		</item>
 		<item>
 			<title>Insurance Claim Deductions in Hospital Bills: Common Causes and Fixes</title>
 			<link>https://shuconmedai.com/blog/claim-deductions-hospital-bills.html</link>

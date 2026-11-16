@@ -38,6 +38,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [AR Days in Hospitals: How to Calculate and Reduce Receivable Days](https://shuconmedai.com/blog/ar-days-hospital.html): AR days show how long hospital receivables stay unpaid. Learn the AR days formula, a worked INR example, ageing buckets and how to reduce them.
 - [Insurance Claim Deductions in Hospital Bills: Common Causes and Fixes](https://shuconmedai.com/blog/claim-deductions-hospital-bills.html): Why insurers and TPAs deduct from hospital bills: consumables, room rent limits, missing documents and package disputes, with an INR example and fixes.
 - [Hospital Software Cost in India: What Drives HMS Pricing](https://shuconmedai.com/blog/hospital-software-cost-india.html): What hospital management software costs in India: the pricing drivers, a first-year cost example in INR and the hidden costs to check in every quote.
 - [Hospital Revenue Cycle Management in India: A Practical Guide](https://shuconmedai.com/blog/hospital-revenue-cycle-management-india.html): Hospital revenue cycle management in India explained: the RCM stages from registration to collections, the metrics to track and where revenue leaks.
