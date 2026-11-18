@@ -223,6 +223,12 @@
 	</url>
 <!-- AUTO:SITEMAP:START -->
 	<url>
+		<loc>https://shuconmedai.com/blog/ot-billing-leakage.html</loc>
+		<lastmod>2026-11-18</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>https://shuconmedai.com/blog/ar-days-hospital.html</loc>
 		<lastmod>2026-11-16</lastmod>
 		<changefreq>monthly</changefreq>

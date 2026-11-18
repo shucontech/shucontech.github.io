@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Mon, 16 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Wed, 18 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>OT Billing Leakage: How Hospitals Lose Revenue in the Operation Theatre</title>
+			<link>https://shuconmedai.com/blog/ot-billing-leakage.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/ot-billing-leakage.html</guid>
+			<pubDate>Wed, 18 Nov 2026 06:00:00 +0530</pubDate>
+			<category>Revenue leakage</category>
+			<description>OT billing covers theatre time, anaesthesia, implants and consumables. See where operation theatre charges go unbilled and how hospitals audit them.</description>
+		</item>
 		<item>
 			<title>AR Days in Hospitals: How to Calculate and Reduce Receivable Days</title>
 			<link>https://shuconmedai.com/blog/ar-days-hospital.html</link>
