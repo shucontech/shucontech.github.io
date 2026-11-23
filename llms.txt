@@ -38,6 +38,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [Expiry Management in Hospital Pharmacy: Reduce Write-Offs](https://shuconmedai.com/blog/expiry-management-hospital-pharmacy.html): Expiry management in a hospital pharmacy: FEFO, 90/60/30-day near-expiry buckets and batch tracking, with an INR example of write-offs avoided.
 - [Cloud vs On-Premise Hospital Software: Which Should You Choose?](https://shuconmedai.com/blog/cloud-vs-on-premise-hospital-software.html): Cloud vs on-premise hospital management software compared on five-year cost, uptime, security and IT effort, with a checklist to help you decide.
 - [OT Billing Leakage: How Hospitals Lose Revenue in the Operation Theatre](https://shuconmedai.com/blog/ot-billing-leakage.html): OT billing covers theatre time, anaesthesia, implants and consumables. See where operation theatre charges go unbilled and how hospitals audit them.
 - [AR Days in Hospitals: How to Calculate and Reduce Receivable Days](https://shuconmedai.com/blog/ar-days-hospital.html): AR days show how long hospital receivables stay unpaid. Learn the AR days formula, a worked INR example, ageing buckets and how to reduce them.

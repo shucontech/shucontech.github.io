@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Fri, 20 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Mon, 23 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>Expiry Management in Hospital Pharmacy: Reduce Write-Offs</title>
+			<link>https://shuconmedai.com/blog/expiry-management-hospital-pharmacy.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/expiry-management-hospital-pharmacy.html</guid>
+			<pubDate>Mon, 23 Nov 2026 06:00:00 +0530</pubDate>
+			<category>Pharmacy &amp; inventory</category>
+			<description>Expiry management in a hospital pharmacy: FEFO, 90/60/30-day near-expiry buckets and batch tracking, with an INR example of write-offs avoided.</description>
+		</item>
 		<item>
 			<title>Cloud vs On-Premise Hospital Software: Which Should You Choose?</title>
 			<link>https://shuconmedai.com/blog/cloud-vs-on-premise-hospital-software.html</link>
