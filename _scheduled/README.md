@@ -67,15 +67,36 @@ Rows marked `covered by …` are already answered by a live page or another post
 - `tool` (optional): which free tool the post promotes inline and in the side rail. One of `arpob`, `bor`,
   `alos`, `btr`, `adc`, `checklist`, `formulas`, `tools`, `glossary`. If omitted, `POST_TOOL` / `PRODUCT_TOOL`
   in `publish.py` pick one from the slug or product.
+- `pillar` (optional, `true`): marks the one cornerstone guide for its `category` (currently
+  `ai-agents-in-healthcare` for "Healthcare AI"). See "Topic clusters" below.
 - `product` is one of: `revenue-leakage`, `insurance-claims`, `patient-engagement`,
   `stakeholder-action`, `hms`, `diagnostics`, `pharmacy`, `custom-ai`, `ai-agents`. It picks the CTA
   and which product page lists the post.
 - Every `<h2>` automatically gets an id and an entry in the "On this page" table of contents, so keep
   H2s short and descriptive (aim for 6–9 per post).
 - The body is just the article content: `p`, `h2`, `h3`, `ul`, `ol`, `table`, `blockquote` (for formulas),
-  and `<div class="callout"><h4>..</h4><p>..</p></div>`. Leave out the H1, FAQ section, CTA, author box and
+  `<div class="callout"><h4>..</h4><p>..</p></div>`, `<ol class="flow"><li><strong>Step</strong> text</li></ol>`
+  (a numbered step diagram, 3-5 steps) and `<tr><th colspan="N">Group</th></tr>` for group rows in long tables. Leave out the H1, FAQ section, CTA, author box and
   related posts; the template adds those.
 - Link to other posts with `<a href="post:other-slug">anchor</a>`. The link appears only once
   that post is live (until then it renders as plain text), so there are never broken links.
 - Link to product pages with relative paths from `/blog/`, e.g. `../agents/revenue-leakage/`.
 - Use INR only (₹, lakh, crore). Don't invent statistics, and hedge regulatory details.
+- Cite a source for every external statistic or regulatory claim, with
+  `<a href="https://..." target="_blank" rel="noopener">anchor</a>` to the primary or a reputable source that you have
+  opened and checked. Two or three good citations per post is enough.
+
+## Topic clusters (pillar guides)
+
+Search engines rank a broad guide better when the site also covers its sub-topics and links them together.
+A post with `"pillar": true` is the hub for its category. The pipeline then, on every run:
+
+- pins the pillar first in the "Related guides" block of every product page that lists its `product`,
+  so newer posts never push it off those pages;
+- adds a "Part of our guide to …" link under the key takeaways of every other post in the same category,
+  puts the pillar first in their "Keep reading" cards, and sets `isPartOf` in their article schema;
+- adds a "More in this guide" list of all live posts in the category to the pillar (plus `hasPart` schema).
+
+Only one pillar per category (`--check` enforces it). To strengthen a pillar, publish more posts in its
+category that each answer one narrower question and link to it early with
+`<a href="post:pillar-slug">natural anchor</a>`; when the pillar itself is updated, set `modified`.
