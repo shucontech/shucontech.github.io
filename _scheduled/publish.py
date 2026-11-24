@@ -4,6 +4,7 @@
 Each run (idempotent):
   * renders every post in _scheduled/posts/ with date <= today (IST) to blog/<slug>.html
   * resolves <a href="post:slug"> links (linked once the target is live, plain text before)
+  * links every post to its category's pillar guide ("pillar": true) and lists the cluster on the pillar
   * rebuilds auto-managed blocks: blog listing + Blog JSON-LD, sitemap, llms.txt,
     homepage "latest guides", product-page "guides" and legacy-post "more guides"
   * regenerates the RSS feed (blog/feed.xml)
@@ -172,8 +173,16 @@ def load_posts():
 def check(posts):
     slugs = {p['slug'] for p in posts} | set(LEGACY)
     problems = []
+    pillars = {}
     for p in posts:
         s = p['slug']
+        if 'pillar' in p:
+            if p['pillar'] is not True:
+                problems.append(f'{s}: "pillar" must be true or left out')
+            elif p['category'] in pillars:
+                problems.append(f'{s}: category already has a pillar ({pillars[p["category"]]})')
+            else:
+                pillars[p['category']] = s
         if len(p['title']) > 62:
             problems.append(f'{s}: title {len(p["title"])} chars')
         if not 110 <= len(p['description']) <= 160:
@@ -228,9 +237,24 @@ def card(slug, title, tag, desc, minutes, prefix=''):
             f'<h2><a href="{prefix}{slug}.html">{esc(title)}</a></h2><p>{esc(desc)}</p>{meta}</div></article>')
 
 
+def pillar_of(p, live_posts):
+    """The live pillar guide for this post's category (None for the pillar itself)."""
+    if p.get('pillar'):
+        return None
+    return next((q for q in live_posts if q.get('pillar') is True and q['category'] == p['category']), None)
+
+
+def pinned_first(items):
+    """Pillar guides ahead of everything else, otherwise keep the given order."""
+    return [p for p in items if p.get('pillar') is True] + [p for p in items if p.get('pillar') is not True]
+
+
 def pick_related(p, live_posts):
     by_slug = {q['slug']: q for q in live_posts}
     chosen = [r for r in p.get('related', []) if r in by_slug or r in LEGACY]
+    pil = pillar_of(p, live_posts)
+    if pil and pil['slug'] not in chosen:
+        chosen.insert(0, pil['slug'])
     for q in sorted(live_posts, key=lambda q: q['date'], reverse=True):
         if q['slug'] != p['slug'] and q['slug'] not in chosen and (q['product'] == p['product'] or q['category'] == p['category']):
             chosen.append(q['slug'])
@@ -342,6 +366,25 @@ def render(p, live_posts, live_slugs, template, today):
     body, toc = add_heading_ids(resolve_links(p['body'], live_slugs))
     tool = tool_for(p)
     body = insert_tool_promo(body, tool)
+    # Topic cluster: every post links up to its category's pillar guide; the pillar lists the cluster.
+    pil = pillar_of(p, live_posts)
+    series_note = series = ''
+    if pil:
+        pil_name = pil.get('breadcrumb', pil['h1'])
+        series_note = (f'<p class="series-note">Part of our guide to '
+                       f'<a href="{pil["slug"]}.html">{esc(pil_name)}</a>.</p>')
+        posting['isPartOf'] = {"@type": "BlogPosting", "@id": f'{SITE}/blog/{pil["slug"]}.html', "headline": pil['h1']}
+    elif p.get('pillar') is True:
+        spokes = sorted((q for q in live_posts if q['category'] == p['category'] and q['slug'] != p['slug']),
+                        key=lambda q: q['date'])
+        if spokes:
+            lis = ''.join(f'<li><a href="{q["slug"]}.html">{esc(q["h1"])}</a><span>{esc(q["description"])}</span></li>'
+                          for q in spokes)
+            series = (f'<section class="series-box" aria-labelledby="guide-series">'
+                      f'<h2 id="guide-series">More in this guide</h2><ul>{lis}</ul></section>')
+            toc.append(('guide-series', 'More in this guide'))
+            posting['hasPart'] = [{"@type": "BlogPosting", "@id": f'{SITE}/blog/{q["slug"]}.html', "headline": q['h1']}
+                                  for q in spokes]
     toc.append(('faq', 'Frequently asked questions'))
     r_path, r_title, r_pitch, r_label = tool or (prod_path, prod_label, cta_p, 'Explore')
     rail_card = (f'<a class="rail-card" data-event="rail_card_clicked" href="../{r_path}"><small>{"Free tool" if tool else "From Shucon MedAI"}</small>'
@@ -350,6 +393,7 @@ def render(p, live_posts, live_slugs, template, today):
                if modified != p['date'] else '')
     vals = {
         'TAKEAWAYS': takeaways_html(p.get('takeaways')), 'TOC': toc_html(toc), 'RAIL_CARD': rail_card, 'UPDATED': updated,
+        'SERIES_NOTE': series_note, 'SERIES': series,
         'TITLE': esc(p['title']), 'DESCRIPTION': esc(p['description']),
         'KEYWORDS': esc(', '.join(p['keywords'])), 'URL': url, 'DATE': p['date'],
         'MODIFIED': p.get('modified', p['date']), 'CATEGORY': esc(p['category']),
@@ -486,7 +530,7 @@ def main():
     edit('index.html', lambda t: replace_block(t, 'HOME-GUIDES', guides_block(newest[:6], 'Latest guides for hospital leaders', ''), 'index.html'))
 
     for page, prods in PRODUCT_PAGES.items():
-        items = [p for p in newest if p['product'] in prods][:6]
+        items = pinned_first([p for p in newest if p['product'] in prods])[:6]
         prefix = '../' * page.count('/')
         edit(page, lambda t, items=items, prefix=prefix, page=page: replace_block(t, 'GUIDES', guides_block(items, 'Related guides', prefix), page))
 
