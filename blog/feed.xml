@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Mon, 23 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Wed, 25 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>AI in Hospital Operations: 12 Practical Use Cases</title>
+			<link>https://shuconmedai.com/blog/ai-in-hospital-operations-use-cases.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/ai-in-hospital-operations-use-cases.html</guid>
+			<pubDate>Wed, 25 Nov 2026 06:00:00 +0530</pubDate>
+			<category>Healthcare AI</category>
+			<description>12 practical examples of AI in hospital operations, from discharge tracking to claim checks and unbilled services, for hospitals in India and the UAE.</description>
+		</item>
 		<item>
 			<title>Expiry Management in Hospital Pharmacy: Reduce Write-Offs</title>
 			<link>https://shuconmedai.com/blog/expiry-management-hospital-pharmacy.html</link>
@@ -128,12 +136,12 @@
 			<description>25 hospital KPIs with owners: financial, bed utilisation, insurance claims, revenue leakage and patient flow metrics, plus how to build a KPI dashboard.</description>
 		</item>
 		<item>
-			<title>AI Agents in Healthcare: What They Are and How Hospitals Use Them</title>
+			<title>AI Agents in Healthcare: Types, Use Cases and Hospital Examples</title>
 			<link>https://shuconmedai.com/blog/ai-agents-in-healthcare.html</link>
 			<guid isPermaLink="true">https://shuconmedai.com/blog/ai-agents-in-healthcare.html</guid>
 			<pubDate>Mon, 19 Oct 2026 06:00:00 +0530</pubDate>
 			<category>Healthcare AI</category>
-			<description>What AI agents in healthcare are, how they differ from chatbots, and practical hospital use cases, with the human oversight, risks and rollout steps to plan.</description>
+			<description>AI agents in healthcare explained: how they work, the main types, 15 hospital use cases, India rules, risks and a 90-day plan to deploy one safely.</description>
 		</item>
 		<item>
 			<title>OPD to IPD Conversion Ratio: Formula, Benchmarks and How to Improve It</title>
