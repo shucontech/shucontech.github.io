@@ -38,6 +38,7 @@
 
 ## Guides
 <!-- AUTO:LLMS:START -->
+- [Agentic AI in Healthcare: What It Means, Hospital Examples and Risks](https://shuconmedai.com/blog/agentic-ai-in-healthcare.html): What agentic AI in healthcare means, how it differs from generative AI, hospital examples, autonomy levels and a six-point test for agent washing.
 - [AI in Hospital Operations: 12 Practical Use Cases](https://shuconmedai.com/blog/ai-in-hospital-operations-use-cases.html): 12 practical examples of AI in hospital operations, from discharge tracking to claim checks and unbilled services, for hospitals in India and the UAE.
 - [Expiry Management in Hospital Pharmacy: Reduce Write-Offs](https://shuconmedai.com/blog/expiry-management-hospital-pharmacy.html): Expiry management in a hospital pharmacy: FEFO, 90/60/30-day near-expiry buckets and batch tracking, with an INR example of write-offs avoided.
 - [Cloud vs On-Premise Hospital Software: Which Should You Choose?](https://shuconmedai.com/blog/cloud-vs-on-premise-hospital-software.html): Cloud vs on-premise hospital management software compared on five-year cost, uptime, security and IT effort, with a checklist to help you decide.

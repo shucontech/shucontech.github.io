@@ -6,7 +6,15 @@
 		<atom:link href="https://shuconmedai.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
 		<description>Guides on hospital revenue leakage, insurance claims, hospital KPIs and healthcare AI for hospital leaders.</description>
 		<language>en-IN</language>
-		<lastBuildDate>Wed, 25 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<lastBuildDate>Thu, 26 Nov 2026 06:00:00 +0530</lastBuildDate>
+		<item>
+			<title>Agentic AI in Healthcare: What It Means, Hospital Examples and Risks</title>
+			<link>https://shuconmedai.com/blog/agentic-ai-in-healthcare.html</link>
+			<guid isPermaLink="true">https://shuconmedai.com/blog/agentic-ai-in-healthcare.html</guid>
+			<pubDate>Thu, 26 Nov 2026 06:00:00 +0530</pubDate>
+			<category>Healthcare AI</category>
+			<description>What agentic AI in healthcare means, how it differs from generative AI, hospital examples, autonomy levels and a six-point test for agent washing.</description>
+		</item>
 		<item>
 			<title>AI in Hospital Operations: 12 Practical Use Cases</title>
 			<link>https://shuconmedai.com/blog/ai-in-hospital-operations-use-cases.html</link>

@@ -223,6 +223,12 @@
 	</url>
 <!-- AUTO:SITEMAP:START -->
 	<url>
+		<loc>https://shuconmedai.com/blog/agentic-ai-in-healthcare.html</loc>
+		<lastmod>2026-11-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>https://shuconmedai.com/blog/ai-in-hospital-operations-use-cases.html</loc>
 		<lastmod>2026-11-25</lastmod>
 		<changefreq>monthly</changefreq>
